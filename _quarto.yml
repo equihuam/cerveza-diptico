@@ -8,7 +8,7 @@ project:
 website:
   title: "Taxonomía de la Cerveza"
   description: "Guía editorial e interactiva sobre la taxonomía, bioquímica de cereales y cata cervecera"
-  site-url: "https://cerveza-diptico.netlify.app"
+  site-url: "https://cerveza-mia.netlify.app"
   navbar:
     background: "#2D3748"
     foreground: "#F7FAFC"

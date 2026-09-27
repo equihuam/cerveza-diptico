@@ -1,1 +1,1 @@
-Sitemap: https://cerveza-diptico.netlify.app/sitemap.xml
+Sitemap: https://cerveza-mia.netlify.app/sitemap.xml
