@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+
+
+website:
+  title: "Taxonomía de la Cerveza"
+  description: "Guía editorial e interactiva sobre la taxonomía, bioquímica de cereales y cata cervecera"
+  site-url: "https://cerveza-diptico.netlify.app"
+  navbar:
+    background: "#2D3748"
+    foreground: "#F7FAFC"
+    search: false
+    left:
+      - text: "🍺 Díptico & Taxonomía"
+        href: index.qmd
+      - text: "📋 Bitácora de Cata"
+        href: assets/degustacion.html
+      - text: "📚 Catálogo de Cervezas"
+        href: assets/catalogo.html
+
+format:
+  html:
+    theme: cosmo
+    css: assets/css/diptico.css
+    toc: false
+    embed-resources: true
+    page-layout: custom

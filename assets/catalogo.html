@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Catálogo y Fichas Descriptivas de Cervezas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #c26910;
+      --primary-hover: #9c4f06;
+      --primary-light: #fbeee0;
+      --accent-hop: #2e7d32;
+      --accent-hop-light: #e8f5e9;
+      --dark: #1f1d1a;
+      --card-bg: #ffffff;
+      --bg: #f8f6f0;
+      --border: #e2d9c8;
+      --text: #2c2925;
+      --text-muted: #6b645b;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.05);
+      --shadow-md: 0 6px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 32px rgba(0,0,0,0.14);
+      --radius: 12px;
+      --radius-sm: 6px;
+      --radius-pill: 999px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 1.25rem 1rem 4rem 1rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+      padding-top: 0.5rem;
+    }
+
+    .top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #e8dcc4;
+      color: #6b4c1b;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 0.3rem 0.85rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: 0.6rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    h1 {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 2.2rem;
+      color: var(--dark);
+      letter-spacing: -0.01em;
+      margin-bottom: 0.35rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 680px;
+      margin: 0 auto 1.2rem auto;
+    }
+
+    /* BARRA SUPERIOR DE ACCIONES GLOBALES */
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .btn {
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.6rem 1.1rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 3px 10px rgba(194, 105, 16, 0.25);
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .btn-secondary:hover {
+      background: #f0ece3;
+      border-color: #cbbeaa;
+    }
+
+    .btn-accent {
+      background: var(--accent-hop-light);
+      color: var(--accent-hop);
+      border-color: #c8e6c9;
+    }
+    .btn-accent:hover {
+      background: #d4edd5;
+    }
+
+    /* CONTROLES DE FILTRO Y BÚSQUEDA */
+    .controls-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.75rem;
+    }
+
+    .controls-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr auto;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .controls-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 580px) {
+      .controls-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .search-wrapper {
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.7rem 1rem 0.7rem 2.4rem;
+      font-family: inherit;
+      font-size: 0.92rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      background: #fdfcf9;
+      color: var(--text);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(194, 105, 16, 0.15);
+      background: #fff;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    .select-filter {
+      width: 100%;
+      padding: 0.68rem 1rem;
+      font-family: inherit;
+      font-size: 0.88rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      background: #fdfcf9;
+      color: var(--text);
+      cursor: pointer;
+    }
+
+    .select-filter:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+
+    .view-toggle {
+      display: flex;
+      background: #ede6d8;
+      padding: 0.25rem;
+      border-radius: var(--radius-pill);
+      gap: 0.2rem;
+    }
+
+    .view-btn {
+      padding: 0.45rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: none;
+      border-radius: var(--radius-pill);
+      background: transparent;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .view-btn.active {
+      background: #fff;
+      color: var(--dark);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      padding: 0 0.5rem;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .stats-count {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    /* GRID DE TARJETAS */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 450px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .beer-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      position: relative;
+    }
+
+    .beer-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #d4c8b2;
+    }
+
+    /* ENCABEZADO DE TARJETA CON MINIATURA VINTAGE */
+    .card-top-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .card-meta-left {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .beer-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.22rem;
+      color: var(--dark);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 0.25rem;
+    }
+
+    .beer-origin {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #826a45;
+      margin-bottom: 0.4rem;
+    }
+
+    .card-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .badge-family {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+    }
+
+    .badge-lager { background: #e3f2fd; color: #1565c0; border: 1px solid #bbdefb; }
+    .badge-ale { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
+    .badge-sour { background: #f3e5f5; color: #7b1fa2; border: 1px solid #e1bee7; }
+    .badge-hybrid { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+
+    .tag-style {
+      display: inline-block;
+      background: #f1ece1;
+      color: #4a3e2c;
+      font-size: 0.74rem;
+      font-weight: 600;
+      padding: 0.18rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* MINIATURA VINTAGE COMPACTA */
+    .vintage-label-wrapper {
+      position: relative;
+      flex-shrink: 0;
+      width: 72px;
+      height: 86px;
+      border-radius: 6px;
+      padding: 3px;
+      background: linear-gradient(145deg, #f0e6d2, #dfd0b7);
+      border: 1px solid #c8b99f;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .vintage-label-wrapper:hover {
+      transform: scale(1.06) rotate(-1deg);
+      box-shadow: 0 6px 14px rgba(194, 105, 16, 0.25);
+      border-color: var(--primary);
+    }
+
+    .vintage-label-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 4px;
+      background: #faf6ee;
+    }
+
+    .label-zoom-tag {
+      position: absolute;
+      bottom: 2px;
+      right: 2px;
+      background: rgba(31, 29, 26, 0.75);
+      color: #fff;
+      font-size: 0.6rem;
+      padding: 1px 3px;
+      border-radius: 3px;
+      pointer-events: none;
+    }
+
+    .card-specs {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.1rem;
+      font-size: 0.85rem;
+    }
+
+    .spec-item {
+      display: grid;
+      grid-template-columns: 85px 1fr;
+      gap: 0.4rem;
+      line-height: 1.35;
+    }
+
+    .spec-label {
+      font-weight: 700;
+      color: #635748;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .spec-val {
+      color: #2c2925;
+    }
+
+    .curiosity-box {
+      background: #fdfaf3;
+      border-left: 3px solid var(--primary);
+      padding: 0.75rem 0.85rem;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-size: 0.84rem;
+      color: #443c30;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      line-height: 1.42;
+    }
+
+    .curiosity-box strong {
+      color: var(--primary-hover);
+      display: inline-block;
+      margin-right: 0.2rem;
+    }
+
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.85rem;
+      border-top: 1px dashed var(--border);
+      font-size: 0.82rem;
+    }
+
+    .card-abv {
+      font-weight: 800;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--radius-pill);
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .btn-icon {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-pill);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-icon:hover {
+      background: #ede6d8;
+      color: var(--dark);
+      border-color: #c4b69f;
+    }
+
+    .btn-icon.delete:hover {
+      background: #ffebee;
+      color: #c62828;
+      border-color: #ef9a9a;
+    }
+
+    /* VISTA TABLA (SHEETS) */
+    .table-wrapper {
+      display: none;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow-x: auto;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sheets-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    .sheets-table th {
+      background: #f1ece1;
+      color: #3b3223;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      padding: 0.85rem 1rem;
+      border-bottom: 2px solid var(--border);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .sheets-table th:hover {
+      background: #e6dfd1;
+    }
+
+    .sheets-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #ede6d8;
+      vertical-align: middle;
+      line-height: 1.4;
+    }
+
+    .sheets-table tr:hover td {
+      background: #faf7f0;
+    }
+
+    .table-label-thumb {
+      width: 42px;
+      height: 50px;
+      object-fit: contain;
+      border-radius: 4px;
+      border: 1px solid #d4c8b2;
+      background: #fcf9f2;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .table-label-thumb:hover {
+      transform: scale(1.15);
+    }
+
+    /* MODAL FORMULARIO */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(18, 16, 14, 0.65);
+      backdrop-filter: blur(3px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      overflow-y: auto;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-card {
+      background: #fff;
+      border-radius: var(--radius);
+      max-width: 650px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border);
+      animation: modalIn 0.25s ease-out;
+    }
+
+    @keyframes modalIn {
+      from { opacity: 0; transform: translateY(12px) scale(0.97); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .modal-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fdfaf5;
+    }
+
+    .modal-title {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 1.3rem;
+      color: var(--dark);
+    }
+
+    .modal-close {
+      background: transparent;
+      border: none;
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 550px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #554a3a;
+      margin-bottom: 0.35rem;
+    }
+
+    .form-input, .form-textarea, .form-select {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      font-family: inherit;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: #fff;
+      color: var(--text);
+    }
+
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(194, 105, 16, 0.12);
+    }
+
+    .form-textarea {
+      min-height: 75px;
+      resize: vertical;
+    }
+
+    .modal-footer {
+      padding: 1.1rem 1.5rem;
+      border-top: 1px solid var(--border);
+      background: #fdfaf5;
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+    }
+
+    /* LIGHTBOX MODAL PARA VER ETIQUETA EN ALTA RESOLUCIÓN */
+    .lightbox-card {
+      background: #231f1a;
+      color: #f7f3eb;
+      border-radius: var(--radius);
+      max-width: 480px;
+      width: 100%;
+      padding: 1.75rem;
+      text-align: center;
+      border: 2px solid #6b5536;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.6);
+      position: relative;
+      animation: modalIn 0.25s ease-out;
+    }
+
+    .lightbox-frame {
+      background: #171513;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #4a3c28;
+      box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+      margin-bottom: 1.25rem;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 320px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+
+    .lightbox-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.4rem;
+      color: #f5d199;
+      margin-bottom: 0.3rem;
+    }
+
+    .lightbox-sub {
+      color: #b5a58d;
+      font-size: 0.88rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .lightbox-history {
+      font-size: 0.84rem;
+      color: #ded6c8;
+      background: rgba(255,255,255,0.06);
+      padding: 0.75rem;
+      border-radius: 6px;
+      text-align: left;
+      line-height: 1.4;
+      margin-bottom: 1.25rem;
+    }
+
+    /* EMPTY STATE */
+    .empty-state {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+      background: #fff;
+      border: 2px dashed var(--border);
+      border-radius: var(--radius);
+      color: var(--text-muted);
+    }
+
+    .empty-icon {
+      font-size: 3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    /* NOTIFICACIÓN TOAST */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--dark);
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: var(--radius-pill);
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="top-badge">🌾 Base de Conocimiento Cervecero</div>
+      <h1>Catálogo de Fichas Descriptivas</h1>
+      <p class="subtitle">Colección técnica, sensorial e histórica de cervezas favoritas: cereales, levaduras, procesos, distintivos de receta, anécdotas y etiquetas vintage.</p>
+
+      <div class="top-actions">
+        <button class="btn btn-primary" id="btn-open-add">
+          <span>➕</span> Agregar Nueva Ficha
+        </button>
+        <button class="btn btn-secondary" id="btn-export-csv">
+          <span>📊</span> Exportar a CSV (Sheets)
+        </button>
+        <button class="btn btn-secondary" id="btn-export-json">
+          <span>💾</span> Exportar JSON
+        </button>
+        <button class="btn btn-secondary" id="btn-import-trigger">
+          <span>📂</span> Importar Datos
+        </button>
+        <input type="file" id="file-importer" accept=".csv,.json" style="display: none;">
+        <button class="btn btn-accent" id="btn-reset-default" title="Recargar las fichas iniciales con todas las notas completas">
+          <span>🔄</span> Restaurar Originales
+        </button>
+      </div>
+    </header>
+
+    <!-- BARRA DE CONTROLES (BÚSQUEDA Y FILTROS) -->
+    <div class="controls-card">
+      <div class="controls-grid">
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" class="search-input" placeholder="Buscar por nombre, cereal, levadura, país o anécdota...">
+        </div>
+
+        <div>
+          <select id="filter-family" class="select-filter">
+            <option value="all">Todas las Familias</option>
+            <option value="Lager">Lager (Baja Fermentación)</option>
+            <option value="Ale">Ale (Alta Fermentación)</option>
+            <option value="Espontánea">Espontánea / Mixta</option>
+          </select>
+        </div>
+
+        <div>
+          <select id="filter-country" class="select-filter">
+            <option value="all">Todos los Países / Regiones</option>
+            <option value="México">México</option>
+            <option value="Xalapa">Xalapa (Artesanal)</option>
+            <option value="Irlanda">Irlanda</option>
+            <option value="Inglaterra">Inglaterra (Yorkshire)</option>
+            <option value="Australia">Australia</option>
+            <option value="Países Bajos">Países Bajos</option>
+          </select>
+        </div>
+
+        <div class="view-toggle">
+          <button class="view-btn active" id="btn-view-cards" title="Vista Tarjetas">🗂️ Tarjetas</button>
+          <button class="view-btn" id="btn-view-table" title="Vista Tabla tipo Sheets">📊 Tabla Sheets</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- BARRA DE ESTADÍSTICAS -->
+    <div class="stats-bar">
+      <div>Mostrando <span id="stats-visible" class="stats-count">0</span> de <span id="stats-total" class="stats-count">0</span> cervezas catalogadas</div>
+      <div>
+        <a href="degustacion.html" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 600;">📝 Ir a Bitácora de Degustación &rarr;</a>
+      </div>
+    </div>
+
+    <!-- CONTENEDOR VISTA TARJETAS -->
+    <div id="cards-container" class="cards-grid">
+      <!-- Se llenan dinámicamente con JS -->
+    </div>
+
+    <!-- CONTENEDOR VISTA TABLA (SHEETS) -->
+    <div id="table-wrapper" class="table-wrapper">
+      <table class="sheets-table" id="sheets-table">
+        <thead>
+          <tr>
+            <th>Etiqueta</th>
+            <th data-sort="name">Nombre ↕</th>
+            <th data-sort="origin">Origen ↕</th>
+            <th data-sort="style">Estilo ↕</th>
+            <th data-sort="family">Familia ↕</th>
+            <th>Cereal / Granos</th>
+            <th>Levadura</th>
+            <th>Proceso</th>
+            <th>Distintivo Receta</th>
+            <th>Anécdota / Curiosidad</th>
+            <th data-sort="abv">ABV ↕</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Se llenan dinámicamente con JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- MODAL PARA AGREGAR / EDITAR FICHA -->
+  <div class="modal-backdrop" id="modal-form">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modal-title-text">Nueva Ficha de Cerveza</h2>
+        <button class="modal-close" id="btn-close-modal">&times;</button>
+      </div>
+      <form id="beer-form">
+        <div class="modal-body">
+          <input type="hidden" id="form-id">
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Nombre de la Cerveza *</label>
+              <input type="text" id="form-name" class="form-input" required placeholder="Ej. Guinness Extra Stout">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-origin">Origen / Ciudad / País *</label>
+              <input type="text" id="form-origin" class="form-input" required placeholder="Ej. Dublín, Irlanda">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="form-family">Familia de Fermentación *</label>
+              <select id="form-family" class="form-select" required>
+                <option value="Lager">Lager (Baja Fermentación)</option>
+                <option value="Ale">Ale (Alta Fermentación)</option>
+                <option value="Espontánea">Espontánea / Mixta (Sour)</option>
+                <option value="Híbrida">Híbrida / Otra</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-style">Estilo Específico *</label>
+              <input type="text" id="form-style" class="form-input" required placeholder="Ej. Irish Dry Stout, Vienna Lager">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="form-abv">Graduación (% ABV)</label>
+              <input type="text" id="form-abv" class="form-input" placeholder="Ej. 5.3% o 4.2% - 5.6%">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-yeast">Levadura</label>
+              <input type="text" id="form-yeast" class="form-input" placeholder="Ej. S. pastorianus, Heineken A-Yeast, US-05">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="form-label-url">Etiqueta Vintage (URL de imagen)</label>
+              <input type="text" id="form-label-url" class="form-input" placeholder="https://... o dejar vacío para diseño auto">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-label-file">O Subir Imagen Local</label>
+              <input type="file" id="form-label-file" class="form-input" accept="image/*" style="padding:0.4rem;">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-cereal">Cereal / Granos y Adjuntos *</label>
+            <input type="text" id="form-cereal" class="form-input" required placeholder="Ej. Malta Pale, cebada tostada no malteada (10%), maíz cervecero...">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-process">Proceso de Elaboración / Fermentación</label>
+            <textarea id="form-process" class="form-textarea" placeholder="Ej. Maceración por infusión simple, Yorkshire Squares, maduración en frío de meses..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-distinctive">Distintivo de la Receta / Perfil Sensorial *</label>
+            <textarea id="form-distinctive" class="form-textarea" required placeholder="Ej. Lúpulos Saaz, notas a café amargo, uso de cápsula de nitrógeno..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="form-history">Dato Histórico / Curioso / Anécdota</label>
+            <textarea id="form-history" class="form-textarea" placeholder="Ej. En 1759 se firmó el arrendamiento por 9,000 años... / Primera en lata en 1954..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="btn-cancel-modal">Cancelar</button>
+          <button type="submit" class="btn btn-primary" id="btn-save-beer">💾 Guardar Ficha</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL PARA VER ETIQUETA EN GRANDE -->
+  <div class="modal-backdrop" id="modal-lightbox">
+    <div class="lightbox-card">
+      <button class="modal-close" id="btn-close-lightbox" style="position:absolute; top:1rem; right:1.2rem; color:#f0e6d2;">&times;</button>
+      <div class="lightbox-frame">
+        <img id="lightbox-img-el" src="" alt="Etiqueta Vintage" class="lightbox-img">
+      </div>
+      <h3 id="lightbox-title-el" class="lightbox-title">Cerveza</h3>
+      <div id="lightbox-sub-el" class="lightbox-sub">Estilo • Origen</div>
+      <div id="lightbox-history-el" class="lightbox-history">Dato histórico</div>
+      <button class="btn btn-secondary" id="btn-close-lightbox-btn" style="background:#3a3227; color:#f0e6d2; border-color:#63523b;">Cerrar Vista</button>
+    </div>
+  </div>
+
+  <!-- TOAST FEEDBACK -->
+  <div id="toast" class="toast">✓ Operación completada</div>
+
+  <!-- SCRIPTS -->
+  <script>
+    // GENERADOR DE ETIQUETAS VECTORIALES VINTAGE EN SVG (DATA-URI)
+    function generateVintageSvg(name, subtitle, bgCol, borderCol, accentCol, motifSvg) {
+      const svg = `
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="100%" height="100%">
+        <defs>
+          <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="${bgCol}" />
+            <stop offset="100%" stop-color="#12100d" />
+          </linearGradient>
+          <filter id="paper">
+            <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" result="noise" />
+            <feDiffuseLighting in="noise" lighting-color="#fff" surfaceScale="1.2">
+              <feDistantLight azimuth="45" elevation="60" />
+            </feDiffuseLighting>
+            <feBlend mode="multiply" in="SourceGraphic" result="blend" />
+          </filter>
+        </defs>
+        <!-- Fondo marco -->
+        <rect x="5" y="5" width="190" height="230" rx="10" fill="url(#grad)" stroke="${borderCol}" stroke-width="4" />
+        <rect x="11" y="11" width="178" height="218" rx="8" fill="none" stroke="${accentCol}" stroke-width="1.5" stroke-dasharray="4,2" />
+        
+        <!-- Adorno superior -->
+        <path d="M 30 25 Q 100 35 170 25" fill="none" stroke="${borderCol}" stroke-width="2" />
+        
+        <!-- Emblema central -->
+        <g transform="translate(100, 85)">
+          ${motifSvg}
+        </g>
+        
+        <!-- Textos tipográficos vintage -->
+        <text x="100" y="152" font-family="'Cinzel', serif" font-weight="700" font-size="15" fill="#f5d796" text-anchor="middle" letter-spacing="1">${name.toUpperCase()}</text>
+        <text x="100" y="174" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" fill="#ded4c1" text-anchor="middle" letter-spacing="0.5">${subtitle.toUpperCase()}</text>
+        <line x1="40" y1="186" x2="160" y2="186" stroke="${borderCol}" stroke-width="1.2" />
+        <text x="100" y="206" font-family="'Cinzel', serif" font-size="9" fill="#c4b295" text-anchor="middle">★ CERVEZA TRADICIONAL ★</text>
+        <text x="100" y="220" font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" fill="#8f7d63" text-anchor="middle">VINTAGE BREWERY ARCHIVE</text>
+      </svg>`;
+      return "data:image/svg+xml;utf8," + encodeURIComponent(svg);
+    }
+
+    // MOTIVOS VECTORIALES
+    const MOTIFS = {
+      harp: `<circle r="34" fill="#1b1712" stroke="#d4af37" stroke-width="2"/>
+             <path d="M -12 -18 C 12 -22 18 10 10 22 C -4 16 -12 2 -12 -18 Z" fill="#d4af37" />
+             <line x1="-6" y1="-14" x2="6" y2="18" stroke="#1b1712" stroke-width="1.5"/>
+             <line x1="-2" y1="-12" x2="8" y2="15" stroke="#1b1712" stroke-width="1.5"/>
+             <line x1="2" y1="-10" x2="10" y2="12" stroke="#1b1712" stroke-width="1.5"/>`,
+      magnet: `<circle r="34" fill="#4a1515" stroke="#e0a96d" stroke-width="2"/>
+               <path d="M -16 16 L -16 -10 C -16 -22 16 -22 16 -10 L 16 16 L 8 16 L 8 -8 C 8 -14 -8 -14 -8 -8 L -8 16 Z" fill="#e0a96d"/>
+               <rect x="-16" y="8" width="8" height="8" fill="#fff"/>
+               <rect x="8" y="8" width="8" height="8" fill="#fff"/>`,
+      xxxx: `<circle r="34" fill="#b71c1c" stroke="#fbc02d" stroke-width="2"/>
+             <text x="0" y="10" font-family="'Cinzel', serif" font-size="22" font-weight="900" fill="#fff" text-anchor="middle" letter-spacing="2">XXXX</text>`,
+      dunkel: `<circle r="34" fill="#2c1a0e" stroke="#d4af37" stroke-width="2"/>
+               <polygon points="0,-22 6,-8 22,-6 10,6 14,22 0,14 -14,22 -10,6 -22,-6 -6,-8" fill="#d4af37" />`,
+      bohemia: `<polygon points="0,-32 28,-16 28,16 0,32 -28,16 -28,-16" fill="#6a1b1b" stroke="#f5d796" stroke-width="2"/>
+                <text x="0" y="8" font-family="'Cinzel', serif" font-size="20" font-weight="700" fill="#f5d796" text-anchor="middle">B</text>`,
+      victoria: `<circle r="34" fill="#7a2014" stroke="#e5b869" stroke-width="2"/>
+                 <text x="0" y="8" font-family="'Cinzel', serif" font-size="24" font-weight="900" fill="#e5b869" text-anchor="middle">V</text>`,
+      sun: `<circle r="34" fill="#d97706" stroke="#fef3c7" stroke-width="2"/>
+            <circle r="14" fill="#fef3c7"/>
+            <path d="M 0 -30 L 0 30 M -30 0 L 30 0 M -20 -20 L 20 20 M -20 20 L 20 -20" stroke="#fef3c7" stroke-width="2"/>`,
+      xx: `<circle r="34" fill="#1b382b" stroke="#c29b38" stroke-width="2"/>
+          <text x="0" y="10" font-family="'Cinzel', serif" font-size="24" font-weight="900" fill="#c29b38" text-anchor="middle">XX</text>`,
+      tecate: `<rect x="-30" y="-30" width="60" height="60" rx="8" fill="#b91c1c" stroke="#ffffff" stroke-width="2"/>
+               <polygon points="0,-20 18,10 -18,10" fill="#ffffff"/>
+               <text x="0" y="24" font-family="'Cinzel', serif" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">1944</text>`,
+      barrel: `<ellipse cx="0" cy="0" rx="26" ry="32" fill="#5c3a21" stroke="#d4a373" stroke-width="2"/>
+               <line x1="-24" y1="-12" x2="24" y2="-12" stroke="#d4a373" stroke-width="2"/>
+               <line x1="-24" y1="12" x2="24" y2="12" stroke="#d4a373" stroke-width="2"/>`,
+      anchor: `<circle r="34" fill="#0f3460" stroke="#e9c46a" stroke-width="2"/>
+               <circle cx="0" cy="-14" r="6" fill="none" stroke="#e9c46a" stroke-width="2"/>
+               <line x1="0" y1="-8" x2="0" y2="20" stroke="#e9c46a" stroke-width="3"/>
+               <path d="M -18 10 C -12 24 12 24 18 10" fill="none" stroke="#e9c46a" stroke-width="3"/>`,
+      heineken: `<circle r="34" fill="#14532d" stroke="#facc15" stroke-width="2"/>
+                 <polygon points="0,-22 6,-6 22,-6 10,6 14,22 0,12 -14,22 -10,6 -22,-6 -6,-6" fill="#dc2626" stroke="#fff" stroke-width="1"/>`,
+      indio: `<circle r="34" fill="#3f2e1e" stroke="#ca8a04" stroke-width="2"/>
+              <path d="M -14 18 C -14 0 0 -18 14 0 C 14 18 0 24 -14 18 Z" fill="#ca8a04"/>
+              <path d="M -16 -4 L -6 -24 L 0 -12 L 6 -24 L 16 -4" fill="none" stroke="#f59e0b" stroke-width="2"/>`,
+      xmas: `<polygon points="0,-32 30,-12 30,22 0,34 -30,22 -30,-12" fill="#701a1a" stroke="#d4af37" stroke-width="2"/>
+             <path d="M 0 -22 L 6 -8 L 20 -8 L 8 2 L 12 16 L 0 8 L -12 16 L -8 2 L -20 -8 L -6 -8 Z" fill="#e2e8f0"/>
+             <text x="0" y="27" font-family="'Cinzel', serif" font-size="9" fill="#d4af37" text-anchor="middle">1924</text>`,
+      carta: `<circle r="34" fill="#854d0e" stroke="#fef08a" stroke-width="2"/>
+              <path d="M -16 -8 L -16 16 L 16 16 L 16 -8 L 0 -18 Z" fill="#fef08a"/>
+              <circle cx="0" cy="2" r="5" fill="#854d0e"/>`,
+      shark: `<circle r="34" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
+              <path d="M -22 6 C -10 -16 14 -16 22 2 C 12 12 -8 16 -22 6 Z" fill="#38bdf8"/>
+              <polygon points="-4,-6 6,-20 8,-4" fill="#38bdf8"/>`
+    };
+
+    // BASE DE DATOS INICIAL CON IMÁGENES VECTORIALES RETRO
+    const INITIAL_BEERS = [
+      {
+        id: "guinness",
+        name: "Guinness Extra Stout",
+        origin: "Dublín, Irlanda",
+        family: "Ale",
+        style: "Irish Dry Stout",
+        label_img: generateVintageSvg("Guinness", "St. James's Gate 1759", "#151310", "#d4af37", "#f3e5ab", MOTIFS.harp),
+        cereal: "Malta base Pale Ale, cebada malteada y ~10% de cebada cruda tostada sin maltear (roasted barley).",
+        yeast: "Saccharomyces cerevisiae (cepa histórica propia de Guinness, fermentación alta a 20-25 °C).",
+        process: "Maceración por infusión simple; servicio con mezcla nitrogenada (70% N2 / 30% CO2) y cápsula (widget) en lata.",
+        distinctive: "La cebada tostada no malteada confiere el color negro rubí, acidez seca limpia a café amargo y espuma ultracremosa sin acidez carbónica.",
+        history: "En 1759, Arthur Guinness firmó un arrendamiento por 9,000 años para St. James's Gate por £45 anuales. El arpa celta fue registrada por Guinness antes de que Irlanda la adoptara como escudo nacional.",
+        abv: "4.2% - 5.6%"
+      },
+      {
+        id: "magnet",
+        name: "John Smith's Magnet",
+        origin: "Tadcaster, Yorkshire, Inglaterra",
+        family: "Ale",
+        style: "English Bitter / Yorkshire Pale Ale",
+        label_img: generateVintageSvg("John Smith's", "Magnet Tadcaster", "#3b1414", "#e0a96d", "#f7d794", MOTIFS.magnet),
+        cereal: "Malta Pale Ale británica, malta crystal y pequeña adición de azúcares cerveceros.",
+        yeast: "Saccharomyces cerevisiae (cepa de Yorkshire con alta floculación).",
+        process: "Fermentación tradicional en cubas de piedra/pizarra cuadradas (Yorkshire Squares) con recirculación y oxigenación controlada.",
+        distinctive: "Lúpulos ingleses terrosos (Fuggles y Goldings) con balance de malta acaramelada, nuez y amargor persistente pero muy redondeado.",
+        history: "Nacida en el corazón minero e industrial de Tadcaster. El nombre 'Magnet' aludía a cómo la taberna atraía como un imán a los trabajadores tras su jornada.",
+        abv: "4.0% - 4.5%"
+      },
+      {
+        id: "castlemaine",
+        name: "Castlemaine XXXX (4X)",
+        origin: "Brisbane, Queensland, Australia",
+        family: "Lager",
+        style: "Australian Pale Lager",
+        label_img: generateVintageSvg("Castlemaine", "XXXX Queensland 1878", "#8b1818", "#fbc02d", "#fff", MOTIFS.xxxx),
+        cereal: "Malta de cebada de dos carreras y azúcar de caña refinada de Queensland como adjunto fermentable.",
+        yeast: "Saccharomyces pastorianus (baja fermentación, muy atenuativa).",
+        process: "Maceración para máxima atenuación y guarda en frío (lagering).",
+        distinctive: "El azúcar de caña seca el cuerpo al extremo sin aportar pesadez, con lúpulo Pride of Ringwood de amargor limpio para el calor tropical.",
+        history: "La 'XXXX' viene de la antigua norma británica donde cada 'X' marcaba la fuerza del barril. En Australia se bromea diciendo que en Queensland no sabían deletrear 'BEER'.",
+        abv: "4.2%"
+      },
+      {
+        id: "negra-modelo",
+        name: "Negra Modelo",
+        origin: "Ciudad de México, México",
+        family: "Lager",
+        style: "Munich Dunkel / Vienna Mexicana",
+        label_img: generateVintageSvg("Negra Modelo", "La Crema de la Cerveza", "#22150b", "#d4af37", "#fef3c7", MOTIFS.dunkel),
+        cereal: "Malta caramelo tostada, malta chocolate, malta base y maíz cervecero.",
+        yeast: "Saccharomyces pastorianus (baja fermentación).",
+        process: "Maceración escalonada para extraer dulzor maltoso y lagering en frío prolongado.",
+        distinctive: "Notas a caramelo quemado, pan tostado y café suave con cuerpo medio untuoso; sin amargor punzante.",
+        history: "Lanzada en 1928 por Cervecería Modelo bajo el lema 'La crema de la cerveza', consolidando el estilo oscuro en el gusto masivo mexicano.",
+        abv: "5.3%"
+      },
+      {
+        id: "bohemia-obscura",
+        name: "Bohemia Obscura",
+        origin: "Monterrey / Orizaba, México",
+        family: "Lager",
+        style: "Vienna Lager / Bock Ligero",
+        label_img: generateVintageSvg("Bohemia", "Obscura Selecta 1905", "#4a1212", "#f5d796", "#fff", MOTIFS.bohemia),
+        cereal: "Maltas tostadas y caramelo europeas combinadas con malta Pilsen base.",
+        yeast: "Saccharomyces pastorianus (fermentación baja clásica).",
+        process: "Guarda prolongada en frío y decocción controlada.",
+        distinctive: "Lúpulos nobles europeos (Saaz y Styrian Goldings) con aroma floral/especiado que equilibra el tostado a nueces y malta dulce.",
+        history: "La línea Bohemia nació en 1905 como tributo a la región checa de Bohemia, buscando elevar el estándar hacia el segmento gourmet.",
+        abv: "4.9% - 5.3%"
+      },
+      {
+        id: "victoria",
+        name: "Victoria",
+        origin: "Toluca / Cd. de México, México",
+        family: "Lager",
+        style: "Vienna Lager",
+        label_img: generateVintageSvg("Victoria", "Toluca y México 1865", "#5c1810", "#e5b869", "#fed7aa", MOTIFS.victoria),
+        cereal: "Malta clara de dos carreras, malta caramelo y sémola de maíz.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Filtración brillante y maduración fría industrial estándar.",
+        distinctive: "Color ámbar cobrizo traslúcido, aroma tenue a malta acaramelada, cuerpo liviano y final seco muy bebible.",
+        history: "Es la marca de cerveza más antigua de México en producción continua (creada en 1865 por la Cía. Cervecera Toluca y México durante el Segundo Imperio de Maximiliano).",
+        abv: "4.0% - 4.5%"
+      },
+      {
+        id: "sol",
+        name: "Sol",
+        origin: "Orizaba, Veracruz, México",
+        family: "Lager",
+        style: "American Adjunct Lager",
+        label_img: generateVintageSvg("El Sol", "El Salto del Agua 1899", "#92400e", "#fef3c7", "#fde68a", MOTIFS.sun),
+        cereal: "Malta de cebada ligera y alto porcentaje de sémola/jarabe de maíz.",
+        yeast: "Saccharomyces pastorianus (ultraligera).",
+        process: "Elaboración rápida con extractos de lúpulo especialmente isomerizados (tetrahidro-isohumulonas).",
+        distinctive: "Inmune a la degradación por luz UV, lo que permite envasarse en su icónica botella de vidrio transparente sin desarrollar sabor 'skunky'.",
+        history: "En 1899 en la fábrica 'El Salto del Agua' (Orizaba), el maestro cervecero vio un rayo de sol descender sobre la paila y la bautizó 'El Sol'.",
+        abv: "4.5%"
+      },
+      {
+        id: "xx-ambar",
+        name: "Dos Equis (XX) Ámbar",
+        origin: "Orizaba, Veracruz, México",
+        family: "Lager",
+        style: "Mexican Vienna Lager",
+        label_img: generateVintageSvg("Siglo XX", "Moctezuma Orizaba 1897", "#163828", "#c29b38", "#fde047", MOTIFS.xx),
+        cereal: "Maltas caramelo tostadas, malta base y maíz cervecero.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Fermentación baja en frío y maduración reposada.",
+        distinctive: "Notas sutiles a azúcar morena, corteza de pan horneado y toque justo de lúpulo herbal.",
+        history: "Creada en 1897 por el cervecero alemán Wilhelm Hasse en Orizaba como 'Siglo XX' para conmemorar el año 1900. El número romano XX terminó dándole su nombre oficial.",
+        abv: "4.7%"
+      },
+      {
+        id: "xx-lager",
+        name: "Dos Equis (XX) Lager",
+        origin: "Orizaba, Veracruz, México",
+        family: "Lager",
+        style: "Pale Lager / Pilsner Mexicana",
+        label_img: generateVintageSvg("Dos Equis", "Lager Especial", "#134e35", "#eab308", "#fff", MOTIFS.xx),
+        cereal: "Malta de dos carreras y adjuntos de maíz.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Filtrado en frío y carbonatación vivaz.",
+        distinctive: "Perfil rubio cristalino, matiz suave de cereal y amargor herbal limpio.",
+        history: "Diseñada como la hermana rubia y moderna de la XX Ámbar, alcanzó fama mundial con la célebre campaña 'The Most Interesting Man in the World'.",
+        abv: "4.2%"
+      },
+      {
+        id: "tecate",
+        name: "Tecate (Original)",
+        origin: "Tecate, Baja California, México",
+        family: "Lager",
+        style: "American Adjunct Lager",
+        label_img: generateVintageSvg("Tecate", "Baja California 1944", "#7f1d1d", "#ffffff", "#fca5a5", MOTIFS.tecate),
+        cereal: "Malta clara y sémola de maíz.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Fermentación rápida y lagering industrial corto de gran escala.",
+        distinctive: "Cuerpo ultraligero y sabor seco, optimizado para servirse a temperaturas muy bajas.",
+        history: "En 1954 fue la primera cerveza en México en venderse en lata de aluminio. El ritual de poner limón y sal en la tapa nació para limpiar el borde de hojalata.",
+        abv: "4.5%"
+      },
+      {
+        id: "barrilito",
+        name: "Barrilito",
+        origin: "Ciudad de México, México",
+        family: "Lager",
+        style: "American Lager / Cerveza de Barrio",
+        label_img: generateVintageSvg("Barrilito", "Cervecería Modelo", "#45220c", "#d4a373", "#fef3c7", MOTIFS.barrel),
+        cereal: "Malta Pilsen nacional y maíz.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Fermentación industrial económica y alta carbonatación.",
+        distinctive: "Sabor muy ligero con toque dulce de maíz y baja graduación alcohólica.",
+        history: "Emblemática por su botella rechoncha de cuello corto con duelas de barril grabadas en el vidrio (formato stubby/steinie), clásica de botaneros y taquerías.",
+        abv: "3.6% - 4.0%"
+      },
+      {
+        id: "pacifico",
+        name: "Pacífico Clara",
+        origin: "Mazatlán, Sinaloa, México",
+        family: "Lager",
+        style: "Mexican Pilsner Style Lager",
+        label_img: generateVintageSvg("Pacífico", "Mazatlán Sin. 1900", "#0c284d", "#e9c46a", "#fdf0d5", MOTIFS.anchor),
+        cereal: "Malta de cebada clara y maíz.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Elaborada con agua de la costa de Mazatlán; filtración brillante.",
+        distinctive: "Sabor a grano fresco, efervescencia vivaz y sutil lúpulo continental con final limpio.",
+        history: "Fundada en 1900 por tres alemanes en Mazatlán. En los años 70 surfistas californianos la cruzaban en camionetas VW a EE. UU., desatando su fama internacional.",
+        abv: "4.5%"
+      },
+      {
+        id: "heineken",
+        name: "Heineken Original",
+        origin: "Ámsterdam, Países Bajos",
+        family: "Lager",
+        style: "International Pale Lager",
+        label_img: generateVintageSvg("Heineken", "Amsterdam 1873", "#0f3e23", "#eab308", "#ef4444", MOTIFS.heineken),
+        cereal: "100% Malta de cebada pura (sin adjuntos de maíz ni arroz).",
+        yeast: "Saccharomyces pastorianus cepa exclusiva 'Heineken A-Yeast'.",
+        process: "Fermentación en tanques horizontales para reducir la presión hidrostática sobre la levadura.",
+        distinctive: "La A-Yeast y los tanques horizontales producen un toque frutal muy sutil (manzana verde) y notas de malta pura 100%.",
+        history: "En 1886 el Dr. H. Elion, discípulo de Louis Pasteur, aisló la cepa A-Yeast en los laboratorios de Heineken.",
+        abv: "5.0%"
+      },
+      {
+        id: "indio",
+        name: "Indio",
+        origin: "Monterrey, Nuevo León, México",
+        family: "Lager",
+        style: "Mexican Vienna / Amber Lager",
+        label_img: generateVintageSvg("Indio", "Cerveza Cuauhtémoc 1893", "#2e1e12", "#ca8a04", "#fde68a", MOTIFS.indio),
+        cereal: "Malta caramelo, malta clara de cebada y maíz cervecero.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Fermentación baja con azúcares caramelizados.",
+        distinctive: "Color ámbar cobrizo, perfil maltoso ligero, bajo amargor y cuerpo dócil para acompañar comidas picantes.",
+        history: "Salió en 1893 como 'Cerveza Cuauhtémoc'. En las cantinas la gente pedía 'dame la del indio', lo que llevó a rebautizar la marca oficialmente como 'Indio'.",
+        abv: "4.1% - 4.5%"
+      },
+      {
+        id: "noche-buena",
+        name: "Noche Buena",
+        origin: "Orizaba, Veracruz, México",
+        family: "Lager",
+        style: "Winter Bock / Festive Lager",
+        label_img: generateVintageSvg("Noche Buena", "Bock Invernal 1924", "#4a1010", "#d4af37", "#fef3c7", MOTIFS.xmas),
+        cereal: "(Antes 1990): 100% Malta (Múnich, Viena, Caramelo oscura). (Hoy): Malta base reducida, jarabe de alta fructosa/maíz y extractos de color.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "(Antes): Meses de guarda en frío en Orizaba; (Hoy): Ciclo industrial acelerado con High-Gravity Brewing.",
+        distinctive: "(Antes): Denso cuerpo licoroso a pan dulce, ciruela pasa, 6.0% ABV; (Hoy): Perfil más ligero, dulce directo, 5.3% ABV.",
+        history: "Creada en 1924 por cerveceros alemanes de Cervecería Moctezuma como regalo navideño exclusivo. En los 90s y tras la compra por Heineken (2010), se masificó aligerando su cuerpo y reduciendo tiempos de guarda.",
+        abv: "5.3% (antes ~6.0%)"
+      },
+      {
+        id: "carta-blanca",
+        name: "Carta Blanca",
+        origin: "Monterrey, Nuevo León, México",
+        family: "Lager",
+        style: "Classic American Adjunct Lager",
+        label_img: generateVintageSvg("Carta Blanca", "Cuauhtémoc 1890", "#5c330a", "#fef08a", "#fff", MOTIFS.carta),
+        cereal: "Malta de cebada de dos carreras y maíz norteño.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Fermentación tradicional de paila fría.",
+        distinctive: "Sabor clásico a cereal crujiente, amargor sutil y carbonatación refrescante.",
+        history: "Nacida en 1890, fue la cerveza fundadora de Cervecería Cuauhtémoc (FEMSA). Su nombre viene del reconocimiento otorgado por la Casa Real Española. Pionera en corcholata metálica y caguama.",
+        abv: "4.5%"
+      },
+      {
+        id: "tiburon-mako",
+        name: "Línea Tiburón: Mako",
+        origin: "Xalapa, Veracruz, México",
+        family: "Ale",
+        style: "American Pale Ale (Artesanal)",
+        label_img: generateVintageSvg("Tiburón Mako", "Pale Ale Xalapa", "#0a2540", "#38bdf8", "#bae6fd", MOTIFS.shark),
+        cereal: "Malta base Pale Ale (Maris Otter / 2-Row) y malta Crystal 60L.",
+        yeast: "Saccharomyces cerevisiae (US-05 / American Ale).",
+        process: "Infusión simple con agua de manantial del Cofre de Perote y Dry Hopping en frío.",
+        distinctive: "Aroma cítrico a toronja, naranja y resina de pino (lúpulos Cascade/Centennial) con soporte limpio de malta (35-45 IBU).",
+        history: "Homenaje a la fauna marina del Golfo de Veracruz y la vibrante escena cervecera independiente de la región Xalapa-Coatepec.",
+        abv: "5.5% - 6.0%"
+      },
+      {
+        id: "tiburon-nodriza",
+        name: "Línea Tiburón: Nodriza",
+        origin: "Xalapa, Veracruz, México",
+        family: "Ale",
+        style: "Oatmeal Stout / Robust Porter",
+        label_img: generateVintageSvg("Tiburón Nodriza", "Oatmeal Stout Xalapa", "#1a120b", "#d97706", "#fde68a", MOTIFS.shark),
+        cereal: "Malta base, malta chocolate, cebada tostada, malta caramelo y 10-15% hojuelas de avena cruda.",
+        yeast: "Saccharomyces cerevisiae (cepa inglesa S-04).",
+        process: "Maceración alta (68 °C) para cuerpo espeso; acondicionamiento en frío sin filtrar.",
+        distinctive: "Textura sedosa en lengua aportada por la avena; notas a café espresso veracruzano y chocolate amargo de metate.",
+        history: "Inspirada en la histórica tradición cafetalera de Coatepec y Xalapa, integrando notas de tueste profundo en el perfil cervecero.",
+        abv: "6.0% - 6.8%"
+      },
+      {
+        id: "tiburon-martillo",
+        name: "Línea Tiburón: Martillo",
+        origin: "Xalapa, Veracruz, México",
+        family: "Ale",
+        style: "India Pale Ale - IPA",
+        label_img: generateVintageSvg("Tiburón Martillo", "Double IPA Xalapa", "#111827", "#10b981", "#6ee7b7", MOTIFS.shark),
+        cereal: "Malta Pale Ale, malta de trigo (para retención de espuma) y malta dextrina.",
+        yeast: "Saccharomyces cerevisiae (cepa IPA Vermont/American).",
+        process: "Maceración atenuativa y doble lupulado en frío (Double Dry Hopping / DDH).",
+        distinctive: "Amargor marcado (55-70 IBU) y explosión tropical a maracuyá, mango y piña gracias a lúpulos Citra, Mosaic y Simcoe.",
+        history: "Diseñada para los entusiastas del lúpulo en Veracruz, inspirada en la potencia del tiburón martillo en el mar veracruzano.",
+        abv: "6.8% - 7.5%"
+      }
+    ];
+
+    // ESTADO LOCAL DE LA APLICACIÓN
+    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v2";
+    let beersData = [];
+    let currentView = "cards"; // "cards" | "table"
+    let currentSort = { col: "name", asc: true };
+    let tempUploadedImage = null;
+
+    // INICIALIZACIÓN
+    function init() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        try {
+          beersData = JSON.parse(stored);
+        } catch (e) {
+          beersData = [...INITIAL_BEERS];
+        }
+      } else {
+        beersData = [...INITIAL_BEERS];
+        saveToStorage();
+      }
+
+      setupEvents();
+      renderApp();
+    }
+
+    function saveToStorage() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(beersData));
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.classList.add("show");
+      setTimeout(() => t.classList.remove("show"), 2800);
+    }
+
+    // RENDERIZADO PRINCIPAL
+    function renderApp() {
+      const search = document.getElementById("search-input").value.toLowerCase().trim();
+      const familyFilter = document.getElementById("filter-family").value;
+      const countryFilter = document.getElementById("filter-country").value;
+
+      // Filtrado
+      let filtered = beersData.filter(b => {
+        const matchesSearch = !search || 
+          (b.name && b.name.toLowerCase().includes(search)) ||
+          (b.origin && b.origin.toLowerCase().includes(search)) ||
+          (b.style && b.style.toLowerCase().includes(search)) ||
+          (b.cereal && b.cereal.toLowerCase().includes(search)) ||
+          (b.yeast && b.yeast.toLowerCase().includes(search)) ||
+          (b.distinctive && b.distinctive.toLowerCase().includes(search)) ||
+          (b.history && b.history.toLowerCase().includes(search));
+
+        const matchesFamily = (familyFilter === "all") || (b.family === familyFilter);
+        
+        let matchesCountry = true;
+        if (countryFilter !== "all") {
+          matchesCountry = b.origin && b.origin.toLowerCase().includes(countryFilter.toLowerCase());
+        }
+
+        return matchesSearch && matchesFamily && matchesCountry;
+      });
+
+      // Ordenamiento
+      filtered.sort((a, b) => {
+        let valA = (a[currentSort.col] || "").toString().toLowerCase();
+        let valB = (b[currentSort.col] || "").toString().toLowerCase();
+        if (currentSort.col === "abv") {
+          valA = parseFloat(valA) || 0;
+          valB = parseFloat(valB) || 0;
+        }
+        if (valA < valB) return currentSort.asc ? -1 : 1;
+        if (valA > valB) return currentSort.asc ? 1 : -1;
+        return 0;
+      });
+
+      // Actualizar stats
+      document.getElementById("stats-visible").textContent = filtered.length;
+      document.getElementById("stats-total").textContent = beersData.length;
+
+      if (currentView === "cards") {
+        renderCards(filtered);
+      } else {
+        renderTable(filtered);
+      }
+    }
+
+    function getFamilyBadgeClass(family) {
+      if (family === "Lager") return "badge-lager";
+      if (family === "Ale") return "badge-ale";
+      if (family.includes("Espontánea") || family.includes("Sour")) return "badge-sour";
+      return "badge-hybrid";
+    }
+
+    function getBeerLabelImg(b) {
+      if (b.label_img && b.label_img.trim().length > 0) return b.label_img;
+      return generateVintageSvg(b.name, b.style, "#2b2015", "#c29b38", "#fde047", MOTIFS.dunkel);
+    }
+
+    // RENDER VISTA TARJETAS
+    function renderCards(list) {
+      const container = document.getElementById("cards-container");
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-icon">🍺</div>
+            <h3>No se encontraron cervezas</h3>
+            <p>Prueba con otros términos de búsqueda o agrega una nueva ficha a la colección.</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(b => {
+        const labelSrc = getBeerLabelImg(b);
+        return `
+        <div class="beer-card" data-id="${b.id}">
+          <div>
+            <div class="card-top-row">
+              <div class="card-meta-left">
+                <h3 class="beer-title">${b.name}</h3>
+                <div class="beer-origin">📍 ${b.origin}</div>
+                <div class="card-badges-row">
+                  <span class="badge-family ${getFamilyBadgeClass(b.family)}">${b.family}</span>
+                  <span class="tag-style">🍺 ${b.style}</span>
+                </div>
+              </div>
+
+              <!-- MINIATURA VINTAGE -->
+              <div class="vintage-label-wrapper" onclick="openLightbox('${b.id}')" title="Ver etiqueta en alta resolución">
+                <img src="${labelSrc}" alt="${b.name}" class="vintage-label-img">
+                <span class="label-zoom-tag">🔍</span>
+              </div>
+            </div>
+
+            <div class="card-specs">
+              <div class="spec-item">
+                <span class="spec-label">🌾 Cereal:</span>
+                <span class="spec-val">${b.cereal}</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">🧫 Levadura:</span>
+                <span class="spec-val">${b.yeast || 'N/D'}</span>
+              </div>
+              ${b.process ? `
+              <div class="spec-item">
+                <span class="spec-label">⚙️ Proceso:</span>
+                <span class="spec-val">${b.process}</span>
+              </div>` : ''}
+              <div class="spec-item">
+                <span class="spec-label">✨ Receta:</span>
+                <span class="spec-val">${b.distinctive}</span>
+              </div>
+            </div>
+
+            ${b.history ? `
+            <div class="curiosity-box">
+              <strong>📜 Dato curioso:</strong> ${b.history}
+            </div>` : ''}
+          </div>
+
+          <div class="card-footer">
+            <span class="card-abv">ABV: ${b.abv || 'N/D'}</span>
+            <div class="card-actions">
+              <button class="btn-icon" onclick="editBeer('${b.id}')" title="Editar Ficha">✏️</button>
+              <button class="btn-icon delete" onclick="deleteBeer('${b.id}')" title="Eliminar Ficha">🗑️</button>
+            </div>
+          </div>
+        </div>
+      `;}).join("");
+    }
+
+    // RENDER VISTA TABLA SHEETS
+    function renderTable(list) {
+      const tbody = document.getElementById("table-body");
+      if (list.length === 0) {
+        tbody.innerHTML = `<tr><td colspan="12" style="text-align:center; padding:2rem;">No se encontraron resultados</td></tr>`;
+        return;
+      }
+
+      tbody.innerHTML = list.map(b => {
+        const labelSrc = getBeerLabelImg(b);
+        return `
+        <tr>
+          <td style="text-align:center;">
+            <img src="${labelSrc}" alt="${b.name}" class="table-label-thumb" onclick="openLightbox('${b.id}')" title="Ver etiqueta">
+          </td>
+          <td><strong>${b.name}</strong></td>
+          <td>${b.origin}</td>
+          <td>${b.style}</td>
+          <td><span class="badge-family ${getFamilyBadgeClass(b.family)}">${b.family}</span></td>
+          <td style="max-width:200px; font-size:0.8rem;">${b.cereal}</td>
+          <td style="max-width:140px; font-size:0.8rem;">${b.yeast || 'N/D'}</td>
+          <td style="max-width:180px; font-size:0.8rem;">${b.process || 'N/D'}</td>
+          <td style="max-width:200px; font-size:0.8rem;">${b.distinctive}</td>
+          <td style="max-width:220px; font-size:0.8rem;">${b.history || 'N/D'}</td>
+          <td><strong>${b.abv || 'N/D'}</strong></td>
+          <td style="white-space:nowrap;">
+            <button class="btn-icon" onclick="editBeer('${b.id}')" title="Editar">✏️</button>
+            <button class="btn-icon delete" onclick="deleteBeer('${b.id}')" title="Eliminar">🗑️</button>
+          </td>
+        </tr>
+      `;}).join("");
+    }
+
+    // ABRIR LIGHTBOX
+    window.openLightbox = function(id) {
+      const b = beersData.find(x => x.id === id);
+      if (!b) return;
+
+      document.getElementById("lightbox-img-el").src = getBeerLabelImg(b);
+      document.getElementById("lightbox-title-el").textContent = b.name;
+      document.getElementById("lightbox-sub-el").textContent = `${b.style} • ${b.origin} (${b.abv || 'N/D'})`;
+      document.getElementById("lightbox-history-el").innerHTML = `<strong>Dato histórico / Receta:</strong> ${b.history || b.distinctive || 'Sin información adicional.'}`;
+
+      document.getElementById("modal-lightbox").classList.add("active");
+    };
+
+    function closeLightbox() {
+      document.getElementById("modal-lightbox").classList.remove("active");
+    }
+
+    // EVENTOS Y CONTROLES
+    function setupEvents() {
+      // Búsqueda en vivo
+      document.getElementById("search-input").addEventListener("input", renderApp);
+      document.getElementById("filter-family").addEventListener("change", renderApp);
+      document.getElementById("filter-country").addEventListener("change", renderApp);
+
+      // Lightbox cerrar
+      document.getElementById("btn-close-lightbox").addEventListener("click", closeLightbox);
+      document.getElementById("btn-close-lightbox-btn").addEventListener("click", closeLightbox);
+      document.getElementById("modal-lightbox").addEventListener("click", (e) => {
+        if (e.target.id === "modal-lightbox") closeLightbox();
+      });
+
+      // Cambio de vista
+      document.getElementById("btn-view-cards").addEventListener("click", () => {
+        currentView = "cards";
+        document.getElementById("btn-view-cards").classList.add("active");
+        document.getElementById("btn-view-table").classList.remove("active");
+        document.getElementById("cards-container").style.display = "grid";
+        document.getElementById("table-wrapper").style.display = "none";
+        renderApp();
+      });
+
+      document.getElementById("btn-view-table").addEventListener("click", () => {
+        currentView = "table";
+        document.getElementById("btn-view-table").classList.add("active");
+        document.getElementById("btn-view-cards").classList.remove("active");
+        document.getElementById("cards-container").style.display = "none";
+        document.getElementById("table-wrapper").style.display = "block";
+        renderApp();
+      });
+
+      // Ordenamiento en tabla
+      document.querySelectorAll(".sheets-table th[data-sort]").forEach(th => {
+        th.addEventListener("click", () => {
+          const col = th.getAttribute("data-sort");
+          if (currentSort.col === col) {
+            currentSort.asc = !currentSort.asc;
+          } else {
+            currentSort.col = col;
+            currentSort.asc = true;
+          }
+          renderApp();
+        });
+      });
+
+      // Manejo de archivo subido en formulario
+      document.getElementById("form-label-file").addEventListener("change", (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = (evt) => {
+            tempUploadedImage = evt.target.result;
+            showToast("✓ Imagen cargada para previsualización");
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+
+      // Abrir modal agregar
+      document.getElementById("btn-open-add").addEventListener("click", () => {
+        document.getElementById("modal-title-text").textContent = "Nueva Ficha de Cerveza";
+        document.getElementById("beer-form").reset();
+        document.getElementById("form-id").value = "";
+        tempUploadedImage = null;
+        document.getElementById("modal-form").classList.add("active");
+      });
+
+      // Cerrar modal
+      document.getElementById("btn-close-modal").addEventListener("click", closeModal);
+      document.getElementById("btn-cancel-modal").addEventListener("click", closeModal);
+
+      // Guardar formulario
+      document.getElementById("beer-form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const id = document.getElementById("form-id").value || ("beer_" + Date.now());
+        const labelUrl = document.getElementById("form-label-url").value.trim();
+        
+        let finalLabel = tempUploadedImage || (labelUrl.length > 0 ? labelUrl : null);
+
+        const beerObj = {
+          id: id,
+          name: document.getElementById("form-name").value.trim(),
+          origin: document.getElementById("form-origin").value.trim(),
+          family: document.getElementById("form-family").value,
+          style: document.getElementById("form-style").value.trim(),
+          abv: document.getElementById("form-abv").value.trim(),
+          yeast: document.getElementById("form-yeast").value.trim(),
+          cereal: document.getElementById("form-cereal").value.trim(),
+          process: document.getElementById("form-process").value.trim(),
+          distinctive: document.getElementById("form-distinctive").value.trim(),
+          history: document.getElementById("form-history").value.trim(),
+          label_img: finalLabel
+        };
+
+        const existingIdx = beersData.findIndex(b => b.id === id);
+        if (existingIdx >= 0) {
+          // Conservar imagen anterior si no se puso una nueva
+          if (!beerObj.label_img) {
+            beerObj.label_img = beersData[existingIdx].label_img;
+          }
+          beersData[existingIdx] = beerObj;
+          showToast("✓ Ficha actualizada con éxito");
+        } else {
+          beersData.unshift(beerObj);
+          showToast("✓ Nueva cerveza agregada al catálogo");
+        }
+
+        saveToStorage();
+        closeModal();
+        renderApp();
+      });
+
+      // Exportar CSV (Google Sheets)
+      document.getElementById("btn-export-csv").addEventListener("click", exportCSV);
+
+      // Exportar JSON
+      document.getElementById("btn-export-json").addEventListener("click", exportJSON);
+
+      // Importar Trigger
+      document.getElementById("btn-import-trigger").addEventListener("click", () => {
+        document.getElementById("file-importer").click();
+      });
+      document.getElementById("file-importer").addEventListener("change", handleFileImport);
+
+      // Restaurar iniciales
+      document.getElementById("btn-reset-default").addEventListener("click", () => {
+        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 19 fichas y etiquetas originales?")) {
+          beersData = [...INITIAL_BEERS];
+          saveToStorage();
+          renderApp();
+          showToast("✓ Colección restaurada con etiquetas vintage");
+        }
+      });
+    }
+
+    function closeModal() {
+      document.getElementById("modal-form").classList.remove("active");
+    }
+
+    // EDITAR FICHA
+    window.editBeer = function(id) {
+      const b = beersData.find(x => x.id === id);
+      if (!b) return;
+
+      document.getElementById("modal-title-text").textContent = "Editar Ficha de Cerveza";
+      document.getElementById("form-id").value = b.id;
+      document.getElementById("form-name").value = b.name || "";
+      document.getElementById("form-origin").value = b.origin || "";
+      document.getElementById("form-family").value = b.family || "Lager";
+      document.getElementById("form-style").value = b.style || "";
+      document.getElementById("form-abv").value = b.abv || "";
+      document.getElementById("form-yeast").value = b.yeast || "";
+      document.getElementById("form-cereal").value = b.cereal || "";
+      document.getElementById("form-process").value = b.process || "";
+      document.getElementById("form-distinctive").value = b.distinctive || "";
+      document.getElementById("form-history").value = b.history || "";
+      document.getElementById("form-label-url").value = (b.label_img && !b.label_img.startsWith("data:")) ? b.label_img : "";
+      tempUploadedImage = null;
+
+      document.getElementById("modal-form").classList.add("active");
+    };
+
+    // ELIMINAR FICHA
+    window.deleteBeer = function(id) {
+      const b = beersData.find(x => x.id === id);
+      if (!b) return;
+      if (confirm(`¿Estás seguro de eliminar la ficha de "${b.name}"?`)) {
+        beersData = beersData.filter(x => x.id !== id);
+        saveToStorage();
+        renderApp();
+        showToast("✓ Ficha eliminada");
+      }
+    };
+
+    // EXPORTAR CSV
+    function exportCSV() {
+      const headers = ["Nombre", "Origen", "Estilo", "Familia", "Cereal / Granos", "Levadura", "Proceso y Fermentacion", "Distintivo de la Receta", "Dato Historico / Curioso", "ABV Aprox"];
+      const rows = beersData.map(b => [
+        `"${(b.name || '').replace(/"/g, '""')}"`,
+        `"${(b.origin || '').replace(/"/g, '""')}"`,
+        `"${(b.style || '').replace(/"/g, '""')}"`,
+        `"${(b.family || '').replace(/"/g, '""')}"`,
+        `"${(b.cereal || '').replace(/"/g, '""')}"`,
+        `"${(b.yeast || '').replace(/"/g, '""')}"`,
+        `"${(b.process || '').replace(/"/g, '""')}"`,
+        `"${(b.distinctive || '').replace(/"/g, '""')}"`,
+        `"${(b.history || '').replace(/"/g, '""')}"`,
+        `"${(b.abv || '').replace(/"/g, '""')}"`
+      ]);
+
+      const csvContent = "\uFEFF" + [headers.join(","), ...rows.map(r => r.join(","))].join("\r\n");
+      downloadBlob(csvContent, "fichas_cervezas_catalogo.csv", "text/csv;charset=utf-8;");
+      showToast("✓ Archivo CSV descargado listo para Google Sheets");
+    }
+
+    // EXPORTAR JSON
+    function exportJSON() {
+      const jsonContent = JSON.stringify(beersData, null, 2);
+      downloadBlob(jsonContent, "fichas_cervezas_catalogo.json", "application/json");
+      showToast("✓ Archivo JSON respaldado");
+    }
+
+    function downloadBlob(content, filename, mimeType) {
+      const blob = new Blob([content], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // IMPORTAR ARCHIVO
+    function handleFileImport(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const text = event.target.result;
+        try {
+          if (file.name.endsWith(".json")) {
+            const imported = JSON.parse(text);
+            if (Array.isArray(imported)) {
+              beersData = imported;
+              saveToStorage();
+              renderApp();
+              showToast(`✓ ${imported.length} fichas importadas desde JSON`);
+            }
+          } else {
+            showToast("✓ Para importar CSV use la estructura estándar.");
+          }
+        } catch (err) {
+          alert("Error al procesar el archivo: " + err.message);
+        }
+      };
+      reader.readAsText(file);
+      e.target.value = "";
+    }
+
+    // Arrancar aplicación
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>

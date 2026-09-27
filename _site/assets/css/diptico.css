@@ -1,0 +1,1023 @@
+/* ==========================================================================
+   Díptico Editorial: Taxonomía de la Cerveza
+   Estructura en Quarto (Fences & Markdown Puro) + CSS Grid / Interactivo / Print
+   ========================================================================== */
+
+:root {
+  --color-paper: #ffffff;
+  --color-bg: #e6ebf1;
+  --color-ink: #0f172a;
+  --color-body: #334155;
+  --color-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  /* Familias cerveceras */
+  --lager-primary: #2b6cb0;
+  --lager-light: #f0f6fc;
+  --lager-border: #bee3f8;
+  --lager-dark: #1a365d;
+
+  --ale-primary: #c05621;
+  --ale-light: #fffcf5;
+  --ale-border: #fbd38d;
+  --ale-dark: #7b341e;
+
+  --wild-primary: #553c9a;
+  --wild-light: #faf5ff;
+  --wild-border: #e9d8fd;
+  --wild-dark: #44337a;
+
+  /* Cereales & Botánica */
+  --grain-barley: #b7791f;
+  --grain-wheat: #975a16;
+  --grain-raw: #744210;
+
+  /* Doblez y márgenes */
+  --fold-gutter: 2.4rem;
+  --fold-line: #cbd5e1;
+
+  --font-serif: "Georgia", "Cambria", "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  background-color: var(--color-bg);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  line-height: 1.4;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ocultar el encabezado por defecto de Quarto para usar el diseño del díptico */
+#title-block-header,
+.quarto-title-banner {
+  display: none !important;
+}
+
+p {
+  margin: 0 0 0.4rem 0;
+}
+
+a {
+  color: var(--ale-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--ale-dark);
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Barra de Herramientas Interactiva (Pantalla)
+   ========================================================================== */
+.interactive-toolbar {
+  max-width: 1280px;
+  margin: 0 auto 1.5rem auto;
+  background: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.8rem;
+  border: 1px solid var(--color-border);
+}
+
+.toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.toolbar-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin-right: 0.3rem;
+}
+
+.toolbar-btn {
+  background: #f8fafc;
+  border: 1px solid var(--color-border);
+  color: var(--color-body);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.toolbar-btn:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: var(--color-ink);
+}
+
+.toolbar-btn.active {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: #ffffff;
+}
+
+.toolbar-btn.btn-print {
+  background: #2b6cb0;
+  border-color: #2b6cb0;
+  color: #ffffff;
+}
+
+.toolbar-btn.btn-print:hover {
+  background: #1a365d;
+  border-color: #1a365d;
+}
+
+/* ==========================================================================
+   Contenedor Principal y Hojas (Sheets)
+   ========================================================================== */
+.diptico-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.sheet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 820px;
+  background-color: var(--color-paper);
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Indicador de pliegue central */
+.sheet::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    to bottom,
+    rgba(203, 213, 225, 0.2),
+    rgba(148, 163, 184, 0.5) 15%,
+    rgba(148, 163, 184, 0.5) 85%,
+    rgba(203, 213, 225, 0.2)
+  );
+  box-shadow: -1px 0 3px rgba(0, 0, 0, 0.04), 1px 0 3px rgba(0, 0, 0, 0.04);
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ==========================================================================
+   Estructura de Páginas / Carillas
+   ========================================================================== */
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sheet .page:first-child {
+  padding: 2rem var(--fold-gutter) 2rem 2.2rem;
+  border-right: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.sheet .page:last-child {
+  padding: 2rem 2.2rem 2rem var(--fold-gutter);
+}
+
+/* ==========================================================================
+   Elementos Editoriales y Tipografía
+   ========================================================================== */
+.tag {
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--color-muted);
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+
+.page-header {
+  margin-bottom: 0.9rem;
+  border-bottom: 2px solid var(--color-ink);
+  padding-bottom: 0.45rem;
+}
+
+.page-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.page-header p {
+  font-size: 0.84rem;
+  color: #475569;
+  margin: 0;
+}
+
+/* ==========================================================================
+   HOJA 1: EXTERIOR (Contraportada y Portada)
+   ========================================================================== */
+.sheet-exterior {
+  background: #faf8f5;
+}
+
+.back-cover {
+  background: #fdfcf9;
+}
+
+.back-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.88rem;
+  color: var(--color-body);
+  line-height: 1.45;
+}
+
+/* Ficha Botánico-Técnica de Cereales */
+.grain-technical-card {
+  background: #ffffff;
+  border: 1px solid #e9dfcf;
+  border-left: 4px solid var(--grain-barley);
+  border-radius: 6px;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.grain-technical-card h4 {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  color: var(--grain-raw);
+  margin: 0 0 0.35rem 0;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.grain-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.grain-item {
+  background: #faf7f2;
+  border: 1px solid #ebdccb;
+  border-radius: 4px;
+  padding: 0.45rem 0.55rem;
+}
+
+.grain-item strong {
+  color: var(--grain-raw);
+  display: block;
+  font-size: 0.76rem;
+  margin-bottom: 0.15rem;
+}
+
+.grain-item p {
+  font-size: 0.72rem;
+  color: #574635;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.quote-box {
+  border-left: 3px solid var(--ale-primary);
+  background: rgba(192, 86, 33, 0.05);
+  padding: 0.65rem 0.85rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.88rem;
+  color: #4a2810;
+  border-radius: 0 6px 6px 0;
+}
+
+.subheading {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  color: var(--color-ink);
+  margin: 0.3rem 0 0.15rem 0;
+}
+
+.back-content ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+}
+
+.back-content li {
+  margin-bottom: 0.25rem;
+}
+
+.page-footer {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 0.5rem;
+  margin-top: 0.6rem;
+  text-align: center;
+}
+
+/* Portada Principal */
+.front-cover {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.cover-art-wrapper {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  border: 1px solid #ebdccb;
+  background: #fdfbf7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.cover-image {
+  width: 100%;
+  height: 480px;
+  max-height: 56vh;
+  object-fit: contain;
+  display: block;
+}
+
+.cover-caption {
+  font-size: 0.74rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-top: 0.4rem;
+}
+
+.cover-title-group {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 2px solid var(--color-ink);
+}
+
+.cover-title-group h1 {
+  font-family: var(--font-serif);
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0.15rem 0 0.4rem 0;
+  color: var(--color-ink);
+}
+
+.cover-title-group h3 {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #475569;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* ==========================================================================
+   HOJA 2: INTERIOR (Panel A y Panel B)
+   ========================================================================== */
+.sheet-interior .panel-a {
+  background: #ffffff;
+}
+
+.sheet-interior .panel-b {
+  background: #fafbfc;
+}
+
+/* Tarjetas de familias (Panel A) */
+.family-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  flex-grow: 1;
+}
+
+.family-card {
+  border-radius: 6px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid transparent;
+  border-left-width: 4px;
+  transition: all 0.25s ease;
+}
+
+.family-card.lager {
+  background-color: var(--lager-light);
+  border-color: var(--lager-border);
+  border-left-color: var(--lager-primary);
+}
+
+.family-card.ale {
+  background-color: var(--ale-light);
+  border-color: var(--ale-border);
+  border-left-color: var(--ale-primary);
+}
+
+.family-card.wild {
+  background-color: var(--wild-light);
+  border-color: var(--wild-border);
+  border-left-color: var(--wild-primary);
+}
+
+.family-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.15rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.family-card.lager h3 { color: var(--lager-dark); }
+.family-card.ale h3 { color: var(--ale-dark); }
+.family-card.wild h3 { color: var(--wild-dark); }
+
+.badge {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.12rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.family-card.lager .badge { color: var(--lager-primary); }
+.family-card.ale .badge { color: var(--ale-primary); }
+.family-card.wild .badge { color: var(--wild-primary); }
+
+.meta {
+  font-size: 0.74rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.family-card p:not(.meta) {
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--color-body);
+  margin: 0;
+}
+
+/* Tabla comparativa técnica */
+.specs-table-wrapper {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--color-border);
+}
+
+.specs-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.72rem;
+}
+
+.specs-table-wrapper th {
+  text-align: left;
+  padding: 0.2rem 0.35rem;
+  color: var(--color-muted);
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+  text-transform: uppercase;
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+}
+
+.specs-table-wrapper td {
+  padding: 0.25rem 0.35rem;
+  border-bottom: 1px solid #f1f5f9;
+  color: var(--color-body);
+}
+
+/* ==========================================================================
+   Panel B: Ramas de estilos y Cristalería
+   ========================================================================== */
+.branches-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.branch {
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 0.55rem 0.75rem;
+  transition: all 0.25s ease;
+}
+
+.branch-lager { border-top: 3px solid var(--lager-primary); }
+.branch-ale { border-top: 3px solid var(--ale-primary); }
+.branch-wild { border-top: 3px solid var(--wild-primary); }
+
+.branch h4 {
+  margin: 0 0 0.35rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.branch-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.branch-lager .branch-title { color: var(--lager-primary); }
+.branch-ale .branch-title { color: var(--ale-primary); }
+.branch-wild .branch-title { color: var(--wild-primary); }
+
+/* Rejilla de chips de estilos */
+.styles-grid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.3rem;
+}
+
+.styles-grid li {
+  padding: 0.3rem 0.45rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  color: var(--color-muted);
+  line-height: 1.25;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.styles-grid li:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.styles-grid li strong {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--color-ink);
+  margin-bottom: 0.05rem;
+}
+
+.grain-badge {
+  font-size: 0.6rem;
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+  display: inline-block;
+  margin-left: 0.2rem;
+  font-weight: 600;
+}
+
+/* Cristalería */
+.glassware-card {
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.55rem 0.75rem;
+  margin-top: auto;
+}
+
+.glassware-heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin: 0 0 0.35rem 0;
+}
+
+.glassware-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.glass-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  transition: all 0.2s ease;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+.glass-icon {
+  width: 22px;
+  height: 22px;
+  padding: 5px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  box-sizing: content-box;
+  transition: all 0.2s ease;
+}
+
+.glass-item strong {
+  font-size: 0.66rem;
+  color: var(--color-ink);
+  line-height: 1.15;
+}
+
+.glass-sub {
+  font-size: 0.6rem;
+  color: var(--color-muted);
+}
+
+/* Estados Interactivos JS */
+.dimmed {
+  opacity: 0.25;
+  filter: grayscale(80%);
+}
+
+.dimmed-subtle {
+  opacity: 0.4;
+}
+
+.glass-item.highlighted {
+  background: #eff6ff;
+  border-radius: 6px;
+}
+
+.glass-item.highlighted .glass-icon {
+  background: #2b6cb0;
+  filter: invert(1);
+  transform: scale(1.1);
+}
+
+/* Modo Lectura Continua */
+.reading-mode {
+  max-width: 900px;
+}
+
+.reading-mode .sheet {
+  grid-template-columns: 1fr;
+  min-height: auto;
+}
+
+.reading-mode .sheet::after {
+  display: none;
+}
+
+.reading-mode .sheet .page:first-child,
+.reading-mode .sheet .page:last-child {
+  padding: 1.5rem 2rem;
+  border-right: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* ==========================================================================
+   Reglas de Impresión (@media print)
+   Imprime exactamente 2 páginas Letter Landscape sin desbordes
+   ========================================================================== */
+@media print {
+  @page {
+    size: letter landscape;
+    margin: 0;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html,
+  body {
+    width: 100% !important;
+    height: 100% !important;
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+    font-size: 11.8px !important;
+    line-height: 1.38 !important;
+  }
+
+  .interactive-toolbar {
+    display: none !important;
+  }
+
+  .diptico-container {
+    gap: 0 !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+
+  .sheet {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-height: 100vh !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    overflow: hidden !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .sheet:first-child {
+    page-break-after: always !important;
+    break-after: page !important;
+  }
+
+  .sheet:last-child {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  .sheet::after {
+    border-left: 1px dashed var(--fold-line) !important;
+    background: none !important;
+    box-shadow: none !important;
+    opacity: 0.8 !important;
+  }
+
+  .page {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  .sheet .page:first-child {
+    padding: 1.6rem 2.8rem 1.6rem 1.8rem !important;
+  }
+
+  .sheet .page:last-child {
+    padding: 1.6rem 1.8rem 1.6rem 2.8rem !important;
+  }
+
+  /* Portada en impresión: Ilustración de página completa, centrada y de máximo impacto */
+  .sheet-exterior .front-cover {
+    padding: 0.8rem 1.4rem 0.8rem 1.8rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    display: flex !important;
+    height: 100vh !important;
+    background: #faf8f5 !important;
+  }
+
+  .sheet-exterior .front-cover .cover-art-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 95vh !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .sheet-exterior .front-cover .cover-image {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 94vh !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    border-radius: 6px !important;
+    display: block !important;
+  }
+
+  .sheet-exterior .front-cover .cover-caption,
+  .sheet-exterior .front-cover .cover-title-group {
+    display: none !important;
+  }
+
+  .page-header {
+    margin-bottom: 0.65rem !important;
+    padding-bottom: 0.35rem !important;
+  }
+
+  .page-header h2 {
+    font-size: 1.45rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .page-header p {
+    font-size: 0.86rem !important;
+  }
+
+  .back-content {
+    gap: 0.6rem !important;
+    font-size: 0.86rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .grain-technical-card {
+    padding: 0.6rem 0.75rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .grain-technical-card h4 {
+    font-size: 0.88rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .grain-grid {
+    gap: 0.45rem !important;
+    margin-top: 0.25rem !important;
+  }
+
+  .grain-item {
+    padding: 0.4rem 0.5rem !important;
+  }
+
+  .grain-item strong {
+    font-size: 0.78rem !important;
+  }
+
+  .grain-item p {
+    font-size: 0.74rem !important;
+  }
+
+  .quote-box {
+    padding: 0.55rem 0.8rem !important;
+    font-size: 0.86rem !important;
+  }
+
+  .back-content ul {
+    font-size: 0.8rem !important;
+    padding-left: 1.2rem !important;
+  }
+
+  .family-cards {
+    gap: 0.55rem !important;
+  }
+
+  .family-card {
+    padding: 0.6rem 0.8rem !important;
+  }
+
+  .family-card h3 {
+    font-size: 1.05rem !important;
+  }
+
+  .family-card p:not(.meta) {
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+  }
+
+  .specs-table-wrapper {
+    margin-top: 0.6rem !important;
+    padding-top: 0.45rem !important;
+  }
+
+  .specs-table-wrapper table {
+    font-size: 0.78rem !important;
+  }
+
+  .specs-table-wrapper th,
+  .specs-table-wrapper td {
+    padding: 0.25rem 0.35rem !important;
+  }
+
+  .branches-container {
+    gap: 0.5rem !important;
+  }
+
+  .branch {
+    padding: 0.45rem 0.65rem !important;
+  }
+
+  .branch-title {
+    font-size: 0.82rem !important;
+  }
+
+  .styles-grid ul {
+    gap: 0.3rem !important;
+  }
+
+  .styles-grid li {
+    padding: 0.28rem 0.42rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .styles-grid li strong {
+    font-size: 0.76rem !important;
+  }
+
+  .glassware-card {
+    padding: 0.5rem 0.65rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .glassware-heading {
+    font-size: 0.72rem !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .glass-icon {
+    width: 20px !important;
+    height: 20px !important;
+    padding: 4px !important;
+  }
+
+  .glass-item strong {
+    font-size: 0.68rem !important;
+  }
+
+  .glass-sub {
+    font-size: 0.62rem !important;
+  }
+}
+
+/* Responsive Pantallas Pequeñas */
+@media screen and (max-width: 960px) {
+  body {
+    padding: 0.75rem;
+  }
+
+  .interactive-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar-group {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .sheet {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .sheet::after {
+    display: none;
+  }
+
+  .sheet .page:first-child,
+  .sheet .page:last-child {
+    padding: 1.25rem;
+    border-right: none;
+  }
+
+  .cover-image {
+    height: 220px;
+  }
+}

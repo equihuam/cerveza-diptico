@@ -1,0 +1,36 @@
+# Quarto & RStudio
+.quarto/
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Python & PyCharm
+__pycache__/
+*.py[cod]
+.venv/
+env/
+.idea/
+
+# Environment and Secrets (Confidencialidad garantizada)
+.env
+.env.*
+*.secret
+*.key
+*.pem
+*.token
+credentials.json
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Output intermedio / legacy
+_output/
+
+/.quarto/
+**/*.quarto_ipynb
+.Rproj.user
+.httr-oauth
+.quarto
