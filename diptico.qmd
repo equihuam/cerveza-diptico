@@ -29,7 +29,9 @@ format:
 
 ::: {.toolbar-group}
 <button type="button" class="toolbar-btn btn-print" id="btn-print-diptico">🖨️ Imprimir / Guardar en PDF</button>
-<a href="index.html" class="toolbar-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">🌐 Versión Web Interactiva</a>
+<a href="index.html" class="toolbar-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">🌐 Guía Web</a>
+<a href="assets/catalogo.html" class="toolbar-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">📚 Catálogo</a>
+<a href="assets/degustacion.html" class="toolbar-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">📋 Bitácora</a>
 :::
 :::
 

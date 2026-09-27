@@ -1,9 +1,13 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - assets/
+    - data/
   render:
     - index.qmd
     - diptico.qmd
+
 
 website:
   title: "Taxonomía & Cultura Cervecera"

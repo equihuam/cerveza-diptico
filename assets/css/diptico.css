@@ -1240,9 +1240,11 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 0.88rem;
 }
 
 .card-lager .card-header-badge { color: var(--lager-dark); }
@@ -1251,11 +1253,12 @@ a:hover {
 
 .temp-pill {
   background: #f1f5f9;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  padding: 0.25rem 0.6rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 12px;
   color: var(--color-body);
+  white-space: nowrap;
 }
 
 .family-card-web h3 {
@@ -1518,6 +1521,230 @@ a:hover {
   background: #f8fafc;
 }
 
+/* ==========================================================================
+   Sección de Glosario Técnico y de Cata (Mobile-First & Anti-Saturación)
+   ========================================================================== */
+.glossary-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.glossary-search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.glossary-search-input {
+  width: 100%;
+  padding: 0.65rem 1rem 0.65rem 2.4rem;
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #f8fafc;
+  color: var(--color-ink);
+  transition: all 0.2s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.glossary-search-input:focus {
+  background-color: #ffffff;
+  border-color: var(--ale-primary);
+  box-shadow: 0 0 0 3px rgba(192, 86, 33, 0.12);
+}
+
+.glossary-search-icon {
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.glossary-categories-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.glossary-tab-btn {
+  background: #f1f5f9;
+  border: 1px solid transparent;
+  color: var(--color-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.glossary-tab-btn:hover {
+  background: #e2e8f0;
+  color: var(--color-ink);
+}
+
+.glossary-tab-btn.active {
+  background: var(--ale-primary);
+  color: #ffffff;
+  border-color: var(--ale-primary);
+}
+
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Tarjeta Glosario */
+.glossary-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.glossary-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.glossary-card-header {
+  padding: 0.95rem 1.15rem 0.45rem 1.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.6rem;
+}
+
+.glossary-title-group {
+  flex: 1 1 150px;
+  min-width: 0;
+}
+
+.glossary-title {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  color: var(--color-ink);
+  margin: 0 0 0.15rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  word-break: break-word;
+}
+
+.glossary-phonetic {
+  font-size: 0.74rem;
+  color: var(--color-muted);
+  font-style: italic;
+  font-family: var(--font-sans);
+  line-height: 1.25;
+}
+
+.glossary-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.18rem 0.45rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+.tag-materia {
+  background: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #fef08a;
+}
+
+.tag-proceso {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+
+.tag-degustacion {
+  background: #f3e8ff;
+  color: #6b21a8;
+  border: 1px solid #e9d5ff;
+}
+
+.glossary-card-body {
+  padding: 0 1.25rem 1.1rem 1.25rem;
+  font-size: 0.86rem;
+  color: var(--color-body);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.glossary-summary {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: 0.88rem;
+}
+
+.glossary-detail-box {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 0.75rem 0.85rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  border-left: 3px solid var(--grain-barley);
+}
+
+.glossary-detail-box.box-proceso {
+  border-left-color: var(--lager-primary);
+}
+
+.glossary-detail-box.box-degustacion {
+  border-left-color: var(--wild-primary);
+}
+
+.glossary-detail-title {
+  font-weight: 700;
+  color: var(--color-ink);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.glossary-empty-state {
+  display: none;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px dashed var(--color-border);
+  color: var(--color-muted);
+}
+
 /* Media Query para Móviles */
 @media screen and (max-width: 768px) {
   body {
@@ -1544,8 +1771,22 @@ a:hover {
   .cards-grid-3,
   .cards-grid-2,
   .glassware-web-grid,
-  .tools-grid {
+  .tools-grid,
+  .glossary-grid {
     grid-template-columns: 1fr;
   }
+
+  .glossary-controls {
+    padding: 0.75rem;
+  }
+
+  .glossary-card-header {
+    padding: 0.9rem 1rem 0.4rem 1rem;
+  }
+
+  .glossary-card-body {
+    padding: 0 1rem 0.9rem 1rem;
+  }
 }
+
 

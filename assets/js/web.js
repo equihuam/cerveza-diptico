@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const glassCards = document.querySelectorAll('.glass-card-web');
     const sections = document.querySelectorAll('.web-section');
 
-    // Manejo de filtros por categoría
+    // Manejo de filtros generales por categoría
     filterPills.forEach(pill => {
         pill.addEventListener('click', () => {
             filterPills.forEach(p => p.classList.remove('active'));
@@ -51,6 +51,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (cristSec) {
                     cristSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
+            } else if (filterValue === 'glosario') {
+                sections.forEach(sec => sec.style.display = 'block');
+                familyCards.forEach(card => card.style.display = 'flex');
+                const glosarioSec = document.getElementById('sec-glosario');
+                if (glosarioSec) {
+                    glosarioSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             }
         });
     });
@@ -65,4 +72,55 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // =========================================================================
+    // Lógica Interactiva del Glosario (Filtro por Categorías + Búsqueda Rápida)
+    // =========================================================================
+    const glossarySearch = document.getElementById('glossary-search');
+    const glossaryTabBtns = document.querySelectorAll('.glossary-tab-btn');
+    const glossaryCards = document.querySelectorAll('.glossary-card');
+    const glossaryEmptyState = document.getElementById('glossary-empty');
+
+    let currentCategory = 'all';
+    let currentSearchTerm = '';
+
+    function filterGlossary() {
+        let visibleCount = 0;
+
+        glossaryCards.forEach(card => {
+            const cardCat = card.getAttribute('data-glossary-cat') || '';
+            const cardText = card.textContent.toLowerCase();
+
+            const matchesCategory = (currentCategory === 'all' || cardCat === currentCategory);
+            const matchesSearch = currentSearchTerm === '' || cardText.includes(currentSearchTerm);
+
+            if (matchesCategory && matchesSearch) {
+                card.style.display = 'flex';
+                visibleCount++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        if (glossaryEmptyState) {
+            glossaryEmptyState.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+    }
+
+    if (glossarySearch) {
+        glossarySearch.addEventListener('input', (e) => {
+            currentSearchTerm = e.target.value.trim().toLowerCase();
+            filterGlossary();
+        });
+    }
+
+    glossaryTabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            glossaryTabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentCategory = btn.getAttribute('data-tab') || 'all';
+            filterGlossary();
+        });
+    });
 });
+

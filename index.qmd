@@ -35,10 +35,13 @@ Guía Botánica, Microbiológica &amp; Sensorial
 🌾 **Cereales** (*Malteados vs. Crudos*)
 :::
 ::: {.meta-chip}
-🍷 **Cristalería Especializada**
+🍷 [**Cristalería**](#sec-cristaleria)
 :::
 ::: {.meta-chip}
-📋 **Guía BJCP &amp; Cata**
+📚 [**Catálogo de Estilos**](assets/catalogo.html)
+:::
+::: {.meta-chip}
+📋 [**Bitácora de Cata**](assets/degustacion.html)
 :::
 :::
 :::
@@ -56,6 +59,7 @@ Guía Botánica, Microbiológica &amp; Sensorial
 <button type="button" class="filter-pill" data-filter="wild">🍇 Espontánea</button>
 <button type="button" class="filter-pill" data-filter="cereales">🌾 Cereales &amp; Grano</button>
 <button type="button" class="filter-pill" data-filter="cristaleria">🍷 Cristalería</button>
+<button type="button" class="filter-pill" data-filter="glosario">📖 Glosario</button>
 :::
 :::
 
@@ -95,6 +99,7 @@ Las levaduras trabajan lentamente a bajas temperaturas y decantan al fondo. Requ
 
 ::: {.card-styles-list}
 **Estilos Emblemáticos:**
+
 - **Pilsner / Bohemian Pils:** Dorada brillante, amargor floral y especiado ([Saaz]).
 - **Munich Helles:** Rubia pálida, acento en pan blanco y cereal dulce.
 - **Dunkel / Schwarzbier:** Color tostado/negro pero cuerpo ligero y notas a corteza de pan.
@@ -125,6 +130,7 @@ Las levaduras suben a la superficie formando una densa corona de espuma durante 
 
 ::: {.card-styles-list}
 **Estilos Emblemáticos:**
+
 - **Pale Ale / APA:** Ámbar claro, aromas cítricos, resinosos y herbales.
 - **IPA (India Pale Ale):** Explosión lupulada, amargor punzante y notas tropicales.
 - **Cervezas de Trigo (Weissbier / Witbier):** Sedosas, turbias, notas a plátano y clavo.
@@ -156,6 +162,7 @@ El mosto se expone al aire nocturno en piscinas abiertas (*koelschip*) en el val
 
 ::: {.card-styles-list}
 **Estilos Emblemáticos:**
+
 - **Lambic Tradicional:** Plana (sin gas), ácida y rústica directa de barrica.
 - **Gueuze:** Mezcla magistral de lambics de 1, 2 y 3 años con segunda fermentación en botella.
 - **Fruit Lambic (Kriek / Framboise):** Maceración prolongada con cerezas ácidas o frambuesas.
@@ -193,6 +200,7 @@ El grano es el corazón azucarado y proteico de la cerveza. Entender la diferenc
 :::
 
 ::: {.grain-mechanisms}
+
 - **Activación Enzimática:** La germinación despierta las enzimas amilasas ($\alpha$ y $\beta$).
 - **Conversión de Almidón:** Durante la maceración en caliente (64–68 °C), las amilasas rompen las largas cadenas de almidón insoluble y las transforman en **maltosa y azúcares fermentables** para la levadura.
 - **Poder Diastásico:** La malta base proporciona la potencia enzimática necesaria para convertir todo el mosto.
@@ -209,6 +217,7 @@ El grano es el corazón azucarado y proteico de la cerveza. Entender la diferenc
 :::
 
 ::: {.grain-mechanisms}
+
 - **Cero Enzimas Activas:** Al no haber germinado, carece de amilasas propias; **requiere combinarse obligatoriamente con malta base** de alto poder diastásico.
 - **Aporte de Proteínas y Betaglucanos:** Mantiene sus proteínas solubles intactas, lo que confiere la **turbidez característica** y una **textura aterciopelada y cremosa**.
 - **Retención de Espuma:** Indispensable en estilos históricos como la **Witbier belga** (hasta 50% de trigo crudo), **Lambic tradicional** (30–40% de trigo crudo) y las sedosas **Oatmeal Stouts**.
@@ -279,7 +288,393 @@ Cada estilo cervecero exige una geometría específica para regular la temperatu
 :::
 
 
-<!-- SECCIÓN 4: RECURSOS INTERACTIVOS Y DESCARGAS -->
+
+<!-- SECCIÓN 4: GLOSARIO TÉCNICO & SENSORIAL -->
+::: {.web-section id="sec-glosario"}
+::: {.section-header}
+[Terminología Cervecera &amp; Sensorial]{.section-tag}
+
+## Glosario Técnico y de Cata
+
+Conceptos bioquímicos fundamentales, ingredientes clave, procesos de estabilización y descriptores sensoriales no tan comunes para enriquecer la experiencia de degustación.
+:::
+
+::: {.glossary-controls}
+::: {.glossary-search-wrapper}
+<span class="glossary-search-icon">🔍</span>
+<input type="text" id="glossary-search" class="glossary-search-input" placeholder="Buscar término (ej. malta, lúpulo, astringencia, diacetilo...)" aria-label="Buscar en el glosario">
+:::
+
+::: {.glossary-categories-filter}
+<button type="button" class="glossary-tab-btn active" data-tab="all">✨ Todos</button>
+<button type="button" class="glossary-tab-btn" data-tab="materia">🌾 Ingredientes &amp; Mosto</button>
+<button type="button" class="glossary-tab-btn" data-tab="proceso">⚙️ Procesos &amp; Estabilidad</button>
+<button type="button" class="glossary-tab-btn" data-tab="degustacion">👅 Cata &amp; Sensaciones</button>
+:::
+:::
+
+::: {.glossary-grid}
+
+<!-- MALTA -->
+::: {.glossary-card data-glossary-cat="materia"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Malta {.glossary-title}
+[Cereal germinado y tostado • *Malt*]{.glossary-phonetic}
+:::
+[🌾 Ingrediente]{.glossary-tag .tag-materia}
+:::
+::: {.glossary-card-body}
+Granos de cereal (principalmente cebada o trigo) que han sido sometidos a germinación controlada y posterior secado/tostado en horno.
+
+::: {.glossary-detail-box}
+::: {.glossary-detail-title}
+🔬 Usos y Efectos en la Cerveza
+:::
+Aporta las enzimas amilasas ($\alpha$ y $\beta$) que transforman el almidón en azúcares fermentables consumidos por la levadura, y dextrinas que construyen el cuerpo de la bebida.
+:::
+
+::: {.glossary-detail-box}
+::: {.glossary-detail-title}
+👅 Impacto en Sabor y Color
+:::
+Determina el color (escala SRM desde pajizo brillante hasta negro opaco). Según su nivel de tostado, confiere sabores que van desde pan fresco, galleta y cereal dulce, hasta caramelo, toffee, frutos secos, chocolate amargo y café torrefacto.
+:::
+:::
+:::
+
+<!-- MOSTO -->
+::: {.glossary-card data-glossary-cat="materia"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Mosto {.glossary-title}
+[Infusión azucarada no fermentada • *Wort*]{.glossary-phonetic}
+:::
+[🌾 Mosto Base]{.glossary-tag .tag-materia}
+:::
+::: {.glossary-card-body}
+Líquido denso y dulce obtenido tras macerar los granos molidos en agua caliente (64–68 °C) y separar el bagazo sólido en la cuba de filtrado.
+
+::: {.glossary-detail-box}
+::: {.glossary-detail-title}
+🔬 Usos y Efectos en la Cerveza
+:::
+Es el medio de cultivo nutritivo que alimentará a la levadura. Durante su posterior ebullición en la olla, se añade el lúpulo, se esteriliza la mezcla y se precipitan proteínas indeseables.
+:::
+
+::: {.glossary-detail-box}
+::: {.glossary-detail-title}
+👅 Impacto en Sabor y Graduación
+:::
+Su concentración de azúcares disueltos (Gravedad Original u *OG*) define el grado alcohólico potencial (ABV) y la densidad de azúcares residuales no fermentables que darán plenitud al paladar.
+:::
+:::
+:::
+
+<!-- LÚPULO -->
+::: {.glossary-card data-glossary-cat="materia"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Lúpulo {.glossary-title}
+[*Humulus lupulus* • Conos y Glándulas de Lupulina]{.glossary-phonetic}
+:::
+[🌿 Lúpulo]{.glossary-tag .tag-materia}
+:::
+::: {.glossary-card-body}
+Flores o conos femeninos de la planta trepadora cannabácea *Humulus lupulus*, cuyas glándulas resinosas doradas (lupulina) contienen alfa-ácidos y aceites esenciales.
+
+::: {.glossary-detail-box}
+::: {.glossary-detail-title}
+🔬 Usos y Efectos en la Cerveza
+:::
+
+- **Amargor:** Isomerización de alfa-ácidos durante el hervor prolongado.
+- **Aroma y Sabor:** Adición tardía en hervor o en frío (*dry hopping*).
+- **Estabilidad y Espuma:** Actúa como conservante antibacteriano natural frente a bacterias gram-positivas y estabiliza la tensión superficial de la espuma.
+:::
+
+::: {.glossary-detail-box}
+::: {.glossary-detail-title}
+👅 Impacto en Sabor y Sensación
+:::
+Equilibra el dulzor de la malta mediante un amargor refrescante medido en IBUs. Despliega un abanico aromático: cítricos (pomelo, mandarina), resinosos (pino), florales, herbales o frutas tropicales (maracuyá, mango).
+:::
+:::
+:::
+
+<!-- ABV -->
+::: {.glossary-card data-glossary-cat="proceso"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### ABV {.glossary-title}
+[Graduación alcohólica en volumen • *Alcohol by Volume*]{.glossary-phonetic}
+:::
+[⚙️ Parámetro]{.glossary-tag .tag-proceso}
+:::
+::: {.glossary-card-body}
+Porcentaje en volumen (% vol) que mide la concentración de etanol puro contenido en 100 ml de cerveza a 20 °C.
+
+::: {.glossary-detail-box .box-proceso}
+::: {.glossary-detail-title}
+🔬 Cálculo & Dinámica Bioquímica
+:::
+Resulta de la fermentación donde las levaduras consumen azúcares del mosto generando alcohol y $\text{CO}_2$. Se determina mediante el diferencial de densidades:
+
+$$\text{ABV} \approx (\text{OG} - \text{FG}) \times 131.25$$
+:::
+
+::: {.glossary-detail-box .box-proceso}
+::: {.glossary-detail-title}
+👅 Impacto en Sensación, Cuerpo y Sabor
+:::
+
+- **Cuerpo y Densidad:** El alcohol incrementa la viscosidad y la plenitud en el paladar (*mouthfeel*).
+- **Calidez y Aroma:** Aporta una agradable calidez en garganta (típica en *Imperial Stout*, *Belgian Tripel* o *Barleywine*) y potencia la volatilización aromática de ésteres y lúpulo.
+- **Balance:** Equilibra el dulzor de las maltas especiales y suaviza el amargor punzante.
+:::
+:::
+:::
+
+<!-- PASTERIZACIÓN -->
+::: {.glossary-card data-glossary-cat="proceso"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Pasterización {.glossary-title}
+[Tratamiento térmico de conservación • *Pasteurization*]{.glossary-phonetic}
+:::
+[⚙️ Estabilidad]{.glossary-tag .tag-proceso}
+:::
+::: {.glossary-card-body}
+Proceso térmico controlado (flash a ~72 °C durante 15–30 segundos o en túnel de calor a ~60–65 °C sobre envases ya cerrados) para inactivar levaduras y bacterias residuales.
+
+::: {.glossary-detail-box .box-proceso}
+::: {.glossary-detail-title}
+🔬 Usos y Efectos en la Cerveza
+:::
+Garantiza la estabilidad biológica prolongada, detiene cualquier fermentación secundaria indeseada y permite almacenar y distribuir la cerveza a temperatura ambiente durante meses sin riesgo de degradación microbiana.
+:::
+
+::: {.glossary-detail-box .box-proceso}
+::: {.glossary-detail-title}
+👅 Impacto en Sabor y Frescura
+:::
+Asegura consistencia comercial masiva; sin embargo, el choque térmico puede volatilizar los aceites más sutiles y delicados del lúpulo fresco y acelerar ligeras notas de envejecimiento térmico respecto a una cerveza fresca sin pasterizar.
+:::
+:::
+:::
+
+<!-- MICROFILTRACIÓN -->
+::: {.glossary-card data-glossary-cat="proceso"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Microfiltración {.glossary-title}
+[Esterilización en frío por membrana • *Cold Filtering*]{.glossary-phonetic}
+:::
+[⚙️ Filtrado en Frío]{.glossary-tag .tag-proceso}
+:::
+::: {.glossary-card-body}
+Filtración física a bajas temperaturas mediante membranas poliméricas o cerámicas con poros micrométricos (0.2 a 0.45 micras), capaces de retener físicamente células de levadura y bacterias.
+
+::: {.glossary-detail-box .box-proceso}
+::: {.glossary-detail-title}
+🔬 Usos y Efectos en la Cerveza
+:::
+Logra estabilidad microbiológica y un brillo visual cristalino sin necesidad de someter el producto al estrés del calor. Es el método predilecto para cervezas embotelladas tipo *draft/barril*.
+:::
+
+::: {.glossary-detail-box .box-proceso}
+::: {.glossary-detail-title}
+👅 Impacto en Sabor y Frescura
+:::
+Preserva intactos los compuestos volátiles termolábiles: los aceites aromáticos del lúpulo, las notas frescas del cereal y los ésteres frutales, manteniendo una sensación en boca sumamente nítida, vivaz y pura.
+:::
+:::
+:::
+
+<!-- ASTRINGENCIA -->
+::: {.glossary-card data-glossary-cat="degustacion"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Astringencia {.glossary-title}
+[Sensación táctil de sequedad y aspereza]{.glossary-phonetic}
+:::
+[👅 Sensación Boca]{.glossary-tag .tag-degustacion}
+:::
+::: {.glossary-card-body}
+Sensación mecánica bucal (no un sabor en las papilas gustativas) caracterizada por contracción, tirantez y aspereza en encías, paladar y lengua, similar a morder la piel de una uva verde o tomar té negro sobre-infusionado.
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+🔬 Origen Bioquímico
+:::
+Causada por la precipitación de proteínas salivales al unirse con polifenoles o taninos extraídos de la cáscara del grano (por moler en exceso, recircular a más de 78 °C o pH de maceración alcalino) o por exceso vegetal de lúpulo.
+:::
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+👅 Impacto en la Degustación
+:::
+En niveles mínimos puede otorgar cierta estructura en cervezas añejadas en barrica de roble; en exceso se considera un defecto que deja el paladar áspero, seco y fatigado.
+:::
+:::
+:::
+
+<!-- SENSIBILIDAD EN BOCA / MOUTHFEEL -->
+::: {.glossary-card data-glossary-cat="degustacion"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Sensación en Boca (*Mouthfeel*) {.glossary-title}
+[Cuerpo, viscosidad y textura táctil]{.glossary-phonetic}
+:::
+[👅 Textura]{.glossary-tag .tag-degustacion}
+:::
+::: {.glossary-card-body}
+Conjunto de sensaciones físicas no gustativas percibidas en la cavidad bucal mientras se bebe la cerveza: peso, viscosidad, densidad, temperatura y efervescencia.
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+🔬 Origen Bioquímico
+:::
+Regulada por la presencia de dextrinas (azúcares no fermentables), proteínas de cadena larga y betaglucanos (aportados por trigo crudo o avena), nivel de $\text{CO}_2$ disuelto y contenido de alcohol.
+:::
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+👅 Perfil en Copa
+:::
+Abarca desde una textura ligera y crujiente (*crisp*, típica de Pilsner), pasando por un cuerpo sedoso y aterciopelado (Witbier, Hazy IPA), hasta una sensación cremosa, untuosa y masticable (Oatmeal Stout, Barleywine).
+:::
+:::
+:::
+
+<!-- ÉSTERES -->
+::: {.glossary-card data-glossary-cat="degustacion"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Ésteres (Perfil Afrutado) {.glossary-title}
+[Compuestos aromáticos frutales • *Esters*]{.glossary-phonetic}
+:::
+[👃 Aroma &amp; Sabor]{.glossary-tag .tag-degustacion}
+:::
+::: {.glossary-card-body}
+Moléculas aromáticas producidas durante la fermentación cuando la levadura combina ácidos grasos con alcoholes orgánicos.
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+🔬 Origen & Dinámica
+:::
+Su síntesis se maximiza a temperaturas más cálidas (18–24 °C), por lo que son el rasgo emblemático de las levaduras Ale (*S. cerevisiae*) y de fermentación salvaje.
+:::
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+👅 Descriptores Sensoriales
+:::
+
+- **Acetato de isoamilo:** Aroma a plátano maduro / chicle (clásico en *Hefeweizen*).
+- **Acetato de etilo:** Notas a manzana verde ligera o pera en dosis sutiles.
+- **Ésteres oscuros:** Ciruela pasa, higo y uva pasa en cervezas Belgas de Abadía (*Dubbel*, *Quadrupel*).
+:::
+:::
+:::
+
+<!-- FENOLES -->
+::: {.glossary-card data-glossary-cat="degustacion"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Fenoles (Perfil Especiado &amp; Ahumado) {.glossary-title}
+[Compuestos aromáticos complejos • *Phenols*]{.glossary-phonetic}
+:::
+[👃 Aroma &amp; Sabor]{.glossary-tag .tag-degustacion}
+:::
+::: {.glossary-card-body}
+Compuestos aromáticos sintetizados por cepas de levadura POF+ (*Phenolic Off-Flavor Positive*) o derivados de maltas secadas al fuego con leña/turba.
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+🔬 Origen & Levaduras
+:::
+A diferencia de las Lagers limpias donde indicarían contaminación, en estilos tradicionales belgas y alemanes de trigo son una virtud química deseada y controlada.
+:::
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+👅 Descriptores Sensoriales
+:::
+
+- **4-vinil-guayacol (4-VG):** Intenso aroma a clavo de olor y nuez moscada (típico en trigo bávaro).
+- **Fenoles especiados:** Pimienta blanca, cardamomo y semillas de cilantro (Saison y Belgian Tripel).
+- **Guayacol / Eugenol:** Notas a humo de madera noble, tocino o turba (Rauchbier alemana).
+:::
+:::
+:::
+
+<!-- DIACETILO -->
+::: {.glossary-card data-glossary-cat="degustacion"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### Diacetilo {.glossary-title}
+[Perfil mantecoso • *Diacetyl* (2,3-butanodiona)]{.glossary-phonetic}
+:::
+[⚠️ Defecto / Umbral]{.glossary-tag .tag-degustacion}
+:::
+::: {.glossary-card-body}
+Compuesto volátil producido naturalmente por la levadura en las fases iniciales de la fermentación a partir del precursor alfa-acetolactato.
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+🔬 Dinámica de Maduración
+:::
+Una levadura sana reabsorbe y descompone el diacetilo al final de la fermentación si se le permite un "descanso de diacetilo" con un suave incremento térmico previo al enfriamiento final.
+:::
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+👅 Perfil Sensorial: ¿Defecto o Estilo?
+:::
+Evoca sabor y aroma a mantequilla derretida, palomitas de cine o caramelo toffee grasoso con una película resbalosa en lengua. Es un defecto grave en Lagers modernas; no obstante, se aceptan trazas casi imperceptibles en ciertas Ales tradicionales británicas o Pilsners checas históricas.
+:::
+:::
+:::
+
+<!-- DMS -->
+::: {.glossary-card data-glossary-cat="degustacion"}
+::: {.glossary-card-header}
+::: {.glossary-title-group}
+### DMS (Sulfuro de Dimetilo) {.glossary-title}
+[Compuesto azufrado volátil • *Dimethyl Sulfide*]{.glossary-phonetic}
+:::
+[⚠️ Defecto]{.glossary-tag .tag-degustacion}
+:::
+::: {.glossary-card-body}
+Compuesto químico orgánico de azufre generado a partir de la descomposición térmica de la S-metilmetionina (SMM), abundante en maltas poco tostadas (como la malta Pilsner).
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+🔬 Control en Fábrica
+:::
+Es muy volátil: se elimina evaporándolo mediante un hervor vigoroso en olla abierta (mínimo 60–90 min) y un enfriamiento súbito del mosto para evitar que se regenere en caliente.
+:::
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
+👅 Impacto en Cata
+:::
+Aporta un aroma y sabor inconfundible a maíz dulce enlatado, verduras cocidas (col, apio) o caldo de mariscos. En cervezas rubias muy ligeras se toleran cantidades ínfimas, pero si es perceptible con facilidad arruina la frescura del trago.
+:::
+:::
+:::
+
+:::
+
+::: {#glossary-empty .glossary-empty-state}
+🔍 No se encontraron términos que coincidan con la búsqueda o filtro seleccionado.
+:::
+
+:::
+
+
+<!-- SECCIÓN 5: RECURSOS INTERACTIVOS Y DESCARGAS -->
 ::: {.web-section id="sec-recursos"}
 ::: {.section-header}
 [Herramientas del Proyecto]{.section-tag}
@@ -328,7 +723,9 @@ Explora fichas detalladas de estilos internacionales con parámetros técnicos (
 ::: {.mobile-quick-dock}
 [🍺 Guía](#sec-familias){.dock-item}
 [🌾 Grano](#sec-cereales){.dock-item}
-[🍷 Cristalería](#sec-cristaleria){.dock-item}
+[🍷 Copas](#sec-cristaleria){.dock-item}
+[📖 Glosario](#sec-glosario){.dock-item}
 [📋 Cata](assets/degustacion.html){.dock-item}
 [📚 Estilos](assets/catalogo.html){.dock-item}
 :::
+
