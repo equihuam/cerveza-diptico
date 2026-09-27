@@ -5,7 +5,6 @@ format:
   html:
     css: assets/css/diptico.css
     page-layout: custom
-    embed-resources: true
     toc: false
     include-after-body:
       text: |

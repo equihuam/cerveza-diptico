@@ -31,8 +31,6 @@ if (Test-Path "assets") {
     Copy-Item -Path "assets\*" -Destination "_site\assets\" -Recurse -Force
 }
 
-# Copia de conveniencia como diptico-cerveza.html
-Copy-Item "_site\index.html" -Destination "_site\diptico-cerveza.html" -Force
 
 Write-Host "📄 [2/3] Generando PDF de impresión de 2 páginas (Letter Landscape)..." -ForegroundColor Cyan
 

@@ -26,5 +26,4 @@ format:
     theme: cosmo
     css: assets/css/diptico.css
     toc: false
-    embed-resources: true
     page-layout: custom
