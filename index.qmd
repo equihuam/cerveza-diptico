@@ -1,6 +1,6 @@
 ---
-title: "Taxonomía de la Cerveza"
-subtitle: "Guía esencial de familias, fermentación y estilos"
+title: "Taxonomía & Cultura de la Cerveza"
+subtitle: "Guía interactiva sobre familias de fermentación, bioquímica de cereales y arte del servicio"
 format:
   html:
     css: assets/css/diptico.css
@@ -8,259 +8,327 @@ format:
     toc: false
     include-after-body:
       text: |
-        <script src="assets/js/diptico.js"></script>
+        <script src="assets/js/web.js"></script>
 ---
 
-<!-- BARRA DE INTERACCIÓN WEB (Se oculta automáticamente al imprimir o exportar a PDF) -->
-::: {.interactive-toolbar}
-::: {.toolbar-group}
-[Vista:]{.toolbar-label}
-<button type="button" class="toolbar-btn view-toggle-btn active" data-view-mode="brochure">📖 Folleto Díptico</button>
-<button type="button" class="toolbar-btn view-toggle-btn" data-view-mode="reading">📄 Lectura Continua</button>
-:::
-
-::: {.toolbar-group}
-[Filtrar Familia:]{.toolbar-label}
-<button type="button" class="toolbar-btn filter-btn active" data-family="all">Todas</button>
-<button type="button" class="toolbar-btn filter-btn" data-family="lager">Lager</button>
-<button type="button" class="toolbar-btn filter-btn" data-family="ale">Ale</button>
-<button type="button" class="toolbar-btn filter-btn" data-family="wild">Espontánea</button>
-:::
-
-::: {.toolbar-group}
-<button type="button" class="toolbar-btn btn-print" id="btn-print-diptico">🖨️ Imprimir / Guardar en PDF</button>
-<a href="assets/catalogo.html" target="_blank" class="toolbar-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">🍺 Catálogo y Fichas</a>
-<a href="assets/degustacion.html" target="_blank" class="toolbar-btn" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.3rem;">📝 Ficha de Degustación</a>
-:::
-:::
-
-
-:::: {.diptico-container}
-
 <!-- =======================================================================
-     HOJA 1: EXTERIOR (Al doblar: Contraportada a la izq, Portada a la der)
+     HERO EDITORIAL & INTRODUCCIÓN
      ======================================================================= -->
-::: {.sheet .sheet-exterior}
-
-<!-- PÁGINA 4: CONTRA-PORTADA / RESPALDO IZQUIERDO -->
-::: {.page .back-cover}
-
-::: {.page-header}
-[Editorial &amp; Ciencia]{.tag}
-
-## El Arte de la Fermentación
+::: {.web-hero}
+::: {.hero-badge}
+Guía Botánica, Microbiológica &amp; Sensorial
 :::
-
-::: {.back-content}
-La cerveza nace de la interacción armónica entre la botánica agraria y la microbiología celular. Cuatro elementos fundamentales guían su proceso: **agua pura**, **cereales nobles**, flores de **lúpulo** (*Humulus lupulus*) y cultivos vivos de **levadura**.
-
-::: {.grain-technical-card}
-#### 🌾 Botánica de Cereales: Malteado vs. Grano Crudo
-
-La base del mosto proviene principalmente de **cebada** (*Hordeum vulgare*) y **trigo** (*Triticum aestivum*), empleados en dos formas clave:
-
-::: {.grain-grid}
-::: {.grain-item}
-**Malteado (Cebada / Trigo)**
-
-Germinación controlada que activa amilasas (α y β). Indispensable para transformar los almidones insolubles en azúcares fermentables.
-:::
-
-::: {.grain-item}
-**Sin Maltear (Grano Crudo / Copos)**
-
-Aporta sedosidad, retención de espuma y turbidez natural ([Witbier, Lambic](#sec-estilos-trigo)). Al carecer de enzimas activas, **exige combinarse con malta base** de alto poder diastásico.
-:::
-:::
-:::
-
-::: {.quote-box}
-*"La fermentación no es solo un proceso químico; es la firma biológica que define la identidad de cada estilo cervecero."*
-:::
-
-#### Fuentes y Referencias {.subheading}
-
-- **BJCP** (*Beer Judge Certification Program*) — Guía Internacional de Estilos.
-- **ASBC** / *Brewing Science Series* — Bioquímica del Malteado y Fermentación.
-- Grabados botánicos y científicos inspirados en láminas litográficas del siglo XIX.
-:::
-
-::: {.page-footer}
-Díptico divulgativo • Edición Especial Quarto &amp; RStudio • 2026
-:::
-
-:::
-
-<!-- PÁGINA 1: PORTADA PRINCIPAL / CARA DERECHA -->
-::: {.page .front-cover}
-
-::: {.cover-art-wrapper}
-![](assets/img/cover.jpg){.cover-image}
-:::
-
-::: {.cover-caption}
-*Humulus lupulus*, *Hordeum vulgare*, *Triticum aestivum* &amp; *Saccharomyces*
-:::
-
-::: {.cover-title-group}
-[Guía Técnica &amp; Sensorial]{.tag}
 
 # Taxonomía de la Cerveza
 
-### Familias de fermentación, cereales malteados y crudos, estilos y servicio
+### El mapa interactivo de familias, levaduras, cereales y estilos cerveceros
+
+::: {.hero-cover-container}
+![](assets/img/cover.jpg){.hero-cover-image alt="Ilustración botánica de lúpulo, cebada y trigo"}
 :::
 
+::: {.hero-meta-chips}
+::: {.meta-chip}
+🔬 **3 Familias** (*Lager, Ale, Espontánea*)
 :::
-
+::: {.meta-chip}
+🌾 **Cereales** (*Malteados vs. Crudos*)
+:::
+::: {.meta-chip}
+🍷 **Cristalería Especializada**
+:::
+::: {.meta-chip}
+📋 **Guía BJCP &amp; Cata**
+:::
+:::
 :::
 
 
 <!-- =======================================================================
-     HOJA 2: INTERIOR (Al abrir el díptico: Panel A izq, Panel B der)
+     BARRA DE FILTROS PEGAJOSA (STICKY THUMB-BAR)
+     Optimizada para navegación rápida con el pulgar en móviles
      ======================================================================= -->
-::: {.sheet .sheet-interior}
-
-<!-- PÁGINA 2: INTERIOR IZQUIERDO (FUNDAMENTOS Y FAMILIAS) -->
-::: {.page .panel-a}
-
-::: {.page-header}
-[Fundamentos Microbiológicos]{.tag}
-
-## Dinámica de Fermentación
-
-La taxonomía cervecera se rige por la especie de levadura y su temperatura de trabajo.
-:::
-
-::: {.family-cards}
-
-::: {.family-card .lager data-family="lager"}
-### Familia Lager [7 °C – 13 °C]{.badge}
-
-[*Saccharomyces pastorianus* • Fermentación baja]{.meta}
-
-Las levaduras actúan y sedimentan en el fondo del fermentador. Exige maduración prolongada en frío (*lagering*). Produce perfiles sensoriales limpios, secos y crujientes, destacando el grano malteado y los lúpulos nobles.
-:::
-
-::: {.family-card .ale data-family="ale"}
-### Familia Ale [15 °C – 24 °C]{.badge}
-
-[*Saccharomyces cerevisiae* • Fermentación alta]{.meta}
-
-Las levaduras ascienden y forman un manto en la superficie. Su metabolismo activo aporta riqueza organoléptica marcada por ésteres frutales (plátano, manzana) y fenoles especiados (clavo), con enorme versatilidad estilística.
-:::
-
-::: {.family-card .wild data-family="wild"}
-### Espontánea y Mixta [Ambiente / Barrica]{.badge}
-
-[*Brettanomyces*, *Lactobacillus* y microflora salvaje]{.meta}
-
-El mosto se enfría en tinas abiertas (*koelschip*), capturando la microbiota autóctona. Madura durante meses o años en toneles de roble, desarrollando acidez láctica, notas terrosas, cuero y alta complejidad rústica.
-:::
-
-:::
-
-::: {.specs-table-wrapper}
-| Familia | Levadura Principal | Temperatura | Maduración |
-|:---|:---|:---|:---|
-| **Lager** | *S. pastorianus* | 7–13 °C | Frío prolongado (*lagering*) |
-| **Ale** | *S. cerevisiae* | 15–24 °C | Media (semanas) |
-| **Espontánea** | Flora salvaje / *Brett.* | Ambiente | Años en madera |
-:::
-
-:::
-
-<!-- PÁGINA 3: INTERIOR DERECHO (MAPA DE ESTILOS Y CRISTALERÍA) -->
-::: {.page .panel-b}
-
-::: {.page-header}
-[Infografía Taxonómica]{.tag}
-
-## Mapa de Estilos y Servicio
-
-Subdivisiones estilísticas representativas y cristalería recomendada.
-:::
-
-::: {.branches-container}
-
-::: {.branch .branch-lager data-family="lager"}
-#### [Lager]{.branch-title} [Fermentación Baja]{.tag}
-
-::: {.styles-grid}
-```{=html}
-<ul>
-  <li data-glass="pilsner"><strong>Pilsner / Pils:</strong> Dorada, final seco, amargor floral y herbal.</li>
-  <li data-glass="pilsner"><strong>Helles / Pale Lager:</strong> Rubia pálida, cuerpo sedoso y balance maltoso.</li>
-  <li data-glass="nonic"><strong>Dunkel / Schwarzbier:</strong> Tostada, notas a pan corteza y café suave.</li>
-  <li data-glass="tulip"><strong>Bock / Doppelbock:</strong> Fuerte, rica en malta dulce y caramelo.</li>
-</ul>
-```
+::: {.sticky-filter-bar}
+::: {.filter-scroll-wrapper}
+<button type="button" class="filter-pill active" data-filter="all">🌐 Ver Todo</button>
+<button type="button" class="filter-pill" data-filter="lager">❄️ Lager</button>
+<button type="button" class="filter-pill" data-filter="ale">🌾 Ale</button>
+<button type="button" class="filter-pill" data-filter="wild">🍇 Espontánea</button>
+<button type="button" class="filter-pill" data-filter="cereales">🌾 Cereales &amp; Grano</button>
+<button type="button" class="filter-pill" data-filter="cristaleria">🍷 Cristalería</button>
 :::
 :::
 
-::: {.branch .branch-ale data-family="ale"}
-#### [Ale]{.branch-title} [Fermentación Alta]{.tag}
 
-::: {.styles-grid}
-```{=html}
-<ul>
-  <li data-glass="nonic"><strong>Pale Ale / APA:</strong> Ámbar claro, lúpulo cítrico, herbal y resinoso.</li>
-  <li data-glass="nonic"><strong>IPA (India Pale Ale):</strong> Carga masiva de lúpulo, amargor y notas frutales.</li>
-  <li data-glass="weizen" id="sec-estilos-trigo"><strong>Trigo (Weiss / Witbier):</strong> Trigo malteado y crudo; plátano y clavo. <span class="grain-badge">Trigo</span></li>
-  <li data-glass="nonic"><strong>Porter / Stout:</strong> Malta torrefacta y cebada tostada; cacao y espresso.</li>
-  <li data-glass="tulip"><strong>Abadía (Dubbel / Tripel):</strong> Complejas, cálidas, fruta madura y especias.</li>
-</ul>
-```
+<!-- =======================================================================
+     CONTENEDOR PRINCIPAL FLUIDO
+     ======================================================================= -->
+:::: {.web-container}
+
+<!-- SECCIÓN 1: FUNDAMENTOS Y FAMILIAS DE FERMENTACIÓN -->
+::: {.web-section id="sec-familias"}
+::: {.section-header}
+[Microbiología &amp; Temperatura]{.section-tag}
+
+## Las Tres Grandes Familias de Fermentación
+
+La clasificación cardinal de la cerveza no depende del color ni del amargor, sino de la **especie de levadura** y la **dinámica térmica** de fermentación.
+:::
+
+::: {.cards-grid-3}
+
+<!-- TARJETA LAGER -->
+::: {.family-card-web .card-lager data-category="lager"}
+::: {.card-header-badge}
+❄️ Familia Lager [7 °C – 13 °C]{.temp-pill}
+:::
+
+### Fermentación Baja
+
+[*Saccharomyces pastorianus* (fondo del tanque)]{.scientific-name}
+
+Las levaduras trabajan lentamente a bajas temperaturas y decantan al fondo. Requiere una maduración prolongada en frío (*lagering* durante semanas o meses) que redondea el perfil.
+
+::: {.card-profile}
+**Perfil Sensorial:** Sumamente limpio, seco, nítido y refrescante. Cero o mínimos ésteres frutales; protagonismo absoluto del cereal malteado y los lúpulos nobles.
+:::
+
+::: {.card-styles-list}
+**Estilos Emblemáticos:**
+- **Pilsner / Bohemian Pils:** Dorada brillante, amargor floral y especiado ([Saaz]).
+- **Munich Helles:** Rubia pálida, acento en pan blanco y cereal dulce.
+- **Dunkel / Schwarzbier:** Color tostado/negro pero cuerpo ligero y notas a corteza de pan.
+- **Doppelbock:** Robusta, maltosa, notas a caramelo y frutos secos.
+:::
+
+::: {.card-glass-hint}
+🍷 **Servicio ideal:** [Vaso Pilsner / Flauta](assets/catalogo.html) (favorece la efervescencia y retención de espuma blanca).
 :::
 :::
 
-::: {.branch .branch-wild data-family="wild"}
-#### [Espontánea &amp; Sour]{.branch-title} [Fermentación Salvaje]{.tag}
 
-::: {.styles-grid}
-```{=html}
-<ul>
-  <li data-glass="tulip"><strong>Lambic / Gueuze:</strong> Acidez punzante, trigo crudo, perfil rústico añejo. <span class="grain-badge">Trigo Crudo</span></li>
-  <li data-glass="tulip"><strong>Fruit Lambic (Kriek):</strong> Co-fermentada con cerezas o frambuesas en roble.</li>
-  <li data-glass="weizen"><strong>Gose / Berliner Weisse:</strong> Trigo ácido, refrescante, láctica y salina. <span class="grain-badge">Trigo</span></li>
-</ul>
-```
+<!-- TARJETA ALE -->
+::: {.family-card-web .card-ale data-category="ale"}
+::: {.card-header-badge}
+🌾 Familia Ale [15 °C – 24 °C]{.temp-pill}
+:::
+
+### Fermentación Alta
+
+[*Saccharomyces cerevisiae* (superficie del tanque)]{.scientific-name}
+
+Las levaduras suben a la superficie formando una densa corona de espuma durante su enérgica fermentación. Proceso más rápido y a temperatura ambiente moderada.
+
+::: {.card-profile}
+**Perfil Sensorial:** Expresivo y frutal. Las levaduras sintetizan ésteres (aromas a plátano, manzana, pera) y fenoles (clavo de olor, pimienta), combinados con generosas adiciones de malta y lúpulo.
+:::
+
+::: {.card-styles-list}
+**Estilos Emblemáticos:**
+- **Pale Ale / APA:** Ámbar claro, aromas cítricos, resinosos y herbales.
+- **IPA (India Pale Ale):** Explosión lupulada, amargor punzante y notas tropicales.
+- **Cervezas de Trigo (Weissbier / Witbier):** Sedosas, turbias, notas a plátano y clavo.
+- **Porter &amp; Stout:** Maltas torrefactas, chocolate amargo, café y avena.
+- **Abadía Belga (Dubbel / Tripel):** Fruta madura, especias, calidez alcohólica.
+:::
+
+::: {.card-glass-hint}
+🍷 **Servicio ideal:** [Pinta Nonic, Vaso Weizen o Copa Tulipa](assets/catalogo.html).
 :::
 :::
 
+
+<!-- TARJETA ESPONTÁNEA -->
+::: {.family-card-web .card-wild data-category="wild"}
+::: {.card-header-badge}
+🍇 Espontánea &amp; Mixta [Ambiente / Barrica]{.temp-pill}
 :::
 
-::: {.glassware-card}
-#### Cristalería de Degustación {.glassware-heading}
+### Fermentación Salvaje &amp; Rústica
 
-::: {.glassware-grid}
-::: {.glass-item data-glass-id="pilsner" data-family="lager"}
-![](assets/img/pilsner.svg){.glass-icon}
-**Vaso Pilsner**
-[Lager / Pils]{.glass-sub}
+[*Brettanomyces*, *Lactobacillus*, *Pediococcus* y microflora]{.scientific-name}
+
+El mosto se expone al aire nocturno en piscinas abiertas (*koelschip*) en el valle del río Senne (Bélgica) o se inocula con cultivos mixtos. Madura durante meses o años en toneles de roble.
+
+::: {.card-profile}
+**Perfil Sensorial:** Complejo, ácido, seco y agreste. Marcada acidez láctica/acética, notas terrosas, cuero mojado, establo (*barnyard funk*) y madera añeja.
 :::
 
-::: {.glass-item data-glass-id="nonic" data-family="ale lager"}
-![](assets/img/nonic.svg){.glass-icon}
-**Pinta Nonic**
-[Ale / IPA / Stout]{.glass-sub}
+::: {.card-styles-list}
+**Estilos Emblemáticos:**
+- **Lambic Tradicional:** Plana (sin gas), ácida y rústica directa de barrica.
+- **Gueuze:** Mezcla magistral de lambics de 1, 2 y 3 años con segunda fermentación en botella.
+- **Fruit Lambic (Kriek / Framboise):** Maceración prolongada con cerezas ácidas o frambuesas.
+- **Gose &amp; Berliner Weisse:** Trigo ácido, refrescante, con notas salinas o cilantro.
 :::
 
-::: {.glass-item data-glass-id="weizen" data-family="ale wild"}
-![](assets/img/weizen.svg){.glass-icon}
-**Vaso Weizen**
-[Trigo / Weiss / Gose]{.glass-sub}
-:::
-
-::: {.glass-item data-glass-id="tulip" data-family="wild ale"}
-![](assets/img/tulip.svg){.glass-icon}
-**Copa Tulipa**
-[Belgas / Sours / Lambic]{.glass-sub}
-:::
+::: {.card-glass-hint}
+🍷 **Servicio ideal:** [Copa Tulipa o Cáliz Belga](assets/catalogo.html) (oxigena y resalta la acidez noble).
 :::
 :::
 
 :::
+:::
 
+
+<!-- SECCIÓN 2: BOTÁNICA Y BIOQUÍMICA DE CEREALES -->
+::: {.web-section id="sec-cereales" data-category="cereales"}
+::: {.section-header}
+[Botánica Agraria &amp; Enzimología]{.section-tag}
+
+## Bioquímica de Cereales: Malteado vs. Grano Crudo
+
+El grano es el corazón azucarado y proteico de la cerveza. Entender la diferencia entre la **germinación enzimática (malteado)** y el **uso de grano crudo** es la clave para comprender la textura y cuerpo de cada estilo.
+:::
+
+::: {.cards-grid-2}
+
+<!-- TARJETA CEREAL MALTEADO -->
+::: {.grain-card .malt-focus}
+### 🌾 Grano Malteado (Cebada / Trigo)
+#### *Hordeum vulgare* / *Triticum aestivum*
+
+::: {.grain-process}
+**El Proceso:** Remojo en agua $\rightarrow$ Germinación controlada $\rightarrow$ Secado/Tostado en horno.
+:::
+
+::: {.grain-mechanisms}
+- **Activación Enzimática:** La germinación despierta las enzimas amilasas ($\alpha$ y $\beta$).
+- **Conversión de Almidón:** Durante la maceración en caliente (64–68 °C), las amilasas rompen las largas cadenas de almidón insoluble y las transforman en **maltosa y azúcares fermentables** para la levadura.
+- **Poder Diastásico:** La malta base proporciona la potencia enzimática necesaria para convertir todo el mosto.
+:::
+:::
+
+<!-- TARJETA GRANO CRUDO / SIN MALTEAR -->
+::: {.grain-card .raw-focus}
+### 🌾 Grano Sin Maltear (Crudo / Copos)
+#### Trigo no malteado, Avena cruda, Maíz, Centeno
+
+::: {.grain-process}
+**El Proceso:** Grano cosechado directamente o pre-gelatinizado en copos sin pasar por maltería.
+:::
+
+::: {.grain-mechanisms}
+- **Cero Enzimas Activas:** Al no haber germinado, carece de amilasas propias; **requiere combinarse obligatoriamente con malta base** de alto poder diastásico.
+- **Aporte de Proteínas y Betaglucanos:** Mantiene sus proteínas solubles intactas, lo que confiere la **turbidez característica** y una **textura aterciopelada y cremosa**.
+- **Retención de Espuma:** Indispensable en estilos históricos como la **Witbier belga** (hasta 50% de trigo crudo), **Lambic tradicional** (30–40% de trigo crudo) y las sedosas **Oatmeal Stouts**.
+:::
+:::
+
+:::
+
+::: {.botanical-quote}
+*"El maltero crea el azúcar que alimenta la vida microbiana; el grano crudo esculpe la sedosidad y el manto de espuma que acaricia el paladar."*
+:::
+:::
+
+
+<!-- SECCIÓN 3: CRISTALERÍA Y ARTE DEL SERVICIO -->
+::: {.web-section id="sec-cristaleria" data-category="cristaleria"}
+::: {.section-header}
+[Geometría &amp; Termodinámica]{.section-tag}
+
+## Cristalería: La Forma al Servicio del Aroma
+
+Cada estilo cervecero exige una geometría específica para regular la temperatura de servicio, canalizar los compuestos volátiles aromáticos hacia la nariz y preservar la corona de espuma.
+:::
+
+::: {.glassware-web-grid}
+
+::: {.glass-card-web data-glass="pilsner" data-category="lager"}
+::: {.glass-svg-wrap}
+![](assets/img/pilsner.svg){.glass-svg alt="Vaso Pilsner"}
+:::
+#### Vaso Pilsner / Flauta
+**Estilos:** *Pilsner, Helles, Kolsch, Pale Lager*
+
+**Propósito:** Su silueta cónica alta y esbelta resalta la claridad brillante dorada y concentra el flujo continuo de burbujas de $\text{CO}_2$, manteniendo una espuma densa y blanca.
+:::
+
+::: {.glass-card-web data-glass="nonic" data-category="ale lager"}
+::: {.glass-svg-wrap}
+![](assets/img/nonic.svg){.glass-svg alt="Pinta Nonic"}
+:::
+#### Pinta Nonic / Imperial
+**Estilos:** *Pale Ale, IPA, Amber Ale, Stout, Porter*
+
+**Propósito:** El ensanchamiento superior mejora el agarre, evita que los bordes se despostillen y permite beber cómodamente cervezas de trago largo con moderada carbonatación.
+:::
+
+::: {.glass-card-web data-glass="weizen" data-category="ale wild"}
+::: {.glass-svg-wrap}
+![](assets/img/weizen.svg){.glass-svg alt="Vaso Weizen"}
+:::
+#### Vaso Weizen (Trigo)
+**Estilos:** *Hefeweizen, Dunkelweizen, Witbier, Gose*
+
+**Propósito:** Base estrecha y boca acampanada con gran volumen (500 ml) para albergar la exuberante corona de espuma de trigo y liberar los aromas a plátano y clavo.
+:::
+
+::: {.glass-card-web data-glass="tulip" data-category="wild ale"}
+::: {.glass-svg-wrap}
+![](assets/img/tulip.svg){.glass-svg alt="Copa Tulipa"}
+:::
+#### Copa Tulipa / Cáliz
+**Estilos:** *Belgian Tripel, Saison, Lambic, Gueuze, Imperial Stout*
+
+**Propósito:** Su cuerpo abombado concentra los ésteres complejos y el labio evertido dirige el líquido hacia la parte frontal y lateral de la lengua, realzando la frescura y los aromas nobles.
+:::
+
+:::
+:::
+
+
+<!-- SECCIÓN 4: RECURSOS INTERACTIVOS Y DESCARGAS -->
+::: {.web-section id="sec-recursos"}
+::: {.section-header}
+[Herramientas del Proyecto]{.section-tag}
+
+## Explora el Ecosistema Cervecero
+:::
+
+::: {.tools-grid}
+
+::: {.tool-card}
+[📋]{.tool-icon}
+
+### Bitácora de Cata Interactiva
+Registra tus notas de degustación sensorial (apariencia, aroma, sabor, balance y puntuación BJCP). Funciona offline con almacenamiento local y exportación a PDF.
+
+[Abrir Bitácora de Cata →](assets/degustacion.html){.btn-tool}
+:::
+
+::: {.tool-card}
+[📚]{.tool-icon}
+
+### Catálogo de Estilos
+Explora fichas detalladas de estilos internacionales con parámetros técnicos (IBU, ABV, SRM), maridajes y cristalería.
+
+[Ver Catálogo de Cervezas →](assets/catalogo.html){.btn-tool}
+:::
+
+::: {.tool-card}
+[🖨️]{.tool-icon}
+
+### Díptico de Colección (PDF)
+¿Prefieres el folleto editorial clásico de dos paneles para imprimir en tamaño carta dúplex? Consulta la versión original maquetada para papel.
+
+[Ver Díptico Imprimible →](diptico.html){.btn-tool}
+:::
+
+:::
 :::
 
 ::::
+
+
+<!-- =======================================================================
+     BARRA INFERIOR DE ACCIÓN RÁPIDA (MOBILE DOCK)
+     ======================================================================= -->
+::: {.mobile-quick-dock}
+[🍺 Guía](#sec-familias){.dock-item}
+[🌾 Grano](#sec-cereales){.dock-item}
+[🍷 Cristalería](#sec-cristaleria){.dock-item}
+[📋 Cata](assets/degustacion.html){.dock-item}
+[📚 Estilos](assets/catalogo.html){.dock-item}
+:::

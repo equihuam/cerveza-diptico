@@ -40,7 +40,7 @@ if (-not (Test-Path $edgePath)) {
 }
 
 $projectRoot = (Get-Location).Path
-$htmlPath = "$projectRoot\_site\index.html"
+$htmlPath = "$projectRoot\_site\diptico.html"
 $pdfPath = "$projectRoot\_site\diptico-cerveza.pdf"
 
 if (Test-Path $edgePath) {

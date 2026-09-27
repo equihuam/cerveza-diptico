@@ -3,22 +3,24 @@ project:
   output-dir: _site
   render:
     - index.qmd
-
+    - diptico.qmd
 
 website:
-  title: "Taxonomía de la Cerveza"
-  description: "Guía editorial e interactiva sobre la taxonomía, bioquímica de cereales y cata cervecera"
+  title: "Taxonomía & Cultura Cervecera"
+  description: "Guía interactiva mobile-first sobre familias de fermentación, bioquímica de cereales y cata cervecera"
   site-url: "https://cerveza-mia.netlify.app"
   navbar:
     background: "#2D3748"
     foreground: "#F7FAFC"
     search: false
     left:
-      - text: "🍺 Díptico & Taxonomía"
+      - text: "🍺 Guía Web"
         href: index.qmd
+      - text: "🖨️ Díptico Imprimible"
+        href: diptico.qmd
       - text: "📋 Bitácora de Cata"
         href: assets/degustacion.html
-      - text: "📚 Catálogo de Cervezas"
+      - text: "📚 Catálogo de Estilos"
         href: assets/catalogo.html
 
 format:
