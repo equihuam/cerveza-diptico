@@ -1609,7 +1609,7 @@ a:hover {
   gap: 1.25rem;
 }
 
-/* Tarjeta Glosario */
+/* Tarjeta Glosario: Título en línea completa + Fila 2 columnas (Definición + Tipo) */
 .glossary-card {
   background: #ffffff;
   border-radius: 14px;
@@ -1627,47 +1627,67 @@ a:hover {
 }
 
 .glossary-card-header {
-  padding: 0.95rem 1.15rem 0.45rem 1.15rem;
+  padding: 1.15rem 1.25rem 0.85rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.35rem 0.6rem;
+  flex-direction: column;
+  gap: 0.55rem;
 }
 
-.glossary-title-group {
-  flex: 1 1 150px;
-  min-width: 0;
+.glossary-title-row {
+  width: 100%;
 }
 
 .glossary-title {
   font-family: var(--font-serif);
-  font-size: 1.12rem;
+  font-size: 1.25rem;
   color: var(--color-ink);
-  margin: 0 0 0.15rem 0;
+  margin: 0 0 0.2rem 0;
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  word-break: break-word;
+  gap: 0.4rem;
+  line-height: 1.2;
 }
 
 .glossary-phonetic {
-  font-size: 0.74rem;
+  font-size: 0.76rem;
   color: var(--color-muted);
   font-style: italic;
   font-family: var(--font-sans);
-  line-height: 1.25;
+  display: block;
+  line-height: 1.3;
+}
+
+.glossary-def-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.85rem;
+  align-items: start;
+}
+
+.glossary-def-text {
+  font-size: 0.88rem;
+  color: var(--color-ink);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.glossary-type-tag {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 0.1rem;
 }
 
 .glossary-tag {
-  font-size: 0.65rem;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  padding: 0.18rem 0.45rem;
+  padding: 0.22rem 0.55rem;
   border-radius: 6px;
   white-space: nowrap;
-  flex-shrink: 0;
+  display: inline-block;
   line-height: 1.2;
 }
 
@@ -1690,20 +1710,14 @@ a:hover {
 }
 
 .glossary-card-body {
-  padding: 0 1.25rem 1.1rem 1.25rem;
+  padding: 0.9rem 1.25rem 1.15rem 1.25rem;
   font-size: 0.86rem;
   color: var(--color-body);
   line-height: 1.5;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.7rem;
   flex: 1;
-}
-
-.glossary-summary {
-  margin: 0;
-  color: var(--color-ink);
-  font-size: 0.88rem;
 }
 
 .glossary-detail-box {
@@ -1781,11 +1795,38 @@ a:hover {
   }
 
   .glossary-card-header {
-    padding: 0.9rem 1rem 0.4rem 1rem;
+    padding: 0.95rem 1rem 0.65rem 1rem;
+    gap: 0.45rem;
+  }
+
+  .glossary-title {
+    font-size: 1.15rem;
+  }
+
+  .glossary-def-row {
+    grid-template-columns: 1fr auto;
+    gap: 0.6rem;
+  }
+
+  .glossary-def-text {
+    font-size: 0.84rem;
   }
 
   .glossary-card-body {
-    padding: 0 1rem 0.9rem 1rem;
+    padding: 0.75rem 1rem 1rem 1rem;
+    gap: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .glossary-def-row {
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+  }
+
+  .glossary-tag {
+    font-size: 0.64rem;
+    padding: 0.18rem 0.45rem;
   }
 }
 

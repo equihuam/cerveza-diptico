@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgNodriza" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c120c"/>
+      <stop offset="50%" stop-color="#2d1d13"/>
+      <stop offset="100%" stop-color="#0c0704"/>
+    </linearGradient>
+    <radialGradient id="amberGlow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1c120c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="10" y="10" width="280" height="380" rx="16" fill="url(#bgNodriza)" stroke="#d97706" stroke-width="3"/>
+  <rect x="18" y="18" width="264" height="364" rx="12" fill="url(#amberGlow)" stroke="#fbbf24" stroke-width="1" stroke-dasharray="6,3"/>
+  
+  <text x="150" y="52" font-family="'Cinzel', Georgia, serif" font-weight="800" font-size="15" fill="#fde68a" text-anchor="middle" letter-spacing="3">LÍNEA TIBURÓN • COATEPEC</text>
+  <line x1="45" y1="62" x2="255" y2="62" stroke="#d97706" stroke-width="1.5"/>
+  
+  <g transform="translate(150, 150)">
+    <circle r="64" fill="#130b06" stroke="#d97706" stroke-width="2"/>
+    <!-- Olas cálidas -->
+    <path d="M -50 30 Q -25 15 0 30 Q 25 45 50 30" fill="none" stroke="#92400e" stroke-width="2.5"/>
+    <!-- Silueta Nodriza Stout -->
+    <path d="M -44 12 C -28 -18 16 -22 42 4 C 30 16 8 20 -14 20 C -28 20 -38 18 -44 12 Z" fill="#d97706"/>
+    <polygon points="-6,-10 6,-30 10,-8" fill="#fbbf24"/>
+    <polygon points="-2,8 8,22 -8,14" fill="#78350f"/>
+    <circle cx="26" cy="4" r="2.5" fill="#fff"/>
+  </g>
+  
+  <text x="150" y="245" font-family="'Cinzel', Georgia, serif" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle" letter-spacing="2">TIBURÓN NODRIZA</text>
+  <text x="150" y="272" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#fbbf24" text-anchor="middle" letter-spacing="1">OATMEAL STOUT / BROWN</text>
+  
+  <rect x="50" y="288" width="200" height="28" rx="6" fill="rgba(217, 119, 6, 0.18)" stroke="#d97706" stroke-width="1"/>
+  <text x="150" y="306" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#fef3c7" text-anchor="middle">6.5% Alc. Vol. • Café Veracruzano &amp; Avena</text>
+  
+  <line x1="50" y1="334" x2="250" y2="334" stroke="#92400e" stroke-width="1"/>
+  <text x="150" y="354" font-family="'Cinzel', Georgia, serif" font-size="10" fill="#fde68a" text-anchor="middle">MALTA TOSTADA • CHOCOLATE DE METATE</text>
+  <text x="150" y="370" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#78716c" text-anchor="middle">XALAPA-COATEPEC, VERACRUZ</text>
+</svg>

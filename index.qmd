@@ -318,15 +318,20 @@ Conceptos bioquímicos fundamentales, ingredientes clave, procesos de estabiliza
 <!-- MALTA -->
 ::: {.glossary-card data-glossary-cat="materia"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Malta {.glossary-title}
 [Cereal germinado y tostado • *Malt*]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Granos de cereal (principalmente cebada o trigo) sometidos a germinación controlada y secado/tostado en horno.
+:::
+::: {.glossary-type-tag}
 [🌾 Ingrediente]{.glossary-tag .tag-materia}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Granos de cereal (principalmente cebada o trigo) que han sido sometidos a germinación controlada y posterior secado/tostado en horno.
-
 ::: {.glossary-detail-box}
 ::: {.glossary-detail-title}
 🔬 Usos y Efectos en la Cerveza
@@ -346,15 +351,20 @@ Determina el color (escala SRM desde pajizo brillante hasta negro opaco). Según
 <!-- MOSTO -->
 ::: {.glossary-card data-glossary-cat="materia"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Mosto {.glossary-title}
 [Infusión azucarada no fermentada • *Wort*]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Líquido denso y dulce obtenido tras macerar los granos molidos en agua caliente (64–68 °C) y separar el bagazo sólido en la cuba de filtrado.
+:::
+::: {.glossary-type-tag}
 [🌾 Mosto Base]{.glossary-tag .tag-materia}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Líquido denso y dulce obtenido tras macerar los granos molidos en agua caliente (64–68 °C) y separar el bagazo sólido en la cuba de filtrado.
-
 ::: {.glossary-detail-box}
 ::: {.glossary-detail-title}
 🔬 Usos y Efectos en la Cerveza
@@ -374,15 +384,20 @@ Su concentración de azúcares disueltos (Gravedad Original u *OG*) define el gr
 <!-- LÚPULO -->
 ::: {.glossary-card data-glossary-cat="materia"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Lúpulo {.glossary-title}
 [*Humulus lupulus* • Conos y Glándulas de Lupulina]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Flores o conos femeninos de la planta trepadora cannabácea *Humulus lupulus*, cuyas glándulas doradas (lupulina) aportan alfa-ácidos y aceites esenciales.
+:::
+::: {.glossary-type-tag}
 [🌿 Lúpulo]{.glossary-tag .tag-materia}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Flores o conos femeninos de la planta trepadora cannabácea *Humulus lupulus*, cuyas glándulas resinosas doradas (lupulina) contienen alfa-ácidos y aceites esenciales.
-
 ::: {.glossary-detail-box}
 ::: {.glossary-detail-title}
 🔬 Usos y Efectos en la Cerveza
@@ -405,15 +420,20 @@ Equilibra el dulzor de la malta mediante un amargor refrescante medido en IBUs. 
 <!-- ABV -->
 ::: {.glossary-card data-glossary-cat="proceso"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### ABV {.glossary-title}
 [Graduación alcohólica en volumen • *Alcohol by Volume*]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Porcentaje en volumen (% vol) que mide la concentración de etanol puro contenido en 100 ml de cerveza a 20 °C.
+:::
+::: {.glossary-type-tag}
 [⚙️ Parámetro]{.glossary-tag .tag-proceso}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Porcentaje en volumen (% vol) que mide la concentración de etanol puro contenido en 100 ml de cerveza a 20 °C.
-
 ::: {.glossary-detail-box .box-proceso}
 ::: {.glossary-detail-title}
 🔬 Cálculo & Dinámica Bioquímica
@@ -438,15 +458,20 @@ $$\text{ABV} \approx (\text{OG} - \text{FG}) \times 131.25$$
 <!-- PASTERIZACIÓN -->
 ::: {.glossary-card data-glossary-cat="proceso"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Pasterización {.glossary-title}
 [Tratamiento térmico de conservación • *Pasteurization*]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Proceso térmico controlado (flash a ~72 °C durante 15–30 segundos o en túnel a ~60–65 °C sobre envases) para inactivar levaduras y bacterias.
+:::
+::: {.glossary-type-tag}
 [⚙️ Estabilidad]{.glossary-tag .tag-proceso}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Proceso térmico controlado (flash a ~72 °C durante 15–30 segundos o en túnel de calor a ~60–65 °C sobre envases ya cerrados) para inactivar levaduras y bacterias residuales.
-
 ::: {.glossary-detail-box .box-proceso}
 ::: {.glossary-detail-title}
 🔬 Usos y Efectos en la Cerveza
@@ -466,15 +491,20 @@ Asegura consistencia comercial masiva; sin embargo, el choque térmico puede vol
 <!-- MICROFILTRACIÓN -->
 ::: {.glossary-card data-glossary-cat="proceso"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Microfiltración {.glossary-title}
 [Esterilización en frío por membrana • *Cold Filtering*]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Filtración física en frío con membranas micrométricas (0.2 a 0.45 micras) capaces de retener mecánicamente células de levadura y bacterias.
+:::
+::: {.glossary-type-tag}
 [⚙️ Filtrado en Frío]{.glossary-tag .tag-proceso}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Filtración física a bajas temperaturas mediante membranas poliméricas o cerámicas con poros micrométricos (0.2 a 0.45 micras), capaces de retener físicamente células de levadura y bacterias.
-
 ::: {.glossary-detail-box .box-proceso}
 ::: {.glossary-detail-title}
 🔬 Usos y Efectos en la Cerveza
@@ -494,15 +524,20 @@ Preserva intactos los compuestos volátiles termolábiles: los aceites aromátic
 <!-- ASTRINGENCIA -->
 ::: {.glossary-card data-glossary-cat="degustacion"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Astringencia {.glossary-title}
 [Sensación táctil de sequedad y aspereza]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Sensación mecánica bucal (no un sabor) caracterizada por tirantez y sequedad en encías y lengua, similar a morder la piel de una uva verde.
+:::
+::: {.glossary-type-tag}
 [👅 Sensación Boca]{.glossary-tag .tag-degustacion}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Sensación mecánica bucal (no un sabor en las papilas gustativas) caracterizada por contracción, tirantez y aspereza en encías, paladar y lengua, similar a morder la piel de una uva verde o tomar té negro sobre-infusionado.
-
 ::: {.glossary-detail-box .box-degustacion}
 ::: {.glossary-detail-title}
 🔬 Origen Bioquímico
@@ -522,15 +557,20 @@ En niveles mínimos puede otorgar cierta estructura en cervezas añejadas en bar
 <!-- SENSIBILIDAD EN BOCA / MOUTHFEEL -->
 ::: {.glossary-card data-glossary-cat="degustacion"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Sensación en Boca (*Mouthfeel*) {.glossary-title}
 [Cuerpo, viscosidad y textura táctil]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Conjunto de sensaciones físicas no gustativas percibidas en boca: peso, densidad, viscosidad, temperatura y efervescencia.
+:::
+::: {.glossary-type-tag}
 [👅 Textura]{.glossary-tag .tag-degustacion}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Conjunto de sensaciones físicas no gustativas percibidas en la cavidad bucal mientras se bebe la cerveza: peso, viscosidad, densidad, temperatura y efervescencia.
-
 ::: {.glossary-detail-box .box-degustacion}
 ::: {.glossary-detail-title}
 🔬 Origen Bioquímico
@@ -550,15 +590,20 @@ Abarca desde una textura ligera y crujiente (*crisp*, típica de Pilsner), pasan
 <!-- ÉSTERES -->
 ::: {.glossary-card data-glossary-cat="degustacion"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Ésteres (Perfil Afrutado) {.glossary-title}
 [Compuestos aromáticos frutales • *Esters*]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Moléculas aromáticas producidas durante la fermentación cuando la levadura combina ácidos grasos con alcoholes orgánicos.
+:::
+::: {.glossary-type-tag}
 [👃 Aroma &amp; Sabor]{.glossary-tag .tag-degustacion}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Moléculas aromáticas producidas durante la fermentación cuando la levadura combina ácidos grasos con alcoholes orgánicos.
-
 ::: {.glossary-detail-box .box-degustacion}
 ::: {.glossary-detail-title}
 🔬 Origen & Dinámica
@@ -581,15 +626,20 @@ Su síntesis se maximiza a temperaturas más cálidas (18–24 °C), por lo que 
 <!-- FENOLES -->
 ::: {.glossary-card data-glossary-cat="degustacion"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Fenoles (Perfil Especiado &amp; Ahumado) {.glossary-title}
 [Compuestos aromáticos complejos • *Phenols*]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Compuestos aromáticos sintetizados por cepas de levadura POF+ (*Phenolic Off-Flavor Positive*) o derivados de maltas ahumadas.
+:::
+::: {.glossary-type-tag}
 [👃 Aroma &amp; Sabor]{.glossary-tag .tag-degustacion}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Compuestos aromáticos sintetizados por cepas de levadura POF+ (*Phenolic Off-Flavor Positive*) o derivados de maltas secadas al fuego con leña/turba.
-
 ::: {.glossary-detail-box .box-degustacion}
 ::: {.glossary-detail-title}
 🔬 Origen & Levaduras
@@ -612,15 +662,20 @@ A diferencia de las Lagers limpias donde indicarían contaminación, en estilos 
 <!-- DIACETILO -->
 ::: {.glossary-card data-glossary-cat="degustacion"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### Diacetilo {.glossary-title}
 [Perfil mantecoso • *Diacetyl* (2,3-butanodiona)]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Compuesto volátil producido naturalmente por la levadura al fermentar a partir del precursor alfa-acetolactato.
+:::
+::: {.glossary-type-tag}
 [⚠️ Defecto / Umbral]{.glossary-tag .tag-degustacion}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Compuesto volátil producido naturalmente por la levadura en las fases iniciales de la fermentación a partir del precursor alfa-acetolactato.
-
 ::: {.glossary-detail-box .box-degustacion}
 ::: {.glossary-detail-title}
 🔬 Dinámica de Maduración
@@ -640,15 +695,20 @@ Evoca sabor y aroma a mantequilla derretida, palomitas de cine o caramelo toffee
 <!-- DMS -->
 ::: {.glossary-card data-glossary-cat="degustacion"}
 ::: {.glossary-card-header}
-::: {.glossary-title-group}
+::: {.glossary-title-row}
 ### DMS (Sulfuro de Dimetilo) {.glossary-title}
 [Compuesto azufrado volátil • *Dimethyl Sulfide*]{.glossary-phonetic}
 :::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Compuesto químico orgánico de azufre generado por descomposición térmica de la SMM en maltas poco tostadas (como Pilsner).
+:::
+::: {.glossary-type-tag}
 [⚠️ Defecto]{.glossary-tag .tag-degustacion}
 :::
+:::
+:::
 ::: {.glossary-card-body}
-Compuesto químico orgánico de azufre generado a partir de la descomposición térmica de la S-metilmetionina (SMM), abundante en maltas poco tostadas (como la malta Pilsner).
-
 ::: {.glossary-detail-box .box-degustacion}
 ::: {.glossary-detail-title}
 🔬 Control en Fábrica

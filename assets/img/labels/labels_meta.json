@@ -1,0 +1,98 @@
+{
+  "guinness": {
+    "file": null,
+    "title": "Guinness Extra Stout (Dublín)",
+    "source": "St. James's Gate Brewery, Dublín (1759) • Wikimedia Commons (CC BY-SA)",
+    "success": false
+  },
+  "john-smiths": {
+    "file": "assets/img/labels/john-smiths.jpg",
+    "title": "John Smith's Magnet Bitter (Tadcaster)",
+    "source": "Tadcaster Brewery, Yorkshire • Wikimedia Commons (CC0)",
+    "success": true
+  },
+  "castlemaine-xxxx": {
+    "file": "assets/img/labels/castlemaine-xxxx.jpg",
+    "title": "Castlemaine XXXX (1920)",
+    "source": "Cartel histórico Castlemaine Perkins Ltd. (1920) • State Library of Queensland / Dominio Público",
+    "success": true
+  },
+  "negra-modelo": {
+    "file": "assets/img/labels/negra-modelo.jpg",
+    "title": "Negra Modelo 'La Crema de la Cerveza' (1928)",
+    "source": "Cervecería Modelo, México • Wikimedia Commons (CC BY-SA)",
+    "success": true
+  },
+  "bohemia-obscura": {
+    "file": "assets/img/labels/bohemia-obscura.jpg",
+    "title": "Bohemia Obscura (1905)",
+    "source": "Cervecería Cuauhtémoc, Monterrey • Wikimedia Commons (CC BY-SA)",
+    "success": true
+  },
+  "victoria": {
+    "file": "assets/img/labels/victoria.jpg",
+    "title": "Victoria (Toluca y México 1865)",
+    "source": "Compañía Cervecera Toluca y México • Wikimedia Commons (CC BY-SA)",
+    "success": true
+  },
+  "sol": {
+    "file": "assets/img/labels/sol.jpg",
+    "title": "El Sol (El Salto del Agua 1899)",
+    "source": "El Salto del Agua / Cervecería Moctezuma Orizaba • Wikimedia Commons (Dominio Público)",
+    "success": true
+  },
+  "dos-equis-lager": {
+    "file": "assets/img/labels/dos-equis-lager.jpg",
+    "title": "Dos Equis (XX) Lager Especial",
+    "source": "Cervecería Moctezuma, Orizaba • Wikimedia Commons (CC BY-SA)",
+    "success": true
+  },
+  "dos-equis-ambar": {
+    "file": null,
+    "title": "Siglo XX / Ámbar (Moctezuma Orizaba 1897)",
+    "source": "Cervecería Moctezuma Orizaba (1896) • Archivo Histórico / Dominio Público",
+    "success": false
+  },
+  "tecate": {
+    "file": "assets/img/labels/tecate.jpg",
+    "title": "Tecate Original (1944 / 1954)",
+    "source": "Tecate, Baja California • Wikimedia Commons (CC BY-SA)",
+    "success": true
+  },
+  "barrilito": {
+    "file": "assets/img/labels/barrilito.jpg",
+    "title": "Barrilito (Cervecería Modelo)",
+    "source": "Cervecería Modelo, México • Wikimedia Commons (Dominio Público)",
+    "success": true
+  },
+  "pacifico": {
+    "file": "assets/img/labels/pacifico.jpg",
+    "title": "Pacífico Clara (Mazatlán 1900)",
+    "source": "Cervecería del Pacífico, Mazatlán Sinaloa • Wikimedia Commons (Dominio Público)",
+    "success": true
+  },
+  "heineken": {
+    "file": null,
+    "title": "Heineken Original (1873 / París 1889)",
+    "source": "Amsterdam, Países Bajos • Wikimedia Commons (CC BY-SA)",
+    "success": false
+  },
+  "indio": {
+    "file": "assets/img/labels/indio.jpg",
+    "title": "Indio (Cerveza Cuauhtémoc 1893)",
+    "source": "Emblema del Tlatoani Cuauhtémoc • Wikimedia Commons (CC BY-SA)",
+    "success": true
+  },
+  "noche-buena": {
+    "file": "assets/img/labels/noche-buena.jpg",
+    "title": "Noche Buena (Moctezuma Orizaba 1924)",
+    "source": "Cervecería Moctezuma Orizaba • Wikimedia Commons (CC BY-SA)",
+    "success": true
+  },
+  "carta-blanca": {
+    "file": "assets/img/labels/carta-blanca.jpg",
+    "title": "Carta Blanca (Cuauhtémoc Monterrey 1890)",
+    "source": "Cartel litográfico publicitario histórico • Cervecería Cuauhtémoc / Wikimedia Commons (CC BY-SA)",
+    "success": true
+  }
+}

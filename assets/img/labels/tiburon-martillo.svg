@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgMartillo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="50%" stop-color="#065f46"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <radialGradient id="greenGlow" cx="50%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#064e3b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="10" y="10" width="280" height="380" rx="16" fill="url(#bgMartillo)" stroke="#10b981" stroke-width="3"/>
+  <rect x="18" y="18" width="264" height="364" rx="12" fill="url(#greenGlow)" stroke="#6ee7b7" stroke-width="1" stroke-dasharray="6,3"/>
+  
+  <text x="150" y="52" font-family="'Cinzel', Georgia, serif" font-weight="800" font-size="15" fill="#a7f3d0" text-anchor="middle" letter-spacing="3">COLECCIÓN ARTESANAL DE LA COSTA</text>
+  <line x1="45" y1="62" x2="255" y2="62" stroke="#10b981" stroke-width="1.5"/>
+  
+  <g transform="translate(150, 150)">
+    <circle r="64" fill="#022c22" stroke="#10b981" stroke-width="2"/>
+    <!-- Cabeza Tiburón Martillo estilizada -->
+    <path d="M -45 10 C -28 -20 12 -24 38 4 C 28 16 6 18 -15 18 C -28 18 -38 16 -45 10 Z" fill="#10b981"/>
+    <!-- Martillo frontal -->
+    <rect x="28" y="-12" width="12" height="32" rx="4" fill="#34d399"/>
+    <!-- Aleta dorsal -->
+    <polygon points="-8,-10 6,-34 10,-8" fill="#6ee7b7"/>
+    <circle cx="34" cy="-8" r="2" fill="#022c22"/>
+    <circle cx="34" cy="16" r="2" fill="#022c22"/>
+  </g>
+  
+  <text x="150" y="245" font-family="'Cinzel', Georgia, serif" font-weight="900" font-size="23" fill="#ffffff" text-anchor="middle" letter-spacing="2">TIBURÓN MARTILLO</text>
+  <text x="150" y="272" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="13" fill="#34d399" text-anchor="middle" letter-spacing="1">DOUBLE DRY HOPPED IPA</text>
+  
+  <rect x="50" y="288" width="200" height="28" rx="6" fill="rgba(16, 185, 129, 0.18)" stroke="#10b981" stroke-width="1"/>
+  <text x="150" y="306" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="11" fill="#d1fae5" text-anchor="middle">7.0% Alc. Vol. • 65 IBU • Citra &amp; Simcoe</text>
+  
+  <line x1="50" y1="334" x2="250" y2="334" stroke="#047857" stroke-width="1"/>
+  <text x="150" y="354" font-family="'Cinzel', Georgia, serif" font-size="10" fill="#6ee7b7" text-anchor="middle">LUPULADO INTENSO • FRUTAS TROPICALES</text>
+  <text x="150" y="370" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" fill="#64748b" text-anchor="middle">XALAPA, VERACRUZ</text>
+</svg>

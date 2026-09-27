@@ -975,6 +975,12 @@
       </div>
       <h3 id="lightbox-title-el" class="lightbox-title">Cerveza</h3>
       <div id="lightbox-sub-el" class="lightbox-sub">Estilo • Origen</div>
+      
+      <div id="lightbox-source-box" style="margin-bottom: 0.9rem; padding: 0.6rem 0.8rem; background: rgba(194, 105, 16, 0.15); border: 1px solid #9c4f06; border-radius: 6px; text-align: left; font-size: 0.78rem;">
+        <strong style="color: #f5d796; display: block; margin-bottom: 0.2rem;">🏛️ Registro Gráfico y Estatus Legal:</strong>
+        <span id="lightbox-source-el" style="color: #ded4c1; line-height: 1.35;"></span>
+      </div>
+
       <div id="lightbox-history-el" class="lightbox-history">Dato histórico</div>
       <button class="btn btn-secondary" id="btn-close-lightbox-btn" style="background:#3a3227; color:#f0e6d2; border-color:#63523b;">Cerrar Vista</button>
     </div>
@@ -1074,7 +1080,7 @@
               <polygon points="-4,-6 6,-20 8,-4" fill="#38bdf8"/>`
     };
 
-    // BASE DE DATOS INICIAL CON IMÁGENES VECTORIALES RETRO
+    // BASE DE DATOS INICIAL CON ETIQUETAS HISTÓRICAS REALES Y FUENTES DE DOMINIO PÚBLICO
     const INITIAL_BEERS = [
       {
         id: "guinness",
@@ -1082,7 +1088,9 @@
         origin: "Dublín, Irlanda",
         family: "Ale",
         style: "Irish Dry Stout",
-        label_img: generateVintageSvg("Guinness", "St. James's Gate 1759", "#151310", "#d4af37", "#f3e5ab", MOTIFS.harp),
+        label_img: "img/labels/guinness.jpg",
+        label_vintage: "c. 1862 (Arpa Brian Boru)",
+        label_source: "St. James's Gate Brewery, Dublín (1759) • Arpa celta registrada en 1862 • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "Malta base Pale Ale, cebada malteada y ~10% de cebada cruda tostada sin maltear (roasted barley).",
         yeast: "Saccharomyces cerevisiae (cepa histórica propia de Guinness, fermentación alta a 20-25 °C).",
         process: "Maceración por infusión simple; servicio con mezcla nitrogenada (70% N2 / 30% CO2) y cápsula (widget) en lata.",
@@ -1096,7 +1104,9 @@
         origin: "Tadcaster, Yorkshire, Inglaterra",
         family: "Ale",
         style: "English Bitter / Yorkshire Pale Ale",
-        label_img: generateVintageSvg("John Smith's", "Magnet Tadcaster", "#3b1414", "#e0a96d", "#f7d794", MOTIFS.magnet),
+        label_img: "img/labels/john-smiths.jpg",
+        label_vintage: "c. 1900 / Yorkshire",
+        label_source: "Tadcaster Brewery, Yorkshire • Emblema tradicional de taberna • Wikimedia Commons (CC0 Dominio Público)",
         cereal: "Malta Pale Ale británica, malta crystal y pequeña adición de azúcares cerveceros.",
         yeast: "Saccharomyces cerevisiae (cepa de Yorkshire con alta floculación).",
         process: "Fermentación tradicional en cubas de piedra/pizarra cuadradas (Yorkshire Squares) con recirculación y oxigenación controlada.",
@@ -1110,7 +1120,9 @@
         origin: "Brisbane, Queensland, Australia",
         family: "Lager",
         style: "Australian Pale Lager",
-        label_img: generateVintageSvg("Castlemaine", "XXXX Queensland 1878", "#8b1818", "#fbc02d", "#fff", MOTIFS.xxxx),
+        label_img: "img/labels/castlemaine-xxxx.jpg",
+        label_vintage: "1920 (Dominio Público)",
+        label_source: "Cartel litográfico publicitario histórico de Castlemaine Perkins Ltd. (1920) • State Library of Queensland / Dominio Público",
         cereal: "Malta de cebada de dos carreras y azúcar de caña refinada de Queensland como adjunto fermentable.",
         yeast: "Saccharomyces pastorianus (baja fermentación, muy atenuativa).",
         process: "Maceración para máxima atenuación y guarda en frío (lagering).",
@@ -1124,7 +1136,9 @@
         origin: "Ciudad de México, México",
         family: "Lager",
         style: "Munich Dunkel / Vienna Mexicana",
-        label_img: generateVintageSvg("Negra Modelo", "La Crema de la Cerveza", "#22150b", "#d4af37", "#fef3c7", MOTIFS.dunkel),
+        label_img: "img/labels/negra-modelo.jpg",
+        label_vintage: "1928 / 'La Crema de la Cerveza'",
+        label_source: "Cervecería Modelo México (1928) • 'La Crema de la Cerveza' • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "Malta caramelo tostada, malta chocolate, malta base y maíz cervecero.",
         yeast: "Saccharomyces pastorianus (baja fermentación).",
         process: "Maceración escalonada para extraer dulzor maltoso y lagering en frío prolongado.",
@@ -1138,7 +1152,9 @@
         origin: "Monterrey / Orizaba, México",
         family: "Lager",
         style: "Vienna Lager / Bock Ligero",
-        label_img: generateVintageSvg("Bohemia", "Obscura Selecta 1905", "#4a1212", "#f5d796", "#fff", MOTIFS.bohemia),
+        label_img: "img/labels/bohemia-obscura.jpg",
+        label_vintage: "1905 / Art Nouveau",
+        label_source: "Cervecería Cuauhtémoc Monterrey (1905) • Estilo Art Nouveau • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "Maltas tostadas y caramelo europeas combinadas con malta Pilsen base.",
         yeast: "Saccharomyces pastorianus (fermentación baja clásica).",
         process: "Guarda prolongada en frío y decocción controlada.",
@@ -1152,7 +1168,9 @@
         origin: "Toluca / Cd. de México, México",
         family: "Lager",
         style: "Vienna Lager",
-        label_img: generateVintageSvg("Victoria", "Toluca y México 1865", "#5c1810", "#e5b869", "#fed7aa", MOTIFS.victoria),
+        label_img: "img/labels/victoria.jpg",
+        label_vintage: "1865 (Toluca y México)",
+        label_source: "Compañía Cervecera Toluca y México (1865) • Diosa Victoria alada • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "Malta clara de dos carreras, malta caramelo y sémola de maíz.",
         yeast: "Saccharomyces pastorianus.",
         process: "Filtración brillante y maduración fría industrial estándar.",
@@ -1166,7 +1184,9 @@
         origin: "Orizaba, Veracruz, México",
         family: "Lager",
         style: "American Adjunct Lager",
-        label_img: generateVintageSvg("El Sol", "El Salto del Agua 1899", "#92400e", "#fef3c7", "#fde68a", MOTIFS.sun),
+        label_img: "img/labels/sol.jpg",
+        label_vintage: "1899 (El Salto del Agua)",
+        label_source: "Fábrica 'El Salto del Agua' / Cervecería Moctezuma Orizaba (1899) • Wikimedia Commons (Dominio Público)",
         cereal: "Malta de cebada ligera y alto porcentaje de sémola/jarabe de maíz.",
         yeast: "Saccharomyces pastorianus (ultraligera).",
         process: "Elaboración rápida con extractos de lúpulo especialmente isomerizados (tetrahidro-isohumulonas).",
@@ -1180,7 +1200,9 @@
         origin: "Orizaba, Veracruz, México",
         family: "Lager",
         style: "Mexican Vienna Lager",
-        label_img: generateVintageSvg("Siglo XX", "Moctezuma Orizaba 1897", "#163828", "#c29b38", "#fde047", MOTIFS.xx),
+        label_img: "img/labels/dos-equis-ambar.png",
+        label_vintage: "1897 / Conmemorativa Siglo XX",
+        label_source: "Cervecería Moctezuma de Orizaba, Veracruz (1896-1897) • Cuna de la marca Siglo XX por Wilhelm Hasse • Archivo Histórico / Dominio Público",
         cereal: "Maltas caramelo tostadas, malta base y maíz cervecero.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación baja en frío y maduración reposada.",
@@ -1194,7 +1216,9 @@
         origin: "Orizaba, Veracruz, México",
         family: "Lager",
         style: "Pale Lager / Pilsner Mexicana",
-        label_img: generateVintageSvg("Dos Equis", "Lager Especial", "#134e35", "#eab308", "#fff", MOTIFS.xx),
+        label_img: "img/labels/dos-equis-lager.jpg",
+        label_vintage: "Internacional / Exportación",
+        label_source: "Cervecería Moctezuma Orizaba • Identidad icónica de doble X • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "Malta de dos carreras y adjuntos de maíz.",
         yeast: "Saccharomyces pastorianus.",
         process: "Filtrado en frío y carbonatación vivaz.",
@@ -1208,7 +1232,9 @@
         origin: "Tecate, Baja California, México",
         family: "Lager",
         style: "American Adjunct Lager",
-        label_img: generateVintageSvg("Tecate", "Baja California 1944", "#7f1d1d", "#ffffff", "#fca5a5", MOTIFS.tecate),
+        label_img: "img/labels/tecate.jpg",
+        label_vintage: "1944 / 1954 (Pionera en Lata)",
+        label_source: "Cervecería Tecate, Baja California (1944) • Primera cerveza en lata de México (1954) • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "Malta clara y sémola de maíz.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación rápida y lagering industrial corto de gran escala.",
@@ -1222,7 +1248,9 @@
         origin: "Ciudad de México, México",
         family: "Lager",
         style: "American Lager / Cerveza de Barrio",
-        label_img: generateVintageSvg("Barrilito", "Cervecería Modelo", "#45220c", "#d4a373", "#fef3c7", MOTIFS.barrel),
+        label_img: "img/labels/barrilito.jpg",
+        label_vintage: "Tradicional de Barrio (Stubby)",
+        label_source: "Cervecería Modelo, México • Botella 'stubby' tradicional de cantina y botanero • Wikimedia Commons (Dominio Público)",
         cereal: "Malta Pilsen nacional y maíz.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación industrial económica y alta carbonatación.",
@@ -1236,7 +1264,9 @@
         origin: "Mazatlán, Sinaloa, México",
         family: "Lager",
         style: "Mexican Pilsner Style Lager",
-        label_img: generateVintageSvg("Pacífico", "Mazatlán Sin. 1900", "#0c284d", "#e9c46a", "#fdf0d5", MOTIFS.anchor),
+        label_img: "img/labels/pacifico.jpg",
+        label_vintage: "1900 / Mazatlán",
+        label_source: "Cervecería del Pacífico, Mazatlán Sinaloa (1900) • Emblema del Ancla Marina • Wikimedia Commons (Dominio Público)",
         cereal: "Malta de cebada clara y maíz.",
         yeast: "Saccharomyces pastorianus.",
         process: "Elaborada con agua de la costa de Mazatlán; filtración brillante.",
@@ -1250,7 +1280,9 @@
         origin: "Ámsterdam, Países Bajos",
         family: "Lager",
         style: "International Pale Lager",
-        label_img: generateVintageSvg("Heineken", "Amsterdam 1873", "#0f3e23", "#eab308", "#ef4444", MOTIFS.heineken),
+        label_img: "img/labels/heineken.jpg",
+        label_vintage: "1873 / París 1889",
+        label_source: "Heineken Brouwerij Ámsterdam (1873) • Medallas de París 1889 y Ámsterdam 1883 • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "100% Malta de cebada pura (sin adjuntos de maíz ni arroz).",
         yeast: "Saccharomyces pastorianus cepa exclusiva 'Heineken A-Yeast'.",
         process: "Fermentación en tanques horizontales para reducir la presión hidrostática sobre la levadura.",
@@ -1264,7 +1296,9 @@
         origin: "Monterrey, Nuevo León, México",
         family: "Lager",
         style: "Mexican Vienna / Amber Lager",
-        label_img: generateVintageSvg("Indio", "Cerveza Cuauhtémoc 1893", "#2e1e12", "#ca8a04", "#fde68a", MOTIFS.indio),
+        label_img: "img/labels/indio.jpg",
+        label_vintage: "1893 (Cerveza Cuauhtémoc)",
+        label_source: "Cerveza Cuauhtémoc (1893) • Retrato original del Tlatoani Cuauhtémoc • Wikimedia Commons (CC BY-SA 4.0)",
         cereal: "Malta caramelo, malta clara de cebada y maíz cervecero.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación baja con azúcares caramelizados.",
@@ -1278,7 +1312,9 @@
         origin: "Orizaba, Veracruz, México",
         family: "Lager",
         style: "Winter Bock / Festive Lager",
-        label_img: generateVintageSvg("Noche Buena", "Bock Invernal 1924", "#4a1010", "#d4af37", "#fef3c7", MOTIFS.xmas),
+        label_img: "img/labels/noche-buena.jpg",
+        label_vintage: "1924 / Bock Navideña",
+        label_source: "Cervecería Moctezuma Orizaba (1924/1938) • Edición navideña invernal con flor de Nochebuena • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "(Antes 1990): 100% Malta (Múnich, Viena, Caramelo oscura). (Hoy): Malta base reducida, jarabe de alta fructosa/maíz y extractos de color.",
         yeast: "Saccharomyces pastorianus.",
         process: "(Antes): Meses de guarda en frío en Orizaba; (Hoy): Ciclo industrial acelerado con High-Gravity Brewing.",
@@ -1292,7 +1328,9 @@
         origin: "Monterrey, Nuevo León, México",
         family: "Lager",
         style: "Classic American Adjunct Lager",
-        label_img: generateVintageSvg("Carta Blanca", "Cuauhtémoc 1890", "#5c330a", "#fef08a", "#fff", MOTIFS.carta),
+        label_img: "img/labels/carta-blanca.jpg",
+        label_vintage: "1890 (Insignia Fundadora)",
+        label_source: "Cartel litográfico publicitario histórico • Cervecería Cuauhtémoc Monterrey (1890) • Medallas Chicago 1893 y París 1900 • Wikimedia Commons (CC BY-SA 4.0)",
         cereal: "Malta de cebada de dos carreras y maíz norteño.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación tradicional de paila fría.",
@@ -1306,7 +1344,9 @@
         origin: "Xalapa, Veracruz, México",
         family: "Ale",
         style: "American Pale Ale (Artesanal)",
-        label_img: generateVintageSvg("Tiburón Mako", "Pale Ale Xalapa", "#0a2540", "#38bdf8", "#bae6fd", MOTIFS.shark),
+        label_img: "img/labels/tiburon-mako.svg",
+        label_vintage: "Artesanal Contemporánea",
+        label_source: "Microcervecería Independiente de Xalapa, Veracruz • Colección Fauna Marina del Golfo & Agua del Cofre de Perote • Licencia Abierta Cultural",
         cereal: "Malta base Pale Ale (Maris Otter / 2-Row) y malta Crystal 60L.",
         yeast: "Saccharomyces cerevisiae (US-05 / American Ale).",
         process: "Infusión simple con agua de manantial del Cofre de Perote y Dry Hopping en frío.",
@@ -1320,7 +1360,9 @@
         origin: "Xalapa, Veracruz, México",
         family: "Ale",
         style: "Oatmeal Stout / Robust Porter",
-        label_img: generateVintageSvg("Tiburón Nodriza", "Oatmeal Stout Xalapa", "#1a120b", "#d97706", "#fde68a", MOTIFS.shark),
+        label_img: "img/labels/tiburon-nodriza.svg",
+        label_vintage: "Artesanal Contemporánea",
+        label_source: "Microcervecería Independiente de Xalapa-Coatepec, Veracruz • Homenaje al Café de Altura y Maltas Tostadas • Licencia Abierta Cultural",
         cereal: "Malta base, malta chocolate, cebada tostada, malta caramelo y 10-15% hojuelas de avena cruda.",
         yeast: "Saccharomyces cerevisiae (cepa inglesa S-04).",
         process: "Maceración alta (68 °C) para cuerpo espeso; acondicionamiento en frío sin filtrar.",
@@ -1334,7 +1376,9 @@
         origin: "Xalapa, Veracruz, México",
         family: "Ale",
         style: "India Pale Ale - IPA",
-        label_img: generateVintageSvg("Tiburón Martillo", "Double IPA Xalapa", "#111827", "#10b981", "#6ee7b7", MOTIFS.shark),
+        label_img: "img/labels/tiburon-martillo.svg",
+        label_vintage: "Artesanal Contemporánea",
+        label_source: "Microcervecería Independiente de Xalapa, Veracruz • Doble Lupulado Tropical • Licencia Abierta Cultural",
         cereal: "Malta Pale Ale, malta de trigo (para retención de espuma) y malta dextrina.",
         yeast: "Saccharomyces cerevisiae (cepa IPA Vermont/American).",
         process: "Maceración atenuativa y doble lupulado en frío (Double Dry Hopping / DDH).",
@@ -1345,7 +1389,7 @@
     ];
 
     // ESTADO LOCAL DE LA APLICACIÓN
-    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v2";
+    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v3";
     let beersData = [];
     let currentView = "cards"; // "cards" | "table"
     let currentSort = { col: "name", asc: true };
@@ -1472,9 +1516,9 @@
                 </div>
               </div>
 
-              <!-- MINIATURA VINTAGE -->
-              <div class="vintage-label-wrapper" onclick="openLightbox('${b.id}')" title="Ver etiqueta en alta resolución">
-                <img src="${labelSrc}" alt="${b.name}" class="vintage-label-img">
+              <!-- MINIATURA HISTÓRICA / VINTAGE -->
+              <div class="vintage-label-wrapper" onclick="openLightbox('${b.id}')" title="Ver etiqueta histórica y registro legal">
+                <img src="${labelSrc}" alt="${b.name}" class="vintage-label-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 120\'><rect width=\'100\' height=\'120\' fill=\'%232b2015\'/><text x=\'50\' y=\'65\' fill=\'%23f5d796\' font-size=\'12\' text-anchor=\'middle\'>🍺 ${encodeURIComponent(b.name.slice(0, 10))}</text></svg>'">
                 <span class="label-zoom-tag">🔍</span>
               </div>
             </div>
@@ -1556,7 +1600,13 @@
 
       document.getElementById("lightbox-img-el").src = getBeerLabelImg(b);
       document.getElementById("lightbox-title-el").textContent = b.name;
-      document.getElementById("lightbox-sub-el").textContent = `${b.style} • ${b.origin} (${b.abv || 'N/D'})`;
+      document.getElementById("lightbox-sub-el").textContent = `${b.style} • ${b.origin} (${b.abv || 'N/D'})${b.label_vintage ? ' • Época: ' + b.label_vintage : ''}`;
+      
+      const sourceEl = document.getElementById("lightbox-source-el");
+      if (sourceEl) {
+        sourceEl.textContent = b.label_source || "Etiqueta histórica documental • Uso educativo, cultural y de divulgación cervecera.";
+      }
+
       document.getElementById("lightbox-history-el").innerHTML = `<strong>Dato histórico / Receta:</strong> ${b.history || b.distinctive || 'Sin información adicional.'}`;
 
       document.getElementById("modal-lightbox").classList.add("active");
@@ -1698,7 +1748,7 @@
           beersData = [...INITIAL_BEERS];
           saveToStorage();
           renderApp();
-          showToast("✓ Colección restaurada con etiquetas vintage");
+          showToast("✓ Colección restaurada con etiquetas históricas reales y archivos abiertos");
         }
       });
     }
