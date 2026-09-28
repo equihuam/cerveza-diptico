@@ -25,10 +25,11 @@ if ($quartoCmd) {
 
 # Copiar assets estáticos adicionales si se requiere en _site/assets
 if (Test-Path "assets") {
-    if (-not (Test-Path "_site\assets")) {
-        New-Item -ItemType Directory -Path "_site\assets" -Force | Out-Null
+    try {
+        Copy-Item -Path "assets\*" -Destination "_site\assets\" -Recurse -Force -ErrorAction SilentlyContinue
+    } catch {
+        # Quarto ya maneja los resources automáticamente
     }
-    Copy-Item -Path "assets\*" -Destination "_site\assets\" -Recurse -Force
 }
 
 

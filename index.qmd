@@ -316,6 +316,39 @@ Conceptos bioquímicos fundamentales, ingredientes clave, procesos de estabiliza
 
 ::: {.glossary-grid}
 
+<!-- CEBADA DE DOS CARRERAS -->
+::: {.glossary-card data-glossary-cat="materia"}
+::: {.glossary-card-header}
+::: {.glossary-title-row}
+### Cebada de Dos Carreras {.glossary-title}
+[*Hordeum vulgare subsp. distichum* • Cebada dística (2-Row Barley)]{.glossary-phonetic}
+:::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Variedad botánica de cebada donde solo la espiguilla central del raquis es fértil, produciendo espigas con dos hileras de granos grandes, simétricos y uniformes.
+:::
+::: {.glossary-type-tag}
+[🌾 Grano &amp; Cereal]{.glossary-tag .tag-materia}
+:::
+:::
+:::
+::: {.glossary-card-body}
+::: {.glossary-detail-box}
+::: {.glossary-detail-title}
+🔬 Ventajas Bioquímicas vs. Seis Carreras (6-Row)
+:::
+Posee mayor proporción de almidón extraíble y menor porcentaje de cáscara por peso. Al contener menos proteínas y taninos que la variedad de seis carreras, minimiza la astringencia y la turbidez por frío (*chill haze*), aportando un poder enzimático ideal para recetas 100% malta.
+:::
+
+::: {.glossary-detail-box}
+::: {.glossary-detail-title}
+👅 Perfil Sensorial y de Elaboración
+:::
+Estándar predilecto para Pilsners europeas, cervezas alemanas, británicas y artesanales de alta calidad. Otorga mostos muy limpios con notas profundas y elegantes a pan horneado fresco, galleta dulce, cereal noble y final redondo sin asperezas.
+:::
+:::
+:::
+
 <!-- MALTA -->
 ::: {.glossary-card data-glossary-cat="materia"}
 ::: {.glossary-card-header}
