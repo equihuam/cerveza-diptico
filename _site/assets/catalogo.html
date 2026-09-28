@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Catálogo Cervecero | Cultura Chelera</title>
-  <meta name="description" content="Catálogo interactivo con fichas técnicas de 22 cervezas: fechas, orígenes, estabilización, cereales y recetas.">
+  <meta name="description" content="Catálogo interactivo con fichas técnicas de 29 cervezas: fechas, orígenes, estabilización, cervezas sin alcohol 0.0%, cereales y recetas.">
   <meta property="og:title" content="Catálogo Cervecero | Cultura Chelera">
-  <meta property="og:description" content="Fichas técnicas, etiquetas históricas y recetas de 22 cervezas internacionales y mexicanas.">
+  <meta property="og:description" content="Fichas técnicas, etiquetas históricas, recetas y variantes sin alcohol 0.0% de 29 cervezas internacionales y mexicanas.">
   <meta property="og:image" content="https://cerveza-mia.netlify.app/assets/img/cover.jpg">
   <meta property="og:site_name" content="Cultura Chelera">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
@@ -362,6 +362,7 @@
     .badge-ale { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
     .badge-sour { background: #f3e5f5; color: #7b1fa2; border: 1px solid #e1bee7; }
     .badge-hybrid { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
+    .badge-zero { background: #e0f2fe; color: #0284c7; border: 1px solid #7dd3fc; }
 
     .badge-stab {
       font-size: 0.72rem;
@@ -844,6 +845,7 @@
             <option value="Lager">Lager (Baja Fermentación)</option>
             <option value="Ale">Ale (Alta Fermentación)</option>
             <option value="Espontánea">Espontánea / Mixta</option>
+            <option value="Sin Alcohol">🍃 Sin Alcohol / 0.0%</option>
           </select>
         </div>
 
@@ -1141,7 +1143,10 @@
       amstel: `<circle r="34" fill="#b91c1c" stroke="#d4af37" stroke-width="2"/>
                <path d="M -34 0 A 34 34 0 0 0 34 0 Z" fill="#ffffff"/>
                <circle r="22" fill="#1b1712" stroke="#d4af37" stroke-width="1.5"/>
-               <text x="0" y="8" font-family="'Cinzel', serif" font-size="20" font-weight="900" fill="#d4af37" text-anchor="middle">A</text>`
+               <text x="0" y="8" font-family="'Cinzel', serif" font-size="20" font-weight="900" fill="#d4af37" text-anchor="middle">A</text>`,
+      zero: `<circle r="34" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+             <circle r="22" fill="#0c4a6e"/>
+             <text x="0" y="7" font-family="'Cinzel', serif" font-size="14" font-weight="900" fill="#ffffff" text-anchor="middle">0.0%</text>`
     };
 
     // BASE DE DATOS INICIAL CON ETIQUETAS HISTÓRICAS REALES Y FUENTES DE DOMINIO PÚBLICO / OFICIALES
@@ -1563,11 +1568,144 @@
         distinctive: "Cuerpo ligero, efervescencia vivaz y sutil amargor herbal. Mundialmente famosa por el ritual del gajo de lima en la botella.",
         history: "Creada en 1925 para celebrar el décimo aniversario de Cervecería Modelo. Su corona está inspirada en la de la Virgen de Guadalupe en la Catedral de Puerto Vallarta. Es la cerveza mexicana más vendida y exportada del mundo.",
         abv: "4.5%"
+      },
+      {
+        id: "heineken-00",
+        name: "Heineken 0.0",
+        origin: "Ámsterdam, Países Bajos / Monterrey, México",
+        launch_year: "2017 / 2019",
+        launch_place: "Heineken Brouwerij, Ámsterdam, Países Bajos / Heineken México",
+        stabilization: "Microfiltrada",
+        family: "Sin Alcohol",
+        style: "Non-Alcoholic Pale Lager (0.0%)",
+        label_img: "img/labels/heineken0.webp",
+        label_vintage: "2017 / Heineken 0.0",
+        label_source: "Heineken International • Etiqueta oficial con marco azul 0.0 • Archivo Comercial / Oficial",
+        cereal: "100% Malta de cebada cervecera pura y agua.",
+        yeast: "Saccharomyces pastorianus (Levadura A exclusiva de Heineken).",
+        process: "Doble ciclo de fermentación con Levadura A en tanques horizontales y desalcoholización suave al vacío a 30-35 °C.",
+        distinctive: "Mantiene el sutil perfil frutal a manzana verde y notas limpias de malta con 0.0% alcohol real y solo 69 kcal por botella de 330 ml.",
+        history: "La cerveza 0.0% más vendida del mundo, desarrollada tras 2 años de investigación por Willem van Waesberghe. Patrocinadora global de la F1 con la campaña 'When You Drive, Never Drink'.",
+        abv: "0.0%"
+      },
+      {
+        id: "corona-cero",
+        name: "Corona Cero 0.0%",
+        origin: "Ciudad de México / Zacatecas, México",
+        launch_year: "2022",
+        launch_place: "Cervecería Modelo, Ciudad de México, México",
+        stabilization: "Pasteurizada",
+        family: "Sin Alcohol",
+        style: "Non-Alcoholic Mexican Adjunct Lager (0.0%)",
+        label_img: "img/labels/corona0.webp",
+        label_vintage: "2022 / Corona Cero",
+        label_source: "Grupo Modelo / AB InBev • Botella serigrafiada Corona Cero • Archivo Comercial / Oficial",
+        cereal: "Malta clara de cebada de dos carreras, arroz y sémola de maíz.",
+        yeast: "Saccharomyces pastorianus (cepa limpia de Grupo Modelo).",
+        process: "Elaborada con la receta clásica y desalcoholizada por evaporación al vacío en frío, preservando lúpulos fotoestables.",
+        distinctive: "Cuerpo ligero, carbonatación viva y notas frescas a cereal y cítricos, con 0.0% alcohol y 56 kcal por botella.",
+        history: "En 2024 hizo historia al convertirse en el primer patrocinador cervecero mundial de los Juegos Olímpicos (París 2024).",
+        abv: "0.0%"
+      },
+      {
+        id: "tecate-00",
+        name: "Tecate 0.0",
+        origin: "Monterrey, Nuevo León / Tecate, México",
+        launch_year: "2023",
+        launch_place: "Cervecería Cuauhtémoc Moctezuma (Heineken México)",
+        stabilization: "Pasteurizada",
+        family: "Sin Alcohol",
+        style: "Non-Alcoholic American Lager (0.0%)",
+        label_img: "img/labels/tecate-0.webp",
+        label_vintage: "2023 / Tecate 0.0",
+        label_source: "Cervecería Tecate (Heineken México) • Lata y botella azul plata Tecate 0.0",
+        cereal: "Malta de cebada y sémola de maíz cervecero seleccionado.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Fermentación baja completa y desalcoholización en frío a baja presión con columna de conos rotatorios.",
+        distinctive: "Cuerpo sumamente liviano y refrescante, de amargor limpio y sutil, ideal para servirse helada con limón y sal.",
+        history: "Presentada masivamente en el festival Pa'l Norte 2023 en Monterrey como alternativa responsable y refrescante para eventos.",
+        abv: "0.0%"
+      },
+      {
+        id: "sol-cero",
+        name: "Sol Cero 0.0%",
+        origin: "Orizaba, Veracruz / Guadalajara, México",
+        launch_year: "2007",
+        launch_place: "Cervecería Moctezuma, Orizaba, Veracruz, México",
+        stabilization: "Pasteurizada",
+        family: "Sin Alcohol",
+        style: "Non-Alcoholic Pale Lager (0.0%)",
+        label_img: "img/labels/sol-0.webp",
+        label_vintage: "2007 / Sol Cero",
+        label_source: "Cervecería Moctezuma (Heineken México) • Etiqueta histórica Sol Cero",
+        cereal: "Malta de cebada clara y sémola de maíz con extractos de lúpulo fotoestables.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Evaporación térmica al vacío a baja temperatura y microfiltración brillante.",
+        distinctive: "Sabor suave, sutil dulzor de grano y bajísimo amargor, perfecta como base para preparar micheladas sin alcohol.",
+        history: "Fue la primera cerveza sin alcohol de producción masiva lanzada en México en 2007, pionera absoluta del segmento en el país.",
+        abv: "0.0%"
+      },
+      {
+        id: "modelo-especial-00",
+        name: "Modelo Especial 0.0%",
+        origin: "Ciudad de México / Zacatecas, México",
+        launch_year: "2024",
+        launch_place: "Grupo Modelo (AB InBev), México",
+        stabilization: "Pasteurizada",
+        family: "Sin Alcohol",
+        style: "Non-Alcoholic International Pilsner (0.0%)",
+        label_img: "img/labels/model0-dorada.webp",
+        label_vintage: "2024 / Modelo Especial 0.0",
+        label_source: "Grupo Modelo (AB InBev) • Etiqueta contemporánea Modelo 0.0",
+        cereal: "Malta de cebada de dos carreras seleccionada y maíz cervecero puro.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Elaboración tradicional de Modelo Especial con extracción suave de alcohol mediante membranas y vacío en frío.",
+        distinctive: "Mayor presencia de malta dulce y sensación de cuerpo en boca que las lagers 0.0 convencionales, con final limpio.",
+        history: "Lanzada en 2024 para atender la demanda de consumidores que buscan el sabor robusto y premium de Modelo Especial en versión 0.0%.",
+        abv: "0.0%"
+      },
+      {
+        id: "modelo-negra-00",
+        name: "Modelo Negra 0.0%",
+        origin: "Ciudad de México / Zacatecas, México",
+        launch_year: "2024",
+        launch_place: "Grupo Modelo (AB InBev), México",
+        stabilization: "Pasteurizada",
+        family: "Sin Alcohol",
+        style: "Non-Alcoholic Munich Dunkel / Dark Lager (0.0%)",
+        label_img: "img/labels/model0-negra.webp",
+        label_vintage: "2024 / Modelo Negra 0.0",
+        label_source: "Grupo Modelo (AB InBev) • Etiqueta contemporánea Modelo Negra 0.0",
+        cereal: "Maltas caramelo tostadas y malta chocolate con malta base y maíz.",
+        yeast: "Saccharomyces pastorianus.",
+        process: "Maceración orientada a retención de dextrinas espesas, fermentación baja y desalcoholización al vacío a baja temperatura.",
+        distinctive: "Primera cerveza oscura 0.0% en México: color caoba con destellos rubí, espuma marfil cremosa y aromas a pan tostado y café.",
+        history: "Rompe el paradigma de las cervezas sin alcohol exclusivamente rubias, brindando una opción oscura para maridajes gastronómicos.",
+        abv: "0.0%"
+      },
+      {
+        id: "minerva-playacar-00",
+        name: "Minerva Playacar 0.0%",
+        origin: "Zapopan, Jalisco, México",
+        launch_year: "2023",
+        launch_place: "Cervecería Minerva, Zapopan, Jalisco, México",
+        stabilization: "Microfiltrada",
+        family: "Sin Alcohol",
+        style: "Craft Non-Alcoholic Pale Ale (0.0%)",
+        label_img: "img/labels/minerva-0.webp",
+        label_vintage: "2023 / Minerva Playacar Cero",
+        label_source: "Cervecería Minerva (Zapopan, Jal.) • Etiqueta oficial craft 0.0",
+        cereal: "Malta Pale Ale de dos carreras y trigo malteado con maltas dextrínicas.",
+        yeast: "Cepa no sacarolítica (Saccharomycodes ludwigii / fermentación restringida).",
+        process: "Fermentación biológica donde la levadura produce aromas ale sin generar alcohol; generoso Dry-Hopping con Citra y Mosaic.",
+        distinctive: "Explosión de aromas cítricos y tropicales (maracuyá, durazno, toronja) con amargor herbal limpio y cuerpo sedoso.",
+        history: "Creada por Cervecería Minerva, pionera del movimiento artesanal mexicano (2003), para ofrecer una auténtica experiencia de cata craft sin alcohol.",
+        abv: "<0.4%"
       }
     ];
 
     // ESTADO LOCAL DE LA APLICACIÓN
-    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v8";
+    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v12";
     let beersData = [];
     let currentView = "cards"; // "cards" | "table"
     let currentSort = { col: "name", asc: true };
@@ -1585,14 +1723,14 @@
               beersData.push({...initB});
             }
           });
-          // Migración automática si faltan campos
+          // Migración automática si faltan campos o si se actualizan imágenes oficiales
           beersData = beersData.map(b => {
             const def = INITIAL_BEERS.find(x => x.id === b.id);
             if (def) {
               if (!b.launch_year) b.launch_year = def.launch_year;
               if (!b.launch_place) b.launch_place = def.launch_place;
               if (!b.stabilization) b.stabilization = def.stabilization;
-              if (!b.label_img) b.label_img = def.label_img;
+              if (!b.label_img || b.label_img === "") b.label_img = def.label_img;
             }
             if (!b.stabilization) b.stabilization = "Pasteurizada";
             return b;
@@ -1601,8 +1739,12 @@
           beersData = [...INITIAL_BEERS];
         }
       } else {
-        // Migrar de v7, v6, v5 o v4 si existían
-        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v7") ||
+        // Migrar de v11, v10, v9, v8, v7, v6, v5 o v4 si existían
+        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v11") ||
+                          localStorage.getItem("antigravity_cervezas_fichas_db_v10") ||
+                          localStorage.getItem("antigravity_cervezas_fichas_db_v9") ||
+                          localStorage.getItem("antigravity_cervezas_fichas_db_v8") ||
+                          localStorage.getItem("antigravity_cervezas_fichas_db_v7") ||
                           localStorage.getItem("antigravity_cervezas_fichas_db_v6") ||
                           localStorage.getItem("antigravity_cervezas_fichas_db_v5") ||
                           localStorage.getItem("antigravity_cervezas_fichas_db_v4");
@@ -1727,6 +1869,8 @@
     }
 
     function getFamilyBadgeClass(family) {
+      if (!family) return "badge-hybrid";
+      if (family.includes("Sin Alcohol") || family.includes("0.0")) return "badge-zero";
       if (family === "Lager") return "badge-lager";
       if (family === "Ale") return "badge-ale";
       if (family.includes("Espontánea") || family.includes("Sour")) return "badge-sour";
@@ -1737,6 +1881,10 @@
       if (b.label_img && b.label_img.trim().length > 0) return b.label_img;
       if (b.id === "amstel-ultra" || (b.name && b.name.toLowerCase().includes("amstel"))) {
         return generateVintageSvg(b.name, b.style, "#8b1515", "#d4af37", "#ffffff", MOTIFS.amstel);
+      }
+      if ((b.family && (b.family.includes("Sin Alcohol") || b.family.includes("0.0"))) || 
+          (b.name && (b.name.includes("0.0") || b.name.includes("Cero") || b.name.includes("Playacar")))) {
+        return generateVintageSvg(b.name, b.style, "#0c4a6e", "#38bdf8", "#f0f9ff", MOTIFS.zero);
       }
       return generateVintageSvg(b.name, b.style, "#2b2015", "#c29b38", "#fde047", MOTIFS.dunkel);
     }
@@ -2021,11 +2169,11 @@
 
       // Restaurar iniciales
       document.getElementById("btn-reset-default").addEventListener("click", () => {
-        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 22 fichas y etiquetas originales?")) {
+        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 29 fichas y etiquetas originales?")) {
           beersData = [...INITIAL_BEERS];
           saveToStorage();
           renderApp();
-          showToast("✓ Colección restaurada con todas las 22 fichas");
+          showToast("✓ Colección restaurada con todas las 29 fichas");
         }
       });
     }

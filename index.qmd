@@ -555,6 +555,42 @@ Preserva intactos los compuestos volátiles termolábiles: los aceites aromátic
 :::
 :::
 
+<!-- DESALCOHOLIZACIÓN -->
+::: {.glossary-card data-glossary-cat="proceso"}
+::: {.glossary-card-header}
+::: {.glossary-title-row}
+### Desalcoholización {.glossary-title}
+[Extracción física y biológica de alcohol • *Dealcoholization / 0.0% Brewing*]{.glossary-phonetic}
+:::
+::: {.glossary-def-row}
+::: {.glossary-def-text}
+Conjunto de tecnologías físicas (post-fermentación) o biológicas (durante fermentación) para producir cervezas sin alcohol (<0.5% ABV) o 0.0% vol reales preservando el perfil de malta y lúpulo.
+:::
+::: {.glossary-type-tag}
+[⚙️ Tecnología 0.0]{.glossary-tag .tag-proceso}
+:::
+:::
+:::
+::: {.glossary-card-body}
+::: {.glossary-detail-box .box-proceso}
+::: {.glossary-detail-title}
+🔬 Métodos Físicos y Biológicos Principales
+:::
+- **Destilación al Vacío (*Vacuum Distillation*):** A presión reducida, el etanol se evapora a solo 30–35 °C sin hervir ni alterar térmicamente la cerveza.
+- **Columna de Conos Rotatorios (*Spinning Cone Column*):** Extrae y resguarda primero los compuestos aromáticos volátiles, desalcoholiza la base en una segunda etapa y reincorpora los aromas originales al producto terminado.
+- **Filtración por Membrana (*Ósmosis Inversa / Diálisis*):** Proceso en frío donde membranas semipermeables separan agua y alcohol de los compuestos de color, dextrinas y sabor.
+- **Fermentación Restringida / Levaduras Especiales:** Detención en frío (0–4 °C) o uso de cepas que solo consumen azúcares simples (*Saccharomycodes ludwigii*), generando naturalmente <0.5% ABV.
+:::
+
+::: {.glossary-detail-box .box-proceso}
+::: {.glossary-detail-title}
+👅 Retos Sensoriales y Balance
+:::
+El etanol aporta viscosidad (*mouthfeel*) y transporta aromas. Para compensar su extracción, las formulaciones 0.0 contemporáneas ajustan maltas caramelizadas para dar cuerpo, emplean *dry-hopping* aromático y reintegran los ésteres naturales condensados en el proceso.
+:::
+:::
+:::
+
 <!-- ASTRINGENCIA -->
 ::: {.glossary-card data-glossary-cat="degustacion"}
 ::: {.glossary-card-header}

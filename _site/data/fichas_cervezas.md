@@ -304,3 +304,105 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 * **Maridaje oficial:** Mariscos, ceviches, tacos al pastor y comida mexicana fresca.
 * **Dato curioso / Identidad:** Creada en 1925 para celebrar el décimo aniversario de Cervecería Modelo. Su emblemático logotipo con dos grifos y la corona imperial está inspirado en la corona de la Virgen de Guadalupe en la Catedral de Puerto Vallarta. Es la marca de cerveza mexicana más vendida y exportada globalmente, famosa por el ritual internacional de servirse con un gajo de lima en el cuello de su botella transparente serigrafiada.
 
+---
+
+## 4. Cervezas Sin Alcohol y 0.0% (Non-Alcoholic Beers)
+
+### 🍺 Heineken 0.0
+* **Origen actual:** Ámsterdam, Países Bajos / Monterrey, México (Heineken México).
+* **Lanzamiento original:** **2017** (Global) / **2019** (México) en *Heineken Brouwerij, Ámsterdam, Países Bajos*.
+* **Estabilización:** ❄️ Desalcoholizada al vacío + Microfiltrada / Pasteurizada.
+* **Estilo:** *Non-Alcoholic Pale Lager (0.0%)*.
+* **ABV:** **0.0% Alc. Vol. (Real)**.
+* **Calorías / Carbohidratos:** 69 kcal por botella de 330 ml.
+* **Cereal / Granos:** 100% Malta de cebada pura y agua.
+* **Levadura:** *Saccharomyces pastorianus* (Levadura A exclusiva de Heineken).
+* **Proceso:** Doble ciclo de fermentación tradicional con Levadura A en tanques horizontales; el alcohol se extrae suavemente mediante destilación al vacío a baja temperatura (30–35 °C) y se mezclan las fracciones aromáticas naturales recuperadas para preservar el perfil original.
+* **Distintivo de la receta:** Mantiene el característico perfil frutal (manzana verde suave) y el balance de malta pura de la receta clásica, con 0.0% alcohol garantizado.
+* **Dato histórico / curioso:** Desarrollada por el maestro cervecero Willem van Waesberghe tras más de 2 años de rigurosos ensayos sensoriales. Es la cerveza 0.0% más vendida del mundo y patrocinadora global de la Fórmula 1 bajo el lema "When You Drive, Never Drink".
+
+---
+
+### 🍺 Corona Cero (0.0%)
+* **Origen actual:** Ciudad de México / Zacatecas, México (Grupo Modelo / AB InBev).
+* **Lanzamiento original:** **2022** en *Cervecería Modelo, Ciudad de México, México*.
+* **Estabilización:** 🔥 Pasteurizada tras desalcoholización al vacío.
+* **Estilo:** *Non-Alcoholic Mexican Adjunct Lager (0.0%)*.
+* **ABV:** **0.0% Alc. Vol. (Real)**.
+* **Calorías:** 56 kcal por botella de 355 ml.
+* **Cereal / Granos:** Malta clara de cebada de dos carreras, arroz y sémola de maíz cervecero.
+* **Levadura:** *Saccharomyces pastorianus* (cepa lager limpia de Grupo Modelo).
+* **Proceso:** Elaborada siguiendo la receta tradicional de Corona Extra; una vez finalizada la maduración, se extrae el alcohol mediante evaporación al vacío a baja temperatura preservando la efervescencia y los extractos de lúpulo fotoestables.
+* **Distintivo de la receta:** Sabor fresco, ligero y efervescente con notas limpias de cereal y suave toque cítrico, ideal para disfrutarse con el tradicional gajo de lima en el cuello.
+* **Dato histórico / curioso:** En 2024 hizo historia al convertirse en el **primer patrocinador cervecero mundial oficial de los Juegos Olímpicos** (París 2024 y Milán-Cortina 2026), posicionando a la categoría 0.0% en la máxima vitrina deportiva del planeta.
+
+---
+
+### 🍺 Tecate 0.0
+* **Origen actual:** Monterrey, Nuevo León / Tecate, Baja California, México (Heineken México).
+* **Lanzamiento original:** **2023** en *Cervecería Cuauhtémoc Moctezuma (Heineken México)*.
+* **Estabilización:** 🔥 Pasteurizada.
+* **Estilo:** *Non-Alcoholic American Adjunct Lager (0.0%)*.
+* **ABV:** **0.0% Alc. Vol. (Real)**.
+* **Cereal / Granos:** Malta de cebada y sémola de maíz cervecero seleccionado.
+* **Levadura:** *Saccharomyces pastorianus*.
+* **Proceso:** Fermentación baja completa, desalcoholización en frío a baja presión mediante columna de conos rotatorios y filtración brillante.
+* **Distintivo de la receta:** Cuerpo sumamente ligero y refrescante, de amargor limpio y sutil, diseñada para servirse muy fría escarchada con sal y limón.
+* **Dato histórico / curioso:** Presentada en el festival de música Pa'l Norte 2023 en Monterrey, nació para expandir las ocasiones de consumo diurno, carnes asadas y eventos sociales manteniendo la identidad norteña de Tecate sin alcohol.
+
+---
+
+### 🍺 Sol Cero (0.0%)
+* **Origen actual:** Orizaba, Veracruz / Guadalajara, Jalisco, México (Heineken México).
+* **Lanzamiento original:** **2007** en *Cervecería Moctezuma, Orizaba, Veracruz, México*.
+* **Estabilización:** 🔥 Pasteurizada.
+* **Estilo:** *Non-Alcoholic Pale Lager (0.0%)*.
+* **ABV:** **0.0% Alc. Vol. (Real)**.
+* **Cereal / Granos:** Malta de cebada clara, sémola de maíz y extractos de lúpulo fotoestables.
+* **Levadura:** *Saccharomyces pastorianus*.
+* **Proceso:** Evaporación térmica al vacío a baja temperatura y microfiltración.
+* **Distintivo de la receta:** Sabor suave con ligero dulzor de maíz y grano, bajísimo amargor y cuerpo fluido, óptima como base para preparar micheladas y bebidas con clamato sin alcohol.
+* **Dato histórico / curioso:** Fue la **primera cerveza sin alcohol de producción masiva lanzada en México** (2007), inaugurando formalmente el segmento *non-alcoholic* en el mercado cervecero nacional.
+
+---
+
+### 🍺 Modelo Especial 0.0%
+* **Origen actual:** Ciudad de México / Zacatecas / Tuxtepec, México (Grupo Modelo / AB InBev).
+* **Lanzamiento original:** **2024** en *Grupo Modelo, México*.
+* **Estabilización:** 🔥 Pasteurizada.
+* **Estilo:** *Non-Alcoholic International Pilsner (0.0%)*.
+* **ABV:** **0.0% Alc. Vol. (Real)**.
+* **Cereal / Granos:** Malta de cebada de dos carreras seleccionada y maíz cervecero de alta pureza.
+* **Levadura:** *Saccharomyces pastorianus*.
+* **Proceso:** Elaboración tradicional de Modelo Especial con fermentación baja y posterior extracción suave de alcohol mediante tecnología combinada de membranas y vacío en frío.
+* **Distintivo de la receta:** Ofrece mayor presencia de malta, balance redondo y sensación de cuerpo en boca que las lagers 0.0 habituales, con final seco y brillante.
+* **Dato histórico / curioso:** Creada para responder a la creciente preferencia de los consumidores por una experiencia cervecera con mayor carácter y textura en momentos libres de alcohol.
+
+---
+
+### 🍺 Modelo Negra 0.0% (Negra Modelo 0.0)
+* **Origen actual:** Ciudad de México / Zacatecas, México (Grupo Modelo / AB InBev).
+* **Lanzamiento original:** **2024** en *Grupo Modelo, México*.
+* **Estabilización:** 🔥 Pasteurizada.
+* **Estilo:** *Non-Alcoholic Munich Dunkel / Dark Lager (0.0%)*.
+* **ABV:** **0.0% Alc. Vol. (Real)**.
+* **Cereal / Granos:** Maltas caramelo tostadas, malta chocolate, malta base y maíz cervecero.
+* **Levadura:** *Saccharomyces pastorianus*.
+* **Proceso:** Maceración especial para retener dextrinas no fermentables que aporten viscosidad y sensación cremosa; desalcoholización al vacío a baja temperatura.
+* **Distintivo de la receta:** **Primera cerveza oscura 0.0% en México**. Color caoba oscuro con destellos rubí, espuma marfil cremosa y aromas a pan tostado, café suave y caramelo con 0.0% alcohol.
+* **Dato histórico / curioso:** Rompió el paradigma de que las cervezas sin alcohol solo podían ser rubias y ligeras, brindando una alternativa oscura y gastronómica para maridar con cortes, moles y platillos especiados.
+
+---
+
+### 🍺 Cervecería Minerva Playacar / Cero (Artesanal Mexicana)
+* **Origen actual:** Zapopan, Jalisco, México.
+* **Lanzamiento original:** **2023** en *Cervecería Minerva, Zapopan, Jalisco, México*.
+* **Estabilización:** 🌿 Microfiltrada en frío / Viva.
+* **Estilo:** *Craft Non-Alcoholic Pale Ale / Session 0.0*.
+* **ABV:** **<0.4% Alc. Vol. (Sin Alcohol Artesanal)**.
+* **Cereal / Granos:** Malta Pale Ale de dos carreras, trigo malteado y maltas dextrínicas especiales.
+* **Levadura:** Cepa especial no sacarolítica (*Saccharomycodes ludwigii* / fermentación biológica controlada).
+* **Proceso:** Fermentación biológica donde la levadura produce ésteres frutales típicos de Ale pero se detiene naturalmente antes de generar alcohol; generoso *Dry-Hopping* con lúpulos aromáticos americanos (Citra y Mosaic).
+* **Distintivo de la receta:** Explosión de aromas cítricos y tropicales (maracuyá, durazno, toronja) con amargor herbal limpio y cuerpo sedoso aportado por el trigo, superando ampliamente el perfil plano de las 0.0 industriales.
+* **Dato histórico / curioso:** Cervecería Minerva, fundada en 2003 en Jalisco como pionera del movimiento artesanal independiente en México, desarrolló esta propuesta para demostrar que la cerveza artesanal de alta gama puede ofrecer una experiencia de cata completa, fresca y aromática sin necesidad de alcohol.
+

@@ -15,3 +15,9 @@
 - tiburón imperial, https://tienda.hechoenveracruz.gob.mx/wp-content/uploads/2022/01/tiburon-camuflaje-.jpg
 - tiburón porter, https://tienda.hechoenveracruz.gob.mx/wp-content/uploads/2022/01/tiburon-original.jpg
 - amstel ultra, https://amstelultra.com.mx / Cervecería Heineken México
+- heineken 0.0, https://www.heineken.com/mx/es/nuestras-cervezas/heineken-0-0
+- corona cero 0.0%, https://www.corona.com.mx/corona-cero
+- tecate 0.0, https://tecate.com/tecate-00 / Heineken México
+- sol cero 0.0%, https://www.cuauhtemocmoctezuma.com / Heineken México
+- modelo especial 0.0% y modelo negra 0.0%, https://grupomodelo.com / AB InBev México
+- minerva playacar 0.0%, https://cervezaminerva.com / Cervecería Minerva (Zapopan, Jalisco)
