@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Catálogo Cervecero | Cultura Chelera</title>
-  <meta name="description" content="Catálogo interactivo con fichas técnicas de 21 cervezas: fechas, orígenes, estabilización, cereales y recetas.">
+  <meta name="description" content="Catálogo interactivo con fichas técnicas de 22 cervezas: fechas, orígenes, estabilización, cereales y recetas.">
   <meta property="og:title" content="Catálogo Cervecero | Cultura Chelera">
-  <meta property="og:description" content="Fichas técnicas, etiquetas históricas y recetas de 21 cervezas internacionales y mexicanas.">
+  <meta property="og:description" content="Fichas técnicas, etiquetas históricas y recetas de 22 cervezas internacionales y mexicanas.">
   <meta property="og:image" content="https://cerveza-mia.netlify.app/assets/img/cover.jpg">
   <meta property="og:site_name" content="Cultura Chelera">
   <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
@@ -1137,7 +1137,11 @@
               <circle cx="0" cy="2" r="5" fill="#854d0e"/>`,
       shark: `<circle r="34" fill="#0f172a" stroke="#38bdf8" stroke-width="2"/>
               <path d="M -22 6 C -10 -16 14 -16 22 2 C 12 12 -8 16 -22 6 Z" fill="#38bdf8"/>
-              <polygon points="-4,-6 6,-20 8,-4" fill="#38bdf8"/>`
+              <polygon points="-4,-6 6,-20 8,-4" fill="#38bdf8"/>`,
+      amstel: `<circle r="34" fill="#b91c1c" stroke="#d4af37" stroke-width="2"/>
+               <path d="M -34 0 A 34 34 0 0 0 34 0 Z" fill="#ffffff"/>
+               <circle r="22" fill="#1b1712" stroke="#d4af37" stroke-width="1.5"/>
+               <text x="0" y="8" font-family="'Cinzel', serif" font-size="20" font-weight="900" fill="#d4af37" text-anchor="middle">A</text>`
     };
 
     // BASE DE DATOS INICIAL CON ETIQUETAS HISTÓRICAS REALES Y FUENTES DE DOMINIO PÚBLICO / OFICIALES
@@ -1409,6 +1413,25 @@
         abv: "5.0%"
       },
       {
+        id: "amstel-ultra",
+        name: "Amstel Ultra",
+        origin: "Ámsterdam, Países Bajos / Monterrey, México",
+        launch_year: "1870 / 2018",
+        launch_place: "Amstel Brouwerij, Ámsterdam, Países Bajos / Heineken México",
+        stabilization: "Pasteurizada",
+        family: "Lager",
+        style: "Ultra Light Lager / European Light Lager",
+        label_img: "img/labels/amstel-ultra.webp",
+        label_vintage: "2018 / Amstel Ultra",
+        label_source: "Amstel Brouwerij (Heineken México) • Etiqueta oficial Ultra Light • Archivo Comercial / Oficial",
+        cereal: "Malta de cebada clara europea y cereales cerveceros seleccionados (bajos en carbohidratos).",
+        yeast: "Saccharomyces pastorianus (cepa lager de baja fermentación y alta atenuación enzimática).",
+        process: "Maceración enzimática exhaustiva para degradación completa de azúcares residuales (low-carb), fermentación en frío (8-12 °C) y filtrado brillante profundo.",
+        distinctive: "Cuerpo ultraligero y final sumamente seco y crujiente, con solo 85 kcal y 2.4 g de carbohidratos por botella de 355 ml, manteniendo la frescura de una cerveza europea.",
+        history: "Fundada en 1870 a orillas del río Amstel en Ámsterdam (cuyo hielo se usaba para enfriar las bodegas). Amstel Ultra llegó a México en 2018 como pionera de las cervezas ultra ligeras premium de herencia europea.",
+        abv: "4.0%"
+      },
+      {
         id: "indio",
         name: "Indio",
         origin: "Monterrey, Nuevo León, México",
@@ -1544,7 +1567,7 @@
     ];
 
     // ESTADO LOCAL DE LA APLICACIÓN
-    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v7";
+    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v8";
     let beersData = [];
     let currentView = "cards"; // "cards" | "table"
     let currentSort = { col: "name", asc: true };
@@ -1578,8 +1601,9 @@
           beersData = [...INITIAL_BEERS];
         }
       } else {
-        // Migrar de v6, v5 o v4 si existían
-        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v6") ||
+        // Migrar de v7, v6, v5 o v4 si existían
+        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v7") ||
+                          localStorage.getItem("antigravity_cervezas_fichas_db_v6") ||
                           localStorage.getItem("antigravity_cervezas_fichas_db_v5") ||
                           localStorage.getItem("antigravity_cervezas_fichas_db_v4");
         if (oldStored) {
@@ -1711,6 +1735,9 @@
 
     function getBeerLabelImg(b) {
       if (b.label_img && b.label_img.trim().length > 0) return b.label_img;
+      if (b.id === "amstel-ultra" || (b.name && b.name.toLowerCase().includes("amstel"))) {
+        return generateVintageSvg(b.name, b.style, "#8b1515", "#d4af37", "#ffffff", MOTIFS.amstel);
+      }
       return generateVintageSvg(b.name, b.style, "#2b2015", "#c29b38", "#fde047", MOTIFS.dunkel);
     }
 
@@ -1994,11 +2021,11 @@
 
       // Restaurar iniciales
       document.getElementById("btn-reset-default").addEventListener("click", () => {
-        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 21 fichas y etiquetas originales?")) {
+        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 22 fichas y etiquetas originales?")) {
           beersData = [...INITIAL_BEERS];
           saveToStorage();
           renderApp();
-          showToast("✓ Colección restaurada con todas las 21 fichas");
+          showToast("✓ Colección restaurada con todas las 22 fichas");
         }
       });
     }

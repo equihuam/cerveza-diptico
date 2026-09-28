@@ -71,6 +71,19 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 
 ---
 
+### 🍺 Amstel Ultra
+* **Origen actual:** Ámsterdam, Países Bajos / Monterrey, México (Heineken México).
+* **Lanzamiento original:** **1870** (Cervecería Amstel, Ámsterdam) / **2018** (Amstel Ultra en México).
+* **Estabilización:** 🔥 Pasteurizada.
+* **Estilo:** *Ultra Light Lager / European Light Lager*.
+* **Cereal / Granos:** Malta de cebada clara europea seleccionada y cereales cerveceros adjuntos (bajos en carbohidratos).
+* **Levadura:** *Saccharomyces pastorianus* (cepa lager de baja fermentación y alta atenuación enzimática).
+* **Proceso:** Maceración enzimática exhaustiva que degrada prácticamente la totalidad de almidones y dextrinas complejas en azúcares fermentables (*low-carb*), fermentación controlada en frío (8–12 °C), maduración reposada (*lagering*) y microfiltración brillante.
+* **Distintivo de la receta:** Perfil sumamente ligero, limpio, seco y crujiente, con solo **85 calorías** y **2.4 g de carbohidratos** por botella de 355 ml, conservando el carácter suave de malta europea y un amargor muy fino sin asperezas.
+* **Dato histórico / curioso:** La cervecería fue fundada en 1870 por De Pesters y Van Marwijk Kooy en Ámsterdam, bautizada en honor al río Amstel (cuyas aguas congeladas servían para refrigerar las bodegas en invierno). Amstel Ultra se introdujo en el mercado mexicano en 2018 como la primera cerveza europea ultra-light premium, convirtiéndose en referente del segmento *wellness* y patrocinador de eventos como el Abierto Mexicano de Tenis y la UEFA Europa League.
+
+---
+
 ## 2. Cervezas Clásicas Mexicanas
 
 ### 🍺 Negra Modelo
