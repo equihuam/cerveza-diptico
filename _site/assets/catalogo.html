@@ -358,6 +358,21 @@
     .badge-sour { background: #f3e5f5; color: #7b1fa2; border: 1px solid #e1bee7; }
     .badge-hybrid { background: #e8f5e9; color: #2e7d32; border: 1px solid #c8e6c9; }
 
+    .badge-stab {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+    .badge-stab-past { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; }
+    .badge-stab-micro { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+    .badge-stab-live { background: #dcfce7; color: #15803d; border: 1px solid #bbf7d0; }
+
     .tag-style {
       display: inline-block;
       background: #f1ece1;
@@ -848,6 +863,15 @@
           </select>
         </div>
 
+        <div>
+          <select id="filter-stab" class="select-filter">
+            <option value="all">Toda Estabilización</option>
+            <option value="Pasteurizada">🔥 Pasteurizada</option>
+            <option value="Microfiltrada">❄️ Microfiltrada</option>
+            <option value="Viva">🌿 Viva</option>
+          </select>
+        </div>
+
         <div class="view-toggle">
           <button class="view-btn active" id="btn-view-cards" title="Vista Tarjetas">🗂️ Tarjetas</button>
           <button class="view-btn" id="btn-view-table" title="Vista Tabla tipo Sheets">📊 Tabla Sheets</button>
@@ -876,7 +900,8 @@
             <th>Etiqueta</th>
             <th data-sort="name">Nombre ↕</th>
             <th data-sort="origin">Origen Actual ↕</th>
-            <th data-sort="launch_year">Lanzamiento Original ↕</th>
+            <th data-sort="launch_year">Lanzamiento ↕</th>
+            <th data-sort="stabilization">Estabilización ↕</th>
             <th data-sort="style">Estilo ↕</th>
             <th data-sort="family">Familia ↕</th>
             <th>Cereal / Granos</th>
@@ -939,19 +964,34 @@
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label" for="form-style">Estilo Específico *</label>
-              <input type="text" id="form-style" class="form-input" required placeholder="Ej. Irish Dry Stout, Vienna Lager">
+              <label class="form-label" for="form-stabilization">Estabilización Microbiológica *</label>
+              <select id="form-stabilization" class="form-select" required>
+                <option value="Pasteurizada">🔥 Pasteurizada (Túnel / Flash)</option>
+                <option value="Microfiltrada">❄️ Microfiltrada en frío</option>
+                <option value="Viva">🌿 Viva (Sin pasteurizar / Acondicionada)</option>
+              </select>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
+              <label class="form-label" for="form-style">Estilo Específico *</label>
+              <input type="text" id="form-style" class="form-input" required placeholder="Ej. Irish Dry Stout, Vienna Lager">
+            </div>
+            <div class="form-group">
               <label class="form-label" for="form-abv">Graduación (% ABV)</label>
               <input type="text" id="form-abv" class="form-input" placeholder="Ej. 5.3% o 4.2% - 5.6%">
             </div>
+          </div>
+
+          <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="form-yeast">Levadura</label>
               <input type="text" id="form-yeast" class="form-input" placeholder="Ej. S. pastorianus, Heineken A-Yeast, US-05">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="form-cereal">Cereal / Granos y Adjuntos *</label>
+              <input type="text" id="form-cereal" class="form-input" required placeholder="Ej. Malta Pale, cebada tostada no malteada (10%)...">
             </div>
           </div>
 
@@ -964,11 +1004,6 @@
               <label class="form-label" for="form-label-file">O Subir Imagen Local</label>
               <input type="file" id="form-label-file" class="form-input" accept="image/*" style="padding:0.4rem;">
             </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="form-cereal">Cereal / Granos y Adjuntos *</label>
-            <input type="text" id="form-cereal" class="form-input" required placeholder="Ej. Malta Pale, cebada tostada no malteada (10%), maíz cervecero...">
           </div>
 
           <div class="form-group">
@@ -1117,6 +1152,7 @@
         origin: "Dublín, Irlanda",
         launch_year: "1759",
         launch_place: "St. James's Gate Brewery, Dublín, Irlanda",
+        stabilization: "Microfiltrada",
         family: "Ale",
         style: "Irish Dry Stout",
         label_img: "img/labels/guinness.jpg",
@@ -1135,6 +1171,7 @@
         origin: "Tadcaster, Yorkshire, Inglaterra",
         launch_year: "c. 1900",
         launch_place: "The Old Brewery, Tadcaster, North Yorkshire, Inglaterra",
+        stabilization: "Viva",
         family: "Ale",
         style: "English Bitter / Yorkshire Pale Ale",
         label_img: "img/labels/john-smiths-magnet-vintage.jpg",
@@ -1153,6 +1190,7 @@
         origin: "Newcastle upon Tyne, Inglaterra",
         launch_year: "1927",
         launch_place: "Tyne Brewery, Newcastle upon Tyne, Inglaterra",
+        stabilization: "Pasteurizada",
         family: "Ale",
         style: "English Brown Ale",
         label_img: "img/labels/newcastle-brown-ale.webp",
@@ -1171,6 +1209,7 @@
         origin: "Brisbane, Queensland, Australia",
         launch_year: "1924",
         launch_place: "Castlemaine Brewery, Milton, Brisbane, Australia",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Australian Pale Lager",
         label_img: "img/labels/castlemaine-xxxx-vintage.gif",
@@ -1189,6 +1228,7 @@
         origin: "Ciudad de México / Orizaba, México",
         launch_year: "1928",
         launch_place: "Cervecería Modelo, Tacuba, Ciudad de México, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Munich Dunkel / Vienna Mexicana",
         label_img: "img/labels/negra-modelo.jpg",
@@ -1207,6 +1247,7 @@
         origin: "Monterrey / Orizaba, México",
         launch_year: "1905",
         launch_place: "Cervecería Cuauhtémoc, Monterrey, Nuevo León, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Vienna Lager / Bock Ligero",
         label_img: "img/labels/bohemia-obscura-alt.webp",
@@ -1225,6 +1266,7 @@
         origin: "Toluca / Cd. de México, México",
         launch_year: "1865",
         launch_place: "Compañía Cervecera Toluca y México, Toluca, Estado de México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Vienna Lager",
         label_img: "img/labels/victoria.jpg",
@@ -1243,6 +1285,7 @@
         origin: "Orizaba, Veracruz, México",
         launch_year: "1899",
         launch_place: "Fábrica 'El Salto del Agua' / Moctezuma, Orizaba, Veracruz, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "American Adjunct Lager",
         label_img: "img/labels/sol.jpg",
@@ -1261,6 +1304,7 @@
         origin: "Orizaba, Veracruz, México",
         launch_year: "1897",
         launch_place: "Cervecería Moctezuma, Orizaba, Veracruz, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Mexican Vienna Lager",
         label_img: "img/labels/dos-equis-ambar-alt.png",
@@ -1279,6 +1323,7 @@
         origin: "Orizaba, Veracruz, México",
         launch_year: "1984",
         launch_place: "Cervecería Moctezuma, Orizaba, Veracruz, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Pale Lager / Pilsner Mexicana",
         label_img: "img/labels/dos-equis-lager-alt.jpg",
@@ -1297,6 +1342,7 @@
         origin: "Tecate, Baja California, México",
         launch_year: "1944",
         launch_place: "Cervecería Tecate, Tecate, Baja California, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "American Adjunct Lager",
         label_img: "img/labels/tecate.jpeg",
@@ -1315,6 +1361,7 @@
         origin: "Ciudad de México, México",
         launch_year: "c. 1934",
         launch_place: "Cervecería Modelo, Ciudad de México, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "American Lager / Cerveza de Barrio",
         label_img: "img/labels/barrilito.jpg",
@@ -1333,6 +1380,7 @@
         origin: "Mazatlán, Sinaloa, México",
         launch_year: "1900",
         launch_place: "Cervecería del Pacífico, Mazatlán, Sinaloa, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Mexican Pilsner Style Lager",
         label_img: "img/labels/pacifico.jpg",
@@ -1351,6 +1399,7 @@
         origin: "Ámsterdam, Países Bajos",
         launch_year: "1873",
         launch_place: "Heineken Brouwerij, Ámsterdam, Países Bajos",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "International Pale Lager",
         label_img: "img/labels/heineken.jpg",
@@ -1369,6 +1418,7 @@
         origin: "Monterrey, Nuevo León, México",
         launch_year: "1893",
         launch_place: "Cervecería Cuauhtémoc, Monterrey, Nuevo León, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Mexican Vienna / Amber Lager",
         label_img: "img/labels/indio-alt.jpg",
@@ -1387,6 +1437,7 @@
         origin: "Orizaba, Veracruz, México",
         launch_year: "1924",
         launch_place: "Cervecería Moctezuma, Orizaba, Veracruz, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Winter Bock / Festive Lager",
         label_img: "img/labels/noche-buena.jpg",
@@ -1405,6 +1456,7 @@
         origin: "Monterrey, Nuevo León, México",
         launch_year: "1890",
         launch_place: "Cervecería Cuauhtémoc, Monterrey, Nuevo León, México",
+        stabilization: "Pasteurizada",
         family: "Lager",
         style: "Classic American Adjunct Lager",
         label_img: "img/labels/carta-blanca.jpg",
@@ -1423,6 +1475,7 @@
         origin: "Xalapa, Veracruz, México",
         launch_year: "2013",
         launch_place: "Cerveza Artesanal Tiburón, Xalapa, Veracruz, México",
+        stabilization: "Viva",
         family: "Ale",
         style: "Blonde Ale (Estilo Americano)",
         label_img: "img/labels/tiburon-amarilla-blod-ale.jpg",
@@ -1441,6 +1494,7 @@
         origin: "Xalapa, Veracruz, México",
         launch_year: "2013",
         launch_place: "Cerveza Artesanal Tiburón, Xalapa, Veracruz, México",
+        stabilization: "Viva",
         family: "Ale",
         style: "English Porter",
         label_img: "img/labels/tiburon-porter.jpg",
@@ -1459,6 +1513,7 @@
         origin: "Xalapa, Veracruz, México",
         launch_year: "2015",
         launch_place: "Cerveza Artesanal Tiburón, Xalapa, Veracruz, México",
+        stabilization: "Viva",
         family: "Ale",
         style: "Imperial Stout (Estilo Inglés)",
         label_img: "img/labels/tiburon-camuflaje-imperial.jpg",
@@ -1474,7 +1529,7 @@
     ];
 
     // ESTADO LOCAL DE LA APLICACIÓN
-    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v5";
+    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v6";
     let beersData = [];
     let currentView = "cards"; // "cards" | "table"
     let currentSort = { col: "name", asc: true };
@@ -1486,29 +1541,34 @@
       if (stored) {
         try {
           beersData = JSON.parse(stored);
-          // Migración automática si faltan los campos de lanzamiento
+          // Migración automática si faltan campos
           beersData = beersData.map(b => {
             const def = INITIAL_BEERS.find(x => x.id === b.id);
             if (def) {
               if (!b.launch_year) b.launch_year = def.launch_year;
               if (!b.launch_place) b.launch_place = def.launch_place;
+              if (!b.stabilization) b.stabilization = def.stabilization;
             }
+            if (!b.stabilization) b.stabilization = "Pasteurizada";
             return b;
           });
         } catch (e) {
           beersData = [...INITIAL_BEERS];
         }
       } else {
-        // Migrar de v4 si existía
-        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v4");
+        // Migrar de v5 o v4 si existían
+        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v5") || localStorage.getItem("antigravity_cervezas_fichas_db_v4");
         if (oldStored) {
           try {
             const oldBeers = JSON.parse(oldStored);
             beersData = oldBeers.map(b => {
               const def = INITIAL_BEERS.find(x => x.id === b.id);
               if (def) {
-                b.launch_year = def.launch_year;
-                b.launch_place = def.launch_place;
+                if (!b.launch_year) b.launch_year = def.launch_year;
+                if (!b.launch_place) b.launch_place = def.launch_place;
+                b.stabilization = def.stabilization;
+              } else {
+                b.stabilization = "Pasteurizada";
               }
               return b;
             });
@@ -1536,11 +1596,28 @@
       setTimeout(() => t.classList.remove("show"), 2800);
     }
 
+    function getStabBadgeClass(stab) {
+      if (!stab) return "badge-stab-past";
+      const s = stab.toLowerCase();
+      if (s.includes("viva") || s.includes("live") || s.includes("cask")) return "badge-stab-live";
+      if (s.includes("micro") || s.includes("filtrada")) return "badge-stab-micro";
+      return "badge-stab-past";
+    }
+
+    function getStabIcon(stab) {
+      if (!stab) return "🔥";
+      const s = stab.toLowerCase();
+      if (s.includes("viva") || s.includes("live") || s.includes("cask")) return "🌿";
+      if (s.includes("micro") || s.includes("filtrada")) return "❄️";
+      return "🔥";
+    }
+
     // RENDERIZADO PRINCIPAL
     function renderApp() {
       const search = document.getElementById("search-input").value.toLowerCase().trim();
       const familyFilter = document.getElementById("filter-family").value;
       const countryFilter = document.getElementById("filter-country").value;
+      const stabFilter = document.getElementById("filter-stab").value;
 
       // Filtrado
       let filtered = beersData.filter(b => {
@@ -1549,6 +1626,7 @@
           (b.origin && b.origin.toLowerCase().includes(search)) ||
           (b.launch_year && b.launch_year.toLowerCase().includes(search)) ||
           (b.launch_place && b.launch_place.toLowerCase().includes(search)) ||
+          (b.stabilization && b.stabilization.toLowerCase().includes(search)) ||
           (b.style && b.style.toLowerCase().includes(search)) ||
           (b.cereal && b.cereal.toLowerCase().includes(search)) ||
           (b.yeast && b.yeast.toLowerCase().includes(search)) ||
@@ -1556,6 +1634,7 @@
           (b.history && b.history.toLowerCase().includes(search));
 
         const matchesFamily = (familyFilter === "all") || (b.family === familyFilter);
+        const matchesStab = (stabFilter === "all") || (b.stabilization === stabFilter);
 
         let matchesCountry = true;
         if (countryFilter !== "all") {
@@ -1563,7 +1642,7 @@
                            (b.launch_place && b.launch_place.toLowerCase().includes(countryFilter.toLowerCase()));
         }
 
-        return matchesSearch && matchesFamily && matchesCountry;
+        return matchesSearch && matchesFamily && matchesCountry && matchesStab;
       });
 
       // Ordenamiento
@@ -1621,6 +1700,10 @@
 
       container.innerHTML = list.map(b => {
         const labelSrc = getBeerLabelImg(b);
+        const stabClass = getStabBadgeClass(b.stabilization);
+        const stabIcon = getStabIcon(b.stabilization);
+        const stabText = b.stabilization || "Pasteurizada";
+
         return `
         <div class="beer-card" data-id="${b.id}">
           <div>
@@ -1634,6 +1717,7 @@
                 <div class="card-badges-row">
                   <span class="badge-family ${getFamilyBadgeClass(b.family)}">${b.family}</span>
                   <span class="tag-style">🍺 ${b.style}</span>
+                  <span class="badge-stab ${stabClass}" title="Tratamiento microbiológico: ${stabText}">${stabIcon} ${stabText}</span>
                 </div>
               </div>
 
@@ -1685,12 +1769,16 @@
     function renderTable(list) {
       const tbody = document.getElementById("table-body");
       if (list.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="13" style="text-align:center; padding:2rem;">No se encontraron resultados</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="14" style="text-align:center; padding:2rem;">No se encontraron resultados</td></tr>`;
         return;
       }
 
       tbody.innerHTML = list.map(b => {
         const labelSrc = getBeerLabelImg(b);
+        const stabClass = getStabBadgeClass(b.stabilization);
+        const stabIcon = getStabIcon(b.stabilization);
+        const stabText = b.stabilization || "Pasteurizada";
+
         return `
         <tr>
           <td style="text-align:center;">
@@ -1699,6 +1787,7 @@
           <td><strong>${b.name}</strong></td>
           <td>${b.origin}</td>
           <td><strong style="color: #9c4f06;">${b.launch_year || 'N/D'}</strong><br><small style="color: #6b645b; font-size: 0.74rem;">${b.launch_place || b.origin}</small></td>
+          <td><span class="badge-stab ${stabClass}">${stabIcon} ${stabText}</span></td>
           <td>${b.style}</td>
           <td><span class="badge-family ${getFamilyBadgeClass(b.family)}">${b.family}</span></td>
           <td style="max-width:180px; font-size:0.8rem;">${b.cereal}</td>
@@ -1720,9 +1809,12 @@
       const b = beersData.find(x => x.id === id);
       if (!b) return;
 
+      const stabIcon = getStabIcon(b.stabilization);
+      const stabText = b.stabilization || "Pasteurizada";
+
       document.getElementById("lightbox-img-el").src = getBeerLabelImg(b);
       document.getElementById("lightbox-title-el").textContent = b.name;
-      document.getElementById("lightbox-sub-el").textContent = `${b.style} • Origen actual: ${b.origin} • Lanzamiento original: ${b.launch_year || 'N/D'} (${b.launch_place || b.origin}) • ABV: ${b.abv || 'N/D'}${b.label_vintage ? ' • Época etiqueta: ' + b.label_vintage : ''}`;
+      document.getElementById("lightbox-sub-el").textContent = `${b.style} • Origen actual: ${b.origin} • Lanzamiento original: ${b.launch_year || 'N/D'} (${b.launch_place || b.origin}) • ${stabIcon} ${stabText} • ABV: ${b.abv || 'N/D'}${b.label_vintage ? ' • Época etiqueta: ' + b.label_vintage : ''}`;
 
       const sourceEl = document.getElementById("lightbox-source-el");
       if (sourceEl) {
@@ -1740,10 +1832,11 @@
 
     // EVENTOS Y CONTROLES
     function setupEvents() {
-      // Búsqueda en vivo
+      // Búsqueda en vivo y filtros
       document.getElementById("search-input").addEventListener("input", renderApp);
       document.getElementById("filter-family").addEventListener("change", renderApp);
       document.getElementById("filter-country").addEventListener("change", renderApp);
+      document.getElementById("filter-stab").addEventListener("change", renderApp);
 
       // Lightbox cerrar
       document.getElementById("btn-close-lightbox").addEventListener("click", closeLightbox);
@@ -1805,6 +1898,7 @@
         document.getElementById("form-id").value = "";
         document.getElementById("form-launch-year").value = "";
         document.getElementById("form-launch-place").value = "";
+        document.getElementById("form-stabilization").value = "Pasteurizada";
         tempUploadedImage = null;
         document.getElementById("modal-form").classList.add("active");
       });
@@ -1827,6 +1921,7 @@
           origin: document.getElementById("form-origin").value.trim(),
           launch_year: document.getElementById("form-launch-year").value.trim(),
           launch_place: document.getElementById("form-launch-place").value.trim(),
+          stabilization: document.getElementById("form-stabilization").value,
           family: document.getElementById("form-family").value,
           style: document.getElementById("form-style").value.trim(),
           abv: document.getElementById("form-abv").value.trim(),
@@ -1870,11 +1965,11 @@
 
       // Restaurar iniciales
       document.getElementById("btn-reset-default").addEventListener("click", () => {
-        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 19 fichas y etiquetas originales?")) {
+        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 20 fichas y etiquetas originales?")) {
           beersData = [...INITIAL_BEERS];
           saveToStorage();
           renderApp();
-          showToast("✓ Colección restaurada con fechas y lugares de lanzamiento original");
+          showToast("✓ Colección restaurada con estabilización microbiológica");
         }
       });
     }
@@ -1894,6 +1989,7 @@
       document.getElementById("form-origin").value = b.origin || "";
       document.getElementById("form-launch-year").value = b.launch_year || "";
       document.getElementById("form-launch-place").value = b.launch_place || "";
+      document.getElementById("form-stabilization").value = b.stabilization || "Pasteurizada";
       document.getElementById("form-family").value = b.family || "Lager";
       document.getElementById("form-style").value = b.style || "";
       document.getElementById("form-abv").value = b.abv || "";
@@ -1922,12 +2018,13 @@
 
     // EXPORTAR CSV
     function exportCSV() {
-      const headers = ["Nombre", "Origen Actual", "Fecha / Ano Lanzamiento Original", "Lugar Lanzamiento Original", "Estilo", "Familia", "Cereal / Granos", "Levadura", "Proceso y Fermentacion", "Distintivo de la Receta", "Dato Historico / Curioso", "ABV Aprox"];
+      const headers = ["Nombre", "Origen Actual", "Fecha / Ano Lanzamiento Original", "Lugar Lanzamiento Original", "Estabilizacion", "Estilo", "Familia", "Cereal / Granos", "Levadura", "Proceso y Fermentacion", "Distintivo de la Receta", "Dato Historico / Curioso", "ABV Aprox"];
       const rows = beersData.map(b => [
         `"${(b.name || '').replace(/"/g, '""')}"`,
         `"${(b.origin || '').replace(/"/g, '""')}"`,
         `"${(b.launch_year || '').replace(/"/g, '""')}"`,
         `"${(b.launch_place || '').replace(/"/g, '""')}"`,
+        `"${(b.stabilization || 'Pasteurizada').replace(/"/g, '""')}"`,
         `"${(b.style || '').replace(/"/g, '""')}"`,
         `"${(b.family || '').replace(/"/g, '""')}"`,
         `"${(b.cereal || '').replace(/"/g, '""')}"`,

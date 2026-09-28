@@ -1,6 +1,6 @@
 # Colección de Fichas Descriptivas de Cervezas
 
-Documento de referencia técnica, sensorial e histórica para el catálogo de cervezas favoritas. Esta información está estructurada con base en **Origen Actual**, **Fecha y Lugar de Lanzamiento Original**, **Cereal / Granos**, **Levadura**, **Proceso de Elaboración**, **Distintivo de la Receta** y **Anécdota / Hecho Histórico o Curioso**.
+Documento de referencia técnica, sensorial e histórica para el catálogo de cervezas favoritas. Esta información está estructurada con base en **Origen Actual**, **Fecha y Lugar de Lanzamiento Original**, **Estabilización Microbiológica**, **Cereal / Granos**, **Levadura**, **Proceso de Elaboración**, **Distintivo de la Receta** y **Anécdota / Hecho Histórico o Curioso**.
 
 ---
 
@@ -9,6 +9,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Guinness Extra Stout / Draught
 * **Origen actual:** Dublín, Irlanda.
 * **Lanzamiento original:** **1759** en *St. James's Gate Brewery, Dublín, Irlanda*.
+* **Estabilización:** ❄️ Microfiltrada en frío (con servicio nitrogenado $N_2$).
 * **Estilo:** *Irish Dry Stout*.
 * **Cereal / Granos:** Malta base Pale Ale británica/irlandesa, cebada malteada y un ~10% de **cebada cruda tostada sin maltear** (*roasted barley* a ~230 °C).
 * **Levadura:** *Saccharomyces cerevisiae* (cepa histórica propia de Guinness, fermentación alta a 20–25 °C).
@@ -21,6 +22,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 John Smith's Magnet
 * **Origen actual:** Tadcaster, North Yorkshire, Inglaterra.
 * **Lanzamiento original:** **c. 1900** en *The Old Brewery, Tadcaster, North Yorkshire, Inglaterra*.
+* **Estabilización:** 🌿 Viva (Acondicionada en barril / *Real Ale* tradicional).
 * **Estilo:** *Traditional Yorkshire Bitter / Pale Ale*.
 * **Cereal / Granos:** Malta Pale Ale inglesa de dos carreras, malta crystal y pequeñas adiciones de azúcares de cervecería para aligerar cuerpo.
 * **Levadura:** *Saccharomyces cerevisiae* (cepa tradicional de Yorkshire, con alta floculación).
@@ -33,6 +35,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Newcastle Brown Ale
 * **Origen actual:** Newcastle upon Tyne, Inglaterra.
 * **Lanzamiento original:** **1927** en *Tyne Brewery, Newcastle upon Tyne, Inglaterra*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *English Brown Ale*.
 * **Cereal / Granos:** Malta Pale Ale, malta crystal y trigo torrefactado con azúcar de caramelo cervecero.
 * **Levadura:** *Saccharomyces cerevisiae* (cepa ale inglesa tradicional).
@@ -45,6 +48,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Castlemaine XXXX (4X)
 * **Origen actual:** Milton, Brisbane, Queensland, Australia.
 * **Lanzamiento original:** **1924** (Cervecería fundada en 1878) en *Castlemaine Brewery, Milton, Brisbane, Australia*.
+* **Estabilización:** 🔥 Pasteurizada (botella/lata masiva).
 * **Estilo:** *Australian Pale Lager*.
 * **Cereal / Granos:** Malta de cebada cervecera australiana de dos carreras combinada con **azúcar de caña refinada de Queensland** como adjunto fermentable.
 * **Levadura:** *Saccharomyces pastorianus* (baja fermentación, muy atenuativa y neutra).
@@ -57,6 +61,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Heineken Original
 * **Origen actual:** Ámsterdam, Países Bajos.
 * **Lanzamiento original:** **1873** en *Heineken Brouwerij, Ámsterdam, Países Bajos*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *International Pale Lager / Pilsner*.
 * **Cereal / Granos:** **100% Malta de cebada** (receta pura sin adjuntos de maíz ni arroz).
 * **Levadura:** *Saccharomyces pastorianus*, cepa exclusiva registrada como **"Heineken A-Yeast"**.
@@ -71,6 +76,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Negra Modelo
 * **Origen actual:** Ciudad de México / Orizaba, México.
 * **Lanzamiento original:** **1928** en *Cervecería Modelo, Tacuba, Ciudad de México, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Munich Dunkel / Vienna Mexicana*.
 * **Cereal / Granos:** Malta caramelo tostada, malta chocolate/negra, malta base y adjuntos cerveceros de maíz.
 * **Levadura:** *Saccharomyces pastorianus* (fermentación baja).
@@ -83,6 +89,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Bohemia Obscura
 * **Origen actual:** Monterrey / Orizaba, México.
 * **Lanzamiento original:** **1905** en *Cervecería Cuauhtémoc, Monterrey, Nuevo León, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Vienna Lager / Dunkel suave*.
 * **Cereal / Granos:** Mezcla de maltas europeas caramelo y tostadas con malta Pilsen base.
 * **Levadura:** *Saccharomyces pastorianus* (perfil lager muy pulido).
@@ -95,6 +102,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Victoria
 * **Origen actual:** Toluca / Cd. de México, México.
 * **Lanzamiento original:** **1865** en *Compañía Cervecera Toluca y México, Toluca, Estado de México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Vienna Lager*.
 * **Cereal / Granos:** Malta clara de dos carreras, malta caramelo y sémola de maíz.
 * **Levadura:** *Saccharomyces pastorianus* (fermentación baja).
@@ -107,6 +115,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Sol
 * **Origen actual:** Orizaba, Veracruz, México.
 * **Lanzamiento original:** **1899** en *Fábrica "El Salto del Agua" / Cervecería Moctezuma, Orizaba, Veracruz, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *American Adjunct Lager / Clara Mexicana*.
 * **Cereal / Granos:** Malta de cebada ligera y alto contenido de sémola/jarabe de maíz.
 * **Levadura:** *Saccharomyces pastorianus* (lager ultraligera).
@@ -119,6 +128,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Dos Equis (XX) Ámbar / Obscura
 * **Origen actual:** Orizaba, Veracruz, México.
 * **Lanzamiento original:** **1897** en *Cervecería Moctezuma, Orizaba, Veracruz, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Mexican Vienna Lager*.
 * **Cereal / Granos:** Malta base pálida, malta caramelo tostada y adjuntos de maíz.
 * **Levadura:** *Saccharomyces pastorianus*.
@@ -131,6 +141,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Dos Equis (XX) Lager Especial
 * **Origen actual:** Orizaba, Veracruz, México.
 * **Lanzamiento original:** **1984** en *Cervecería Moctezuma, Orizaba, Veracruz, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Pale Lager / Pilsner Mexicana*.
 * **Cereal / Granos:** Malta clara Pilsen y sémola de maíz.
 * **Levadura:** *Saccharomyces pastorianus*.
@@ -143,6 +154,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Tecate (Original)
 * **Origen actual:** Tecate, Baja California, México.
 * **Lanzamiento original:** **1944** (primera en lata en 1954) en *Cervecería Tecate, Tecate, Baja California, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *American Adjunct Lager*.
 * **Cereal / Granos:** Malta clara y sémola de maíz.
 * **Levadura:** *Saccharomyces pastorianus*.
@@ -155,6 +167,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Barrilito
 * **Origen actual:** Ciudad de México, México.
 * **Lanzamiento original:** **c. 1934** en *Cervecería Modelo, Ciudad de México, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *American Lager / Cerveza de Barrio*.
 * **Cereal / Granos:** Malta Pilsen nacional y maíz.
 * **Levadura:** *Saccharomyces pastorianus*.
@@ -167,6 +180,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Pacífico Clara
 * **Origen actual:** Mazatlán, Sinaloa, México.
 * **Lanzamiento original:** **1900** en *Cervecería del Pacífico, Mazatlán, Sinaloa, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Mexican Pilsner Style Lager*.
 * **Cereal / Granos:** Malta de cebada clara y maíz cervecero.
 * **Levadura:** *Saccharomyces pastorianus*.
@@ -179,6 +193,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Indio
 * **Origen actual:** Monterrey, Nuevo León, México.
 * **Lanzamiento original:** **1893** en *Cervecería Cuauhtémoc, Monterrey, Nuevo León, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Mexican Vienna / Amber Lager*.
 * **Cereal / Granos:** Malta caramelo, malta clara de cebada y maíz cervecero.
 * **Levadura:** *Saccharomyces pastorianus*.
@@ -191,6 +206,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Noche Buena
 * **Origen actual:** Orizaba, Veracruz, México.
 * **Lanzamiento original:** **1924** (comercializada en 1938) en *Cervecería Moctezuma, Orizaba, Veracruz, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Winter Bock / Festive Lager*.
 * **Cereal / Granos:** (Antes 1990): 100% Malta (Múnich, Viena, Caramelo oscura). (Hoy): Malta base reducida, jarabe de maíz y extractos de color.
 * **Levadura:** *Saccharomyces pastorianus*.
@@ -203,6 +219,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Carta Blanca
 * **Origen actual:** Monterrey, Nuevo León, México.
 * **Lanzamiento original:** **1890** en *Cervecería Cuauhtémoc, Monterrey, Nuevo León, México*.
+* **Estabilización:** 🔥 Pasteurizada.
 * **Estilo:** *Classic American Adjunct Lager*.
 * **Cereal / Granos:** Malta de cebada de dos carreras y maíz norteño.
 * **Levadura:** *Saccharomyces pastorianus*.
@@ -218,6 +235,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Tiburón Blonde Ale
 * **Origen actual:** Xalapa, Veracruz, México.
 * **Lanzamiento original:** **2013** en *Cerveza Artesanal Tiburón, Xalapa, Veracruz, México*.
+* **Estabilización:** 🌿 Viva (artesanal sin pasteurizar).
 * **Estilo:** *Blonde Ale (Estilo Americano)*.
 * **Color:** Claro.
 * **ABV:** **4.8% Alc. Vol.**
@@ -232,6 +250,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Tiburón Porter
 * **Origen actual:** Xalapa, Veracruz, México.
 * **Lanzamiento original:** **2013** en *Cerveza Artesanal Tiburón, Xalapa, Veracruz, México*.
+* **Estabilización:** 🌿 Viva (artesanal sin pasteurizar).
 * **Estilo:** *English Porter*.
 * **Color:** Obscuro.
 * **ABV:** **5.8% Alc. Vol.**
@@ -246,6 +265,7 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 ### 🍺 Tiburón Imperial (Imperial Stout)
 * **Origen actual:** Xalapa, Veracruz, México.
 * **Lanzamiento original:** **2015** en *Cerveza Artesanal Tiburón, Xalapa, Veracruz, México*.
+* **Estabilización:** 🌿 Viva (artesanal sin pasteurizar de guarda).
 * **Estilo:** *Imperial Stout (Estilo Inglés)*.
 * **Color:** Obscuro / Negro profundo.
 * **ABV:** **7.9% Alc. Vol.**
