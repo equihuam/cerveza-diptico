@@ -1,6 +1,7 @@
 ---
-title: "Taxonomía & Cultura de la Cerveza"
-subtitle: "Guía interactiva sobre familias de fermentación, bioquímica de cereales y arte del servicio"
+title: "Cultura Chelera"
+subtitle: "Guía botánica, microbiológica y sensorial de la cerveza"
+description: "Guía interactiva sobre familias de fermentación, cereales, cristalería, catálogo y bitácora de cata."
 format:
   html:
     css: assets/css/diptico.css
@@ -19,7 +20,7 @@ format:
 Guía Botánica, Microbiológica &amp; Sensorial
 :::
 
-# Taxonomía de la Cerveza
+# Cultura Chelera
 
 ### El mapa interactivo de familias, levaduras, cereales y estilos cerveceros
 

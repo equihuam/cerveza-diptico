@@ -1,5 +1,5 @@
 ---
-title: "Díptico Imprimible: Taxonomía de la Cerveza"
+title: "Díptico Imprimible"
 subtitle: "Edición especial para impresión en 2 páginas tamaño Carta Horizontal"
 format:
   html:

@@ -10,10 +10,21 @@ project:
 
 
 website:
-  title: "Taxonomía & Cultura Cervecera"
-  description: "Guía interactiva mobile-first sobre familias de fermentación, bioquímica de cereales y cata cervecera"
+  title: "Cultura Chelera"
+  description: "Guía interactiva mobile-first sobre familias de fermentación, bioquímica de cereales, catálogo y cata cervecera"
   site-url: "https://cerveza-mia.netlify.app"
   favicon: assets/img/favicon.svg
+  open-graph:
+    title: "Cultura Chelera"
+    description: "Guía botánica, microbiológica y sensorial de la cerveza: familias, cereales, cristalería, catálogo y bitácora de cata."
+    image: assets/img/cover.jpg
+    site-name: "Cultura Chelera"
+    locale: "es_MX"
+  twitter-card:
+    title: "Cultura Chelera"
+    description: "Guía botánica, microbiológica y sensorial de la cerveza: familias, cereales, cristalería, catálogo y bitácora de cata."
+    image: assets/img/cover.jpg
+    card-style: summary_large_image
   navbar:
     background: "#2D3748"
     foreground: "#F7FAFC"
