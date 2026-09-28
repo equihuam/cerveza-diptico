@@ -735,26 +735,33 @@ Evoca sabor y aroma a mantequilla derretida, palomitas de cine o caramelo toffee
 :::
 ::: {.glossary-def-row}
 ::: {.glossary-def-text}
-Compuesto químico orgánico de azufre generado por descomposición térmica de la SMM en maltas poco tostadas (como Pilsner).
+Compuesto químico orgánico de azufre generado por la descomposición térmica de la **SMM** (*S-metilmetionina*) presente en maltas claras poco tostadas (como Pilsner).
 :::
 ::: {.glossary-type-tag}
-[⚠️ Defecto]{.glossary-tag .tag-degustacion}
+[⚠️ Defecto / Umbral]{.glossary-tag .tag-degustacion}
 :::
 :::
 :::
 ::: {.glossary-card-body}
 ::: {.glossary-detail-box .box-degustacion}
 ::: {.glossary-detail-title}
+🌱 El Precursor: SMM (*S-metilmetionina*)
+:::
+La **SMM** es un aminoácido modificado sintetizado de forma natural durante la germinación de la cebada en el proceso de malteo. En maltas oscuras o muy tostadas el calor del secado destruye la SMM; en cambio, en maltas pálidas (Pilsner, Lager) permanece intacta en altas concentraciones y se disocia en DMS libre durante la cocción del mosto en caliente ($>70^\circ\text{C}$).
+:::
+
+::: {.glossary-detail-box .box-degustacion}
+::: {.glossary-detail-title}
 🔬 Control en Fábrica
 :::
-Es muy volátil: se elimina evaporándolo mediante un hervor vigoroso en olla abierta (mínimo 60–90 min) y un enfriamiento súbito del mosto para evitar que se regenere en caliente.
+Es altamente volátil: se elimina evaporándolo mediante un hervor vigoroso en olla abierta (60–90 min) y un posterior enfriamiento súbito del mosto para evitar que la SMM remanente siga generando DMS en caliente dentro del tanque sin poder escapar.
 :::
 
 ::: {.glossary-detail-box .box-degustacion}
 ::: {.glossary-detail-title}
 👅 Impacto en Cata
 :::
-Aporta un aroma y sabor inconfundible a maíz dulce enlatado, verduras cocidas (col, apio) o caldo de mariscos. En cervezas rubias muy ligeras se toleran cantidades ínfimas, pero si es perceptible con facilidad arruina la frescura del trago.
+Aporta un aroma y sabor inconfundible a maíz dulce enlatado, verduras cocidas (col, apio) o caldo de mariscos. En cervezas rubias muy ligeras se toleran trazas mínimas, pero si es perceptible con facilidad arruina la frescura y limpieza del trago.
 :::
 :::
 :::
