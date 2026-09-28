@@ -13,6 +13,7 @@ website:
   title: "Taxonomía & Cultura Cervecera"
   description: "Guía interactiva mobile-first sobre familias de fermentación, bioquímica de cereales y cata cervecera"
   site-url: "https://cerveza-mia.netlify.app"
+  favicon: assets/img/favicon.svg
   navbar:
     background: "#2D3748"
     foreground: "#F7FAFC"
@@ -31,5 +32,6 @@ format:
   html:
     theme: cosmo
     css: assets/css/diptico.css
+    favicon: assets/img/favicon.svg
     toc: false
     page-layout: custom

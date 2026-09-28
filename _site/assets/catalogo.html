@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Catálogo y Fichas Descriptivas de Cervezas</title>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="alternate icon" type="image/png" href="img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -887,7 +889,7 @@
       <form id="beer-form">
         <div class="modal-body">
           <input type="hidden" id="form-id">
-          
+
           <div class="form-row">
             <div class="form-group">
               <label class="form-label" for="form-name">Nombre de la Cerveza *</label>
@@ -975,7 +977,7 @@
       </div>
       <h3 id="lightbox-title-el" class="lightbox-title">Cerveza</h3>
       <div id="lightbox-sub-el" class="lightbox-sub">Estilo • Origen</div>
-      
+
       <div id="lightbox-source-box" style="margin-bottom: 0.9rem; padding: 0.6rem 0.8rem; background: rgba(194, 105, 16, 0.15); border: 1px solid #9c4f06; border-radius: 6px; text-align: left; font-size: 0.78rem;">
         <strong style="color: #f5d796; display: block; margin-bottom: 0.2rem;">🏛️ Registro Gráfico y Estatus Legal:</strong>
         <span id="lightbox-source-el" style="color: #ded4c1; line-height: 1.35;"></span>
@@ -1011,15 +1013,15 @@
         <!-- Fondo marco -->
         <rect x="5" y="5" width="190" height="230" rx="10" fill="url(#grad)" stroke="${borderCol}" stroke-width="4" />
         <rect x="11" y="11" width="178" height="218" rx="8" fill="none" stroke="${accentCol}" stroke-width="1.5" stroke-dasharray="4,2" />
-        
+
         <!-- Adorno superior -->
         <path d="M 30 25 Q 100 35 170 25" fill="none" stroke="${borderCol}" stroke-width="2" />
-        
+
         <!-- Emblema central -->
         <g transform="translate(100, 85)">
           ${motifSvg}
         </g>
-        
+
         <!-- Textos tipográficos vintage -->
         <text x="100" y="152" font-family="'Cinzel', serif" font-weight="700" font-size="15" fill="#f5d796" text-anchor="middle" letter-spacing="1">${name.toUpperCase()}</text>
         <text x="100" y="174" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="10" fill="#ded4c1" text-anchor="middle" letter-spacing="0.5">${subtitle.toUpperCase()}</text>
@@ -1080,7 +1082,7 @@
               <polygon points="-4,-6 6,-20 8,-4" fill="#38bdf8"/>`
     };
 
-    // BASE DE DATOS INICIAL CON ETIQUETAS HISTÓRICAS REALES Y FUENTES DE DOMINIO PÚBLICO
+    // BASE DE DATOS INICIAL CON ETIQUETAS HISTÓRICAS REALES Y FUENTES DE DOMINIO PÚBLICO / OFICIALES
     const INITIAL_BEERS = [
       {
         id: "guinness",
@@ -1104,9 +1106,9 @@
         origin: "Tadcaster, Yorkshire, Inglaterra",
         family: "Ale",
         style: "English Bitter / Yorkshire Pale Ale",
-        label_img: "img/labels/john-smiths.jpg",
+        label_img: "img/labels/john-smiths-magnet-vintage.jpg",
         label_vintage: "c. 1900 / Yorkshire",
-        label_source: "Tadcaster Brewery, Yorkshire • Emblema tradicional de taberna • Wikimedia Commons (CC0 Dominio Público)",
+        label_source: "Tadcaster Brewery, Yorkshire • Emblema y etiqueta histórica Magnet Pale Ale • TavernTrove Archive / Dominio Público",
         cereal: "Malta Pale Ale británica, malta crystal y pequeña adición de azúcares cerveceros.",
         yeast: "Saccharomyces cerevisiae (cepa de Yorkshire con alta floculación).",
         process: "Fermentación tradicional en cubas de piedra/pizarra cuadradas (Yorkshire Squares) con recirculación y oxigenación controlada.",
@@ -1115,14 +1117,30 @@
         abv: "4.0% - 4.5%"
       },
       {
+        id: "newcastle",
+        name: "Newcastle Brown Ale",
+        origin: "Newcastle upon Tyne, Inglaterra",
+        family: "Ale",
+        style: "English Brown Ale",
+        label_img: "img/labels/newcastle-brown-ale.webp",
+        label_vintage: "1927 / 'The Blue Star'",
+        label_source: "The Newcastle Breweries Ltd. (1927) • Estrella azul de cinco puntas conmemorativa • Archivo de Colección",
+        cereal: "Malta Pale Ale, malta crystal y trigo torrefactado con azúcar de caramelo cervecero.",
+        yeast: "Saccharomyces cerevisiae (cepa ale inglesa tradicional).",
+        process: "Elaborada tradicionalmente mezclando una amber ale madurada con una brown ale fresca para lograr suavidad sedosa.",
+        distinctive: "Sabor dulce maltoso a nuez tostada, caramelo tofe y final sedoso con muy bajo amargor.",
+        history: "Creada en 1927 por el coronel Jim Porter en Newcastle. Conocida popularmente como 'The Dog' o 'The Blue Star'.",
+        abv: "4.7%"
+      },
+      {
         id: "castlemaine",
         name: "Castlemaine XXXX (4X)",
         origin: "Brisbane, Queensland, Australia",
         family: "Lager",
         style: "Australian Pale Lager",
-        label_img: "img/labels/castlemaine-xxxx.jpg",
+        label_img: "img/labels/castlemaine-xxxx-vintage.gif",
         label_vintage: "1920 (Dominio Público)",
-        label_source: "Cartel litográfico publicitario histórico de Castlemaine Perkins Ltd. (1920) • State Library of Queensland / Dominio Público",
+        label_source: "Cartel litográfico publicitario histórico de Castlemaine Perkins Ltd. (1920) • Australian Beer Posters / Dominio Público",
         cereal: "Malta de cebada de dos carreras y azúcar de caña refinada de Queensland como adjunto fermentable.",
         yeast: "Saccharomyces pastorianus (baja fermentación, muy atenuativa).",
         process: "Maceración para máxima atenuación y guarda en frío (lagering).",
@@ -1152,9 +1170,9 @@
         origin: "Monterrey / Orizaba, México",
         family: "Lager",
         style: "Vienna Lager / Bock Ligero",
-        label_img: "img/labels/bohemia-obscura.jpg",
+        label_img: "img/labels/bohemia-obscura-alt.webp",
         label_vintage: "1905 / Art Nouveau",
-        label_source: "Cervecería Cuauhtémoc Monterrey (1905) • Estilo Art Nouveau • Wikimedia Commons (CC BY-SA 3.0)",
+        label_source: "Cervecería Cuauhtémoc Monterrey (1905) • Línea Selecta Gourmet • Vinos y Licores / Wikimedia Commons (CC BY-SA)",
         cereal: "Maltas tostadas y caramelo europeas combinadas con malta Pilsen base.",
         yeast: "Saccharomyces pastorianus (fermentación baja clásica).",
         process: "Guarda prolongada en frío y decocción controlada.",
@@ -1200,9 +1218,9 @@
         origin: "Orizaba, Veracruz, México",
         family: "Lager",
         style: "Mexican Vienna Lager",
-        label_img: "img/labels/dos-equis-ambar.png",
+        label_img: "img/labels/dos-equis-ambar-alt.png",
         label_vintage: "1897 / Conmemorativa Siglo XX",
-        label_source: "Cervecería Moctezuma de Orizaba, Veracruz (1896-1897) • Cuna de la marca Siglo XX por Wilhelm Hasse • Archivo Histórico / Dominio Público",
+        label_source: "Cervecería Moctezuma de Orizaba, Veracruz (1897) • Cuna de la marca Siglo XX por Wilhelm Hasse • Archivo El Maíz / Dominio Público",
         cereal: "Maltas caramelo tostadas, malta base y maíz cervecero.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación baja en frío y maduración reposada.",
@@ -1216,9 +1234,9 @@
         origin: "Orizaba, Veracruz, México",
         family: "Lager",
         style: "Pale Lager / Pilsner Mexicana",
-        label_img: "img/labels/dos-equis-lager.jpg",
+        label_img: "img/labels/dos-equis-lager-alt.jpg",
         label_vintage: "Internacional / Exportación",
-        label_source: "Cervecería Moctezuma Orizaba • Identidad icónica de doble X • Wikimedia Commons (CC BY-SA 3.0)",
+        label_source: "Cervecería Moctezuma Orizaba • Identidad icónica de doble X • Vinoteca / Wikimedia Commons (CC BY-SA)",
         cereal: "Malta de dos carreras y adjuntos de maíz.",
         yeast: "Saccharomyces pastorianus.",
         process: "Filtrado en frío y carbonatación vivaz.",
@@ -1232,7 +1250,7 @@
         origin: "Tecate, Baja California, México",
         family: "Lager",
         style: "American Adjunct Lager",
-        label_img: "img/labels/tecate.jpg",
+        label_img: "img/labels/tecate.jpeg",
         label_vintage: "1944 / 1954 (Pionera en Lata)",
         label_source: "Cervecería Tecate, Baja California (1944) • Primera cerveza en lata de México (1954) • Wikimedia Commons (CC BY-SA 3.0)",
         cereal: "Malta clara y sémola de maíz.",
@@ -1250,7 +1268,7 @@
         style: "American Lager / Cerveza de Barrio",
         label_img: "img/labels/barrilito.jpg",
         label_vintage: "Tradicional de Barrio (Stubby)",
-        label_source: "Cervecería Modelo, México • Botella 'stubby' tradicional de cantina y botanero • Wikimedia Commons (Dominio Público)",
+        label_source: "Cervecería Modelo, México • Botella 'stubby' tradicional de cantina y botanero • Brands of the World / Dominio Público",
         cereal: "Malta Pilsen nacional y maíz.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación industrial económica y alta carbonatación.",
@@ -1296,9 +1314,9 @@
         origin: "Monterrey, Nuevo León, México",
         family: "Lager",
         style: "Mexican Vienna / Amber Lager",
-        label_img: "img/labels/indio.jpg",
+        label_img: "img/labels/indio-alt.jpg",
         label_vintage: "1893 (Cerveza Cuauhtémoc)",
-        label_source: "Cerveza Cuauhtémoc (1893) • Retrato original del Tlatoani Cuauhtémoc • Wikimedia Commons (CC BY-SA 4.0)",
+        label_source: "Cerveza Cuauhtémoc (1893) • Retrato original del Tlatoani Cuauhtémoc • Archivo Expansión / Wikimedia Commons (CC BY-SA)",
         cereal: "Malta caramelo, malta clara de cebada y maíz cervecero.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación baja con azúcares caramelizados.",
@@ -1330,7 +1348,7 @@
         style: "Classic American Adjunct Lager",
         label_img: "img/labels/carta-blanca.jpg",
         label_vintage: "1890 (Insignia Fundadora)",
-        label_source: "Cartel litográfico publicitario histórico • Cervecería Cuauhtémoc Monterrey (1890) • Medallas Chicago 1893 y París 1900 • Wikimedia Commons (CC BY-SA 4.0)",
+        label_source: "Cartel litográfico publicitario histórico • Cervecería Cuauhtémoc Monterrey (1890) • Medallas Chicago 1893 y París 1900 • Brands of the World / Wikimedia Commons (CC BY-SA)",
         cereal: "Malta de cebada de dos carreras y maíz norteño.",
         yeast: "Saccharomyces pastorianus.",
         process: "Fermentación tradicional de paila fría.",
@@ -1339,57 +1357,57 @@
         abv: "4.5%"
       },
       {
-        id: "tiburon-mako",
-        name: "Línea Tiburón: Mako",
+        id: "tiburon-blonde",
+        name: "Tiburón Blonde Ale",
         origin: "Xalapa, Veracruz, México",
         family: "Ale",
-        style: "American Pale Ale (Artesanal)",
-        label_img: "img/labels/tiburon-mako.svg",
-        label_vintage: "Artesanal Contemporánea",
-        label_source: "Microcervecería Independiente de Xalapa, Veracruz • Colección Fauna Marina del Golfo & Agua del Cofre de Perote • Licencia Abierta Cultural",
-        cereal: "Malta base Pale Ale (Maris Otter / 2-Row) y malta Crystal 60L.",
-        yeast: "Saccharomyces cerevisiae (US-05 / American Ale).",
-        process: "Infusión simple con agua de manantial del Cofre de Perote y Dry Hopping en frío.",
-        distinctive: "Aroma cítrico a toronja, naranja y resina de pino (lúpulos Cascade/Centennial) con soporte limpio de malta (35-45 IBU).",
-        history: "Homenaje a la fauna marina del Golfo de Veracruz y la vibrante escena cervecera independiente de la región Xalapa-Coatepec.",
-        abv: "5.5% - 6.0%"
+        style: "Blonde Ale (Estilo Americano)",
+        label_img: "img/labels/tiburon-amarilla-blod-ale.jpg",
+        label_vintage: "Edición Amarilla (Oficial)",
+        label_source: "Botella y etiqueta original amarilla • Cerveza Artesanal Tiburón (Xalapa, Ver.) / Hecho en Veracruz",
+        cereal: "Malta de cebada clara base seleccionada y maltas caramelo claras.",
+        yeast: "Saccharomyces cerevisiae (fermentación alta ale limpia).",
+        process: "Maceración simple, fermentación alta controlada y guarda en frío; temperatura de servicio oficial: 4-7 °C.",
+        distinctive: "Ligera, refrescante, afrutada y con notas a pan fresco, con un liviano amargor en el retrogusto.",
+        history: "Creada por Cerveza Artesanal Tiburón en Xalapa, Veracruz para ser su cerveza de sesión más fresca. Maridaje oficial recomendado: mariscos y pescados frescos.",
+        abv: "4.8%"
       },
       {
-        id: "tiburon-nodriza",
-        name: "Línea Tiburón: Nodriza",
+        id: "tiburon-porter",
+        name: "Tiburón Porter",
         origin: "Xalapa, Veracruz, México",
         family: "Ale",
-        style: "Oatmeal Stout / Robust Porter",
-        label_img: "img/labels/tiburon-nodriza.svg",
-        label_vintage: "Artesanal Contemporánea",
-        label_source: "Microcervecería Independiente de Xalapa-Coatepec, Veracruz • Homenaje al Café de Altura y Maltas Tostadas • Licencia Abierta Cultural",
-        cereal: "Malta base, malta chocolate, cebada tostada, malta caramelo y 10-15% hojuelas de avena cruda.",
-        yeast: "Saccharomyces cerevisiae (cepa inglesa S-04).",
-        process: "Maceración alta (68 °C) para cuerpo espeso; acondicionamiento en frío sin filtrar.",
-        distinctive: "Textura sedosa en lengua aportada por la avena; notas a café espresso veracruzano y chocolate amargo de metate.",
-        history: "Inspirada en la histórica tradición cafetalera de Coatepec y Xalapa, integrando notas de tueste profundo en el perfil cervecero.",
-        abv: "6.0% - 6.8%"
+        style: "English Porter",
+        label_img: "img/labels/tiburon-porter.jpg",
+        label_vintage: "Edición Original (Oficial)",
+        label_source: "Botella y etiqueta original obscura con tiburón • Cerveza Artesanal Tiburón (Xalapa, Ver.) / Hecho en Veracruz",
+        cereal: "Maltas tostadas especiales, malta chocolate, malta caramelo oscura y malta base.",
+        yeast: "Saccharomyces cerevisiae (cepa ale tradicional de origen inglés).",
+        process: "Maceración escalonada para cuerpo cremoso y balance dulce-amargo; temperatura de servicio oficial: 6-9 °C.",
+        distinctive: "Predominan las notas a café y cacao veracruzano, con un cuerpo cremoso y perfecto balance entre lo dulce y lo amargo.",
+        history: "Cerveza fundadora e insignia de Cerveza Tiburón en Xalapa con su icónica etiqueta original. Maridaje oficial: postres de chocolate y carnes asadas.",
+        abv: "5.8%"
       },
       {
-        id: "tiburon-martillo",
-        name: "Línea Tiburón: Martillo",
+        id: "tiburon-imperial",
+        name: "Tiburón Imperial",
         origin: "Xalapa, Veracruz, México",
         family: "Ale",
-        style: "India Pale Ale - IPA",
-        label_img: "img/labels/tiburon-martillo.svg",
-        label_vintage: "Artesanal Contemporánea",
-        label_source: "Microcervecería Independiente de Xalapa, Veracruz • Doble Lupulado Tropical • Licencia Abierta Cultural",
-        cereal: "Malta Pale Ale, malta de trigo (para retención de espuma) y malta dextrina.",
-        yeast: "Saccharomyces cerevisiae (cepa IPA Vermont/American).",
-        process: "Maceración atenuativa y doble lupulado en frío (Double Dry Hopping / DDH).",
-        distinctive: "Amargor marcado (55-70 IBU) y explosión tropical a maracuyá, mango y piña gracias a lúpulos Citra, Mosaic y Simcoe.",
-        history: "Diseñada para los entusiastas del lúpulo en Veracruz, inspirada en la potencia del tiburón martillo en el mar veracruzano.",
-        abv: "6.8% - 7.5%"
+        style: "Imperial Stout (Estilo Inglés)",
+        label_img: "img/labels/tiburon-camuflaje-imperial.jpg",
+        label_vintage: "Edición Camuflaje (Oficial)",
+        label_source: "Botella y etiqueta oficial camuflaje militar • Cerveza Artesanal Tiburón (Xalapa, Ver.) / Hecho en Veracruz",
+        cereal: "Alta densidad de maltas especiales tostadas, chocolate amargo, cebada negra y maltas caramelizadas.",
+        yeast: "Saccharomyces cerevisiae (cepa para alta graduación alcohólica).",
+        process: "Cocción prolongada y guarda reposada en frío; temperatura de servicio oficial: 8-11 °C.",
+        distinctive: "Gran intensidad, color negro y cuerpo pleno; posee sabores marcados a café y chocolate amargo con ligeras notas a frutos negros y una placentera sensación cálida al paladar.",
+        history: "La cerveza de mayor carácter y potencia de Cerveza Tiburón en Xalapa, vestida con su singular etiqueta de diseño camuflaje militar. Maridaje oficial: quesos maduros y chocolates.",
+        abv: "7.9%"
       }
     ];
 
     // ESTADO LOCAL DE LA APLICACIÓN
-    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v3";
+    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v4";
     let beersData = [];
     let currentView = "cards"; // "cards" | "table"
     let currentSort = { col: "name", asc: true };
@@ -1432,7 +1450,7 @@
 
       // Filtrado
       let filtered = beersData.filter(b => {
-        const matchesSearch = !search || 
+        const matchesSearch = !search ||
           (b.name && b.name.toLowerCase().includes(search)) ||
           (b.origin && b.origin.toLowerCase().includes(search)) ||
           (b.style && b.style.toLowerCase().includes(search)) ||
@@ -1442,7 +1460,7 @@
           (b.history && b.history.toLowerCase().includes(search));
 
         const matchesFamily = (familyFilter === "all") || (b.family === familyFilter);
-        
+
         let matchesCountry = true;
         if (countryFilter !== "all") {
           matchesCountry = b.origin && b.origin.toLowerCase().includes(countryFilter.toLowerCase());
@@ -1601,7 +1619,7 @@
       document.getElementById("lightbox-img-el").src = getBeerLabelImg(b);
       document.getElementById("lightbox-title-el").textContent = b.name;
       document.getElementById("lightbox-sub-el").textContent = `${b.style} • ${b.origin} (${b.abv || 'N/D'})${b.label_vintage ? ' • Época: ' + b.label_vintage : ''}`;
-      
+
       const sourceEl = document.getElementById("lightbox-source-el");
       if (sourceEl) {
         sourceEl.textContent = b.label_source || "Etiqueta histórica documental • Uso educativo, cultural y de divulgación cervecera.";
@@ -1694,7 +1712,7 @@
         e.preventDefault();
         const id = document.getElementById("form-id").value || ("beer_" + Date.now());
         const labelUrl = document.getElementById("form-label-url").value.trim();
-        
+
         let finalLabel = tempUploadedImage || (labelUrl.length > 0 ? labelUrl : null);
 
         const beerObj = {

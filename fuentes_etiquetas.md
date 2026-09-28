@@ -1,0 +1,17 @@
+# Fuentes para las etiquetas:
+
+- barrilito, https://pasareladiag.blob.core.windows.net/images/113023.jpg
+- negra modelo, http://www.encopasabemejor.com/2013/02/negra-modelo.html
+- bohemia obscura, https://vinosylicores.com/cdn/shop/files/983682-800-1067.webp?v=1752457644&width=800
+- carta blanca, https://www.brandsoftheworld.com/logo/carta-blanca-0?original=1
+- castlemain xxxx, https://australianbeerposters.com.au/wp-content/uploads/2023/04/BP0574.gif
+- dos equis lager, https://vinotecamx.vtexassets.com/arquivos/ids/1657944-1600-1600?v=639216007232070000&width=1600&height=1600&aspect=true
+- dos equis ambar, https://www.elmaiz.ch/cdn/shop/files/dos_equis.png?v=1752691726&width=1125
+- sol, https://birrapertoriodelxino.wordpress.com/wp-content/uploads/2014/07/img03879-20140711-1609.jpg
+- indio, https://cdn-3.expansion.mx/dims4/default/5ccc3af/2147483647/strip/true/crop/1200x750+0+0/resize/1200x750!/format/webp/quality/70/?url=https%3A%2F%2Fcdn-3.expansion.mx%2Fe4%2F8f%2F3811efd144ff912941ec21c794b0%2Fdueno-cerveza-indio.jpg
+- newcastle brown ale, https://images.bierothek.de/storage/product_images/det/13007001_shop_2275.webp
+- john smith's magnet, https://www.taverntrove.com/imagecache/john-smiths-magnet-pale-ale-labels-john-smiths-the-brewery-ltd_45756-1.jpg_H638.jpg
+- tiburón Blonde Ale, https://tienda.hechoenveracruz.gob.mx/wp-content/uploads/2022/01/tiburon-amarilla.jpg
+- tiburón imperial, https://tienda.hechoenveracruz.gob.mx/wp-content/uploads/2022/01/tiburon-camuflaje-.jpg
+- tiburón porter, https://tienda.hechoenveracruz.gob.mx/wp-content/uploads/2022/01/tiburon-original.jpg
+- 
