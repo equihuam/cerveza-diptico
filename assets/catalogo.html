@@ -416,43 +416,34 @@
       background: #faf6ee;
     }
 
-    .label-zoom-tag {
-      position: absolute;
-      bottom: 2px;
-      right: 2px;
-      background: rgba(31, 29, 26, 0.75);
-      color: #fff;
-      font-size: 0.6rem;
-      padding: 1px 3px;
-      border-radius: 3px;
-      pointer-events: none;
-    }
-
     .card-specs {
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      gap: 0.55rem;
       margin-bottom: 1.1rem;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
     }
 
     .spec-item {
       display: grid;
-      grid-template-columns: 85px 1fr;
-      gap: 0.4rem;
+      grid-template-columns: 96px 1fr;
+      gap: 0.45rem;
       line-height: 1.35;
+      align-items: baseline;
     }
 
     .spec-label {
       font-weight: 700;
       color: #635748;
-      font-size: 0.78rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
+      white-space: nowrap;
     }
 
     .spec-val {
       color: #2c2925;
+      font-size: 0.82rem;
     }
 
     .curiosity-box {
@@ -1525,11 +1516,30 @@
         distinctive: "Gran intensidad, color negro y cuerpo pleno; posee sabores marcados a café y chocolate amargo con ligeras notas a frutos negros y una placentera sensación cálida al paladar.",
         history: "La cerveza de mayor carácter y potencia de Cerveza Tiburón en Xalapa, vestida con su singular etiqueta de diseño camuflaje militar. Maridaje oficial: quesos maduros y chocolates.",
         abv: "7.9%"
+      },
+      {
+        id: "corona",
+        name: "Corona Extra",
+        origin: "Ciudad de México / Zacatecas, México",
+        launch_year: "1925",
+        launch_place: "Cervecería Modelo, Tacuba, Ciudad de México, México",
+        stabilization: "Pasteurizada",
+        family: "Lager",
+        style: "American Adjunct Lager / Clara Mexicana",
+        label_img: "img/labels/corona.jpg",
+        label_vintage: "1925 / Serigrafía Vitrificada",
+        label_source: "Cervecería Modelo (1925) • Botella serigrafiada y corona histórica • Wikimedia Commons (CC BY-SA 3.0)",
+        cereal: "Malta clara de cebada de dos carreras, arroz y sémola/grits de maíz.",
+        yeast: "Saccharomyces pastorianus (cepa lager propia de Grupo Modelo).",
+        process: "Fermentación baja en frío (9-12 °C), filtración brillante y extractos de lúpulo isomerizados fotoestables.",
+        distinctive: "Cuerpo ligero, efervescencia vivaz y sutil amargor herbal. Mundialmente famosa por el ritual del gajo de lima en la botella.",
+        history: "Creada en 1925 para celebrar el décimo aniversario de Cervecería Modelo. Su corona está inspirada en la de la Virgen de Guadalupe en la Catedral de Puerto Vallarta. Es la cerveza mexicana más vendida y exportada del mundo.",
+        abv: "4.5%"
       }
     ];
 
     // ESTADO LOCAL DE LA APLICACIÓN
-    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v6";
+    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v7";
     let beersData = [];
     let currentView = "cards"; // "cards" | "table"
     let currentSort = { col: "name", asc: true };
@@ -1541,6 +1551,12 @@
       if (stored) {
         try {
           beersData = JSON.parse(stored);
+          // Asegurar que las fichas iniciales maestras siempre existan
+          INITIAL_BEERS.forEach(initB => {
+            if (!beersData.some(b => b.id === initB.id)) {
+              beersData.push({...initB});
+            }
+          });
           // Migración automática si faltan campos
           beersData = beersData.map(b => {
             const def = INITIAL_BEERS.find(x => x.id === b.id);
@@ -1548,6 +1564,7 @@
               if (!b.launch_year) b.launch_year = def.launch_year;
               if (!b.launch_place) b.launch_place = def.launch_place;
               if (!b.stabilization) b.stabilization = def.stabilization;
+              if (!b.label_img) b.label_img = def.label_img;
             }
             if (!b.stabilization) b.stabilization = "Pasteurizada";
             return b;
@@ -1556,8 +1573,10 @@
           beersData = [...INITIAL_BEERS];
         }
       } else {
-        // Migrar de v5 o v4 si existían
-        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v5") || localStorage.getItem("antigravity_cervezas_fichas_db_v4");
+        // Migrar de v6, v5 o v4 si existían
+        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v6") ||
+                          localStorage.getItem("antigravity_cervezas_fichas_db_v5") ||
+                          localStorage.getItem("antigravity_cervezas_fichas_db_v4");
         if (oldStored) {
           try {
             const oldBeers = JSON.parse(oldStored);
@@ -1566,11 +1585,17 @@
               if (def) {
                 if (!b.launch_year) b.launch_year = def.launch_year;
                 if (!b.launch_place) b.launch_place = def.launch_place;
-                b.stabilization = def.stabilization;
+                if (!b.stabilization) b.stabilization = def.stabilization;
+                if (!b.label_img) b.label_img = def.label_img;
               } else {
                 b.stabilization = "Pasteurizada";
               }
               return b;
+            });
+            INITIAL_BEERS.forEach(initB => {
+              if (!beersData.some(b => b.id === initB.id)) {
+                beersData.push({...initB});
+              }
             });
           } catch(e) {
             beersData = [...INITIAL_BEERS];
@@ -1724,7 +1749,6 @@
               <!-- MINIATURA HISTÓRICA / VINTAGE -->
               <div class="vintage-label-wrapper" onclick="openLightbox('${b.id}')" title="Ver etiqueta histórica y registro legal">
                 <img src="${labelSrc}" alt="${b.name}" class="vintage-label-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 120\'><rect width=\'100\' height=\'120\' fill=\'%232b2015\'/><text x=\'50\' y=\'65\' fill=\'%23f5d796\' font-size=\'12\' text-anchor=\'middle\'>🍺 ${encodeURIComponent(b.name.slice(0, 10))}</text></svg>'">
-                <span class="label-zoom-tag">🔍</span>
               </div>
             </div>
 
@@ -1965,11 +1989,11 @@
 
       // Restaurar iniciales
       document.getElementById("btn-reset-default").addEventListener("click", () => {
-        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 20 fichas y etiquetas originales?")) {
+        if (confirm("¿Deseas restaurar la colección predeterminada con todas las 21 fichas y etiquetas originales?")) {
           beersData = [...INITIAL_BEERS];
           saveToStorage();
           renderApp();
-          showToast("✓ Colección restaurada con estabilización microbiológica");
+          showToast("✓ Colección restaurada con todas las 21 fichas");
         }
       });
     }

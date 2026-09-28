@@ -274,3 +274,20 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 * **Cereal y Levadura:** Alta densidad de maltas especiales tostadas y chocolate amargo; levadura para alta graduación alcohólica.
 * **Maridaje oficial:** Chocolates amargos y quesos maduros.
 * **Dato curioso / Identidad:** La creación más potente y compleja de la casa cervecera xalapeña, reconocida por su singular etiqueta estilo camuflaje militar.
+
+---
+
+### 🍺 Corona Extra
+* **Origen actual:** Ciudad de México / Zacatecas, México.
+* **Lanzamiento original:** **1925** en *Cervecería Modelo, Tacuba, Ciudad de México, México*.
+* **Estabilización:** 🔥 Pasteurizada.
+* **Estilo:** *American Adjunct Lager / Clara Mexicana*.
+* **Color:** Dorado pálido cristalino.
+* **ABV:** **4.5% Alc. Vol.**
+* **Temperatura de servicio:** **3–6 °C**.
+* **Perfil y Notas de Cata:** Cuerpo ligero, efervescencia vivaz, tenue nota de cereal y sutil amargor herbal con final limpio. Diseñada para una tomabilidad refrescante extrema.
+* **Cereal y Levadura:** Malta clara de cebada de dos carreras, arroz y sémola/grits de maíz; levadura *Saccharomyces pastorianus* (baja fermentación, cepa limpia de Grupo Modelo).
+* **Proceso y Fermentación:** Fermentación baja en frío (9-12 °C), filtración brillante y uso de lúpulos isomerizados fotoestables para soportar la exposición solar en botella transparente.
+* **Maridaje oficial:** Mariscos, ceviches, tacos al pastor y comida mexicana fresca.
+* **Dato curioso / Identidad:** Creada en 1925 para celebrar el décimo aniversario de Cervecería Modelo. Su emblemático logotipo con dos grifos y la corona imperial está inspirado en la corona de la Virgen de Guadalupe en la Catedral de Puerto Vallarta. Es la marca de cerveza mexicana más vendida y exportada globalmente, famosa por el ritual internacional de servirse con un gajo de lima en el cuello de su botella transparente serigrafiada.
+
