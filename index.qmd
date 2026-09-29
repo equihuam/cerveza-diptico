@@ -855,14 +855,66 @@ Explora fichas detalladas de estilos internacionales con parámetros técnicos (
 
 
 <!-- =======================================================================
-     BARRA INFERIOR DE ACCIÓN RÁPIDA (MOBILE DOCK)
+     BARRA INFERIOR DE ACCIÓN RÁPIDA / MENÚ FLOTANTE COLAPSABLE (2 COLUMNAS)
+     Diseño accesible (WCAG AA), colapsable, no invasivo y mobile-first
      ======================================================================= -->
-::: {.mobile-quick-dock}
-[🍺 Guía](#sec-familias){.dock-item}
-[🌾 Grano](#sec-cereales){.dock-item}
-[🍷 Copas](#sec-cristaleria){.dock-item}
-[📖 Glosario](#sec-glosario){.dock-item}
-[📋 Cata](assets/degustacion.html){.dock-item}
-[📚 Estilos](assets/catalogo.html){.dock-item}
-:::
+```{=html}
+<nav class="quick-dock" id="quickDock" aria-label="Menú de navegación y acceso rápido">
+  <button type="button" class="dock-toggle-btn" id="dockToggleBtn" aria-expanded="false" aria-controls="dockGridContainer" aria-label="Abrir menú de navegación rápida">
+    <span class="dock-toggle-indicator">
+      <span class="dock-icon-main" aria-hidden="true">🧭</span>
+      <span class="dock-label-main">Navegación</span>
+    </span>
+    <span class="dock-toggle-arrow" aria-hidden="true">▲</span>
+  </button>
+  
+  <div class="dock-grid-container" id="dockGridContainer" hidden>
+    <div class="dock-grid" role="menu">
+      <a href="#sec-familias" class="dock-item" role="menuitem" data-dock-target="sec-familias">
+        <span class="dock-item-icon" aria-hidden="true">🍺</span>
+        <span class="dock-item-text">
+          <strong class="dock-item-title">Familias</strong>
+          <span class="dock-item-desc">Fermentación</span>
+        </span>
+      </a>
+      <a href="#sec-cereales" class="dock-item" role="menuitem" data-dock-target="sec-cereales">
+        <span class="dock-item-icon" aria-hidden="true">🌾</span>
+        <span class="dock-item-text">
+          <strong class="dock-item-title">Cereales</strong>
+          <span class="dock-item-desc">Malta &amp; Crudo</span>
+        </span>
+      </a>
+      <a href="#sec-cristaleria" class="dock-item" role="menuitem" data-dock-target="sec-cristaleria">
+        <span class="dock-item-icon" aria-hidden="true">🍷</span>
+        <span class="dock-item-text">
+          <strong class="dock-item-title">Copas</strong>
+          <span class="dock-item-desc">Cristalería</span>
+        </span>
+      </a>
+      <a href="#sec-glosario" class="dock-item" role="menuitem" data-dock-target="sec-glosario">
+        <span class="dock-item-icon" aria-hidden="true">📖</span>
+        <span class="dock-item-text">
+          <strong class="dock-item-title">Glosario</strong>
+          <span class="dock-item-desc">Técnico &amp; Cata</span>
+        </span>
+      </a>
+      <a href="assets/degustacion.html" class="dock-item" role="menuitem">
+        <span class="dock-item-icon" aria-hidden="true">📋</span>
+        <span class="dock-item-text">
+          <strong class="dock-item-title">Bitácora</strong>
+          <span class="dock-item-desc">Ficha BJCP</span>
+        </span>
+      </a>
+      <a href="assets/catalogo.html" class="dock-item" role="menuitem">
+        <span class="dock-item-icon" aria-hidden="true">📚</span>
+        <span class="dock-item-text">
+          <strong class="dock-item-title">Catálogo</strong>
+          <span class="dock-item-desc">Estilos y Fichas</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</nav>
+```
+
 

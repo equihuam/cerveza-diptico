@@ -122,5 +122,77 @@ document.addEventListener('DOMContentLoaded', () => {
             filterGlossary();
         });
     });
+
+    // =========================================================================
+    // Lógica del Menú Flotante Colapsable de Navegación Rápida (2 Columnas)
+    // =========================================================================
+    const quickDock = document.getElementById('quickDock');
+    const dockToggleBtn = document.getElementById('dockToggleBtn');
+    const dockGridContainer = document.getElementById('dockGridContainer');
+
+    if (quickDock && dockToggleBtn && dockGridContainer) {
+        function openDock() {
+            quickDock.classList.add('is-open');
+            dockToggleBtn.setAttribute('aria-expanded', 'true');
+            dockToggleBtn.setAttribute('aria-label', 'Cerrar menú de navegación rápida');
+            dockGridContainer.removeAttribute('hidden');
+        }
+
+        function closeDock() {
+            quickDock.classList.remove('is-open');
+            dockToggleBtn.setAttribute('aria-expanded', 'false');
+            dockToggleBtn.setAttribute('aria-label', 'Abrir menú de navegación rápida');
+            dockGridContainer.setAttribute('hidden', '');
+        }
+
+        function toggleDock() {
+            const isOpen = quickDock.classList.contains('is-open');
+            if (isOpen) {
+                closeDock();
+            } else {
+                openDock();
+            }
+        }
+
+        dockToggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDock();
+        });
+
+        // Cerrar al hacer clic en un enlace interno con scroll suave
+        const dockItems = quickDock.querySelectorAll('.dock-item');
+        dockItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                const targetId = item.getAttribute('data-dock-target');
+                if (targetId) {
+                    const targetEl = document.getElementById(targetId);
+                    if (targetEl) {
+                        e.preventDefault();
+                        closeDock();
+                        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        history.pushState(null, '', `#${targetId}`);
+                    }
+                } else {
+                    closeDock();
+                }
+            });
+        });
+
+        // Cerrar con la tecla Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && quickDock.classList.contains('is-open')) {
+                closeDock();
+                dockToggleBtn.focus();
+            }
+        });
+
+        // Cerrar al hacer clic fuera del menú
+        document.addEventListener('click', (e) => {
+            if (quickDock.classList.contains('is-open') && !quickDock.contains(e.target)) {
+                closeDock();
+            }
+        });
+    }
 });
+
 
