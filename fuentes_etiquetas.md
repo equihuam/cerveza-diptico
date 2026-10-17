@@ -21,3 +21,8 @@
 - sol cero 0.0%, https://www.cuauhtemocmoctezuma.com / Heineken México
 - modelo especial 0.0% y modelo negra 0.0%, https://grupomodelo.com / AB InBev México
 - minerva playacar 0.0%, https://cervezaminerva.com / Cervecería Minerva (Zapopan, Jalisco)
+- blue house embrujada (wit belga), https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas / Blue House Cervecería (Coatepec, Veracruz)
+- blue house ciervo blanco (hefeweizen), https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas / Blue House Cervecería (Coatepec, Veracruz)
+- blue house tara gold (english ipa), https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas / Blue House Cervecería (Coatepec, Veracruz)
+- blue house kelpi rojo (scottish ale), https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas / Blue House Cervecería (Coatepec, Veracruz)
+- blue house lago oscuro (irish stout), https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas / Blue House Cervecería (Coatepec, Veracruz)

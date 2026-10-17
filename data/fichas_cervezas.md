@@ -306,7 +306,85 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 
 ---
 
-## 4. Cervezas Sin Alcohol y 0.0% (Non-Alcoholic Beers)
+## 4. Blue House Cervecería (Coatepec, Veracruz)
+*Referencia comercial y distribución regional:* [Pixcando – Red de Producción y Consumo Sano y Solidario (Coatepec / Xalapa)](https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas)
+
+### 🍺 Blue House Embrujada
+* **Origen actual:** Coatepec, Veracruz, México.
+* **Lanzamiento original:** **c. 2020** en *Blue House Cervecería, Coatepec, Veracruz, México*.
+* **Estabilización:** 🌿 Viva (artesanal sin pasteurizar).
+* **Estilo:** *Wit Belga / Belgian Witbier*.
+* **Color:** Muy clara (pajizo pálido con turbidez natural de trigo).
+* **ABV / IBU:** **5.1% Alc. Vol.** | **15 IBU**.
+* **Temperatura de servicio:** **4–7 °C**.
+* **Perfil y Notas de Cata:** Cerveza de trigo muy clara de inspiración belga, sumamente refrescante y efervescente, con delicados tonos aromáticos y gustativos de cáscara de naranja, semilla de cilantro y flor de manzanilla.
+* **Cereal y Levadura:** Malta de cebada clara y alta proporción de trigo sin maltear, infusionada en cocción con cáscara de naranja dulce/amarga, semilla de cilantro (*Coriandrum sativum*) y manzanilla; levadura *Saccharomyces cerevisiae* (cepa belga de trigo productora de sutiles ésteres y fenoles).
+* **Maridaje sugerido:** Ensaladas cítricas, ceviches, pescados blancos, quesos frescos de cabra de la región de Coatepec y postres ligeros de fruta.
+* **Dato curioso / Identidad:** Su etiqueta color naranja terracota muestra el trazo arquitectónico de un portal colonial místico, en guiño a las leyendas de casas embrujadas de Coatepec y Xalapa. Se comercializa en botellas de 355 ml en restaurantes locales y a través de la red agroecológica *Pixcando*.
+
+---
+
+### 🍺 Blue House Ciervo Blanco
+* **Origen actual:** Coatepec, Veracruz, México.
+* **Lanzamiento original:** **c. 2020** en *Blue House Cervecería, Coatepec, Veracruz, México*.
+* **Estabilización:** 🌿 Viva (artesanal sin pasteurizar con levadura en suspensión).
+* **Estilo:** *Hefeweizen Alemán (Weissbier al estilo de Múnich)*.
+* **Color:** Clara (dorado opalescente con corona de espuma blanca abundante).
+* **ABV / IBU:** **5.3% Alc. Vol.** | **12 IBU**.
+* **Temperatura de servicio:** **5–8 °C**.
+* **Perfil y Notas de Cata:** Cerveza de trigo clásica al estilo de Múnich, efervescente, sedosa y de amargor muy suave (12 IBU), con marcados tonos frutales de plátano maduro y especiados de clavo de olor aportados de forma 100% natural por la levadura.
+* **Cereal y Levadura:** Al menos 50% de malta de trigo alemán y malta Pilsen de dos carreras (sin especias añadidas, fiel a la ley de pureza bávara); levadura *Saccharomyces cerevisiae* (cepa Weizen bávara productora de acetato de isoamilo y 4-vinil guayacol).
+* **Maridaje sugerido:** Salchichas alemanas (Weisswurst), carnes blancas, trucha empapelada de la montaña veracruzana, pan artesanal de masa madre y strudel de manzana.
+* **Dato curioso / Identidad:** Su etiqueta azul índigo profundo presenta la silueta de un ciervo blanco real (*White Hart*), criatura que en el folclore celta y germánico (como en la leyenda bávara de san Huberto) simboliza la pureza indómita del bosque y el encuentro con lo sagrado.
+
+---
+
+### 🍺 Blue House Tara Gold
+* **Origen actual:** Coatepec, Veracruz, México.
+* **Lanzamiento original:** **c. 2020** en *Blue House Cervecería, Coatepec, Veracruz, México*.
+* **Estabilización:** 🌿 Viva (artesanal sin pasteurizar).
+* **Estilo:** *English IPA (IPA Inglesa Moderna)*.
+* **Color:** Clara (dorado intenso / ámbar pálido brillante).
+* **ABV / IBU:** **5.2% Alc. Vol.** | **36 IBU**.
+* **Temperatura de servicio:** **7–10 °C**.
+* **Perfil y Notas de Cata:** Una IPA moderna y equilibrada que combina maltas y lúpulos ingleses y norteamericanos para producir una cerveza clara, refrescante y sumamente bebible con un nítido sabor lupuloso de cítricos (toronja, cáscara de limón y resina floral suave).
+* **Cereal y Levadura:** Combinación de malta Pale Ale británica (tipo Maris Otter) y maltas claras norteamericanas con toque de malta cristal dorada; levadura *Saccharomyces cerevisiae* (cepa Ale inglesa de fermentación limpia y atenuación media-alta).
+* **Maridaje sugerido:** Platillos especiados de la cocina veracruzana, hamburguesas gourmet, carnes al carbón, currys suaves y quesos semicurados.
+* **Dato curioso / Identidad:** Su etiqueta verde bosque ostenta en dorado el Árbol de la Vida celta (*Crann Bethadh*), y su nombre alude a la mítica **Colina de Tara** (*Hill of Tara* en Irlanda), antiguo asiento sagrado de los Altos Reyes celtas, uniendo la herencia cervecera británica con el lúpulo del Nuevo Mundo.
+
+---
+
+### 🍺 Blue House Kelpi Rojo
+* **Origen actual:** Coatepec, Veracruz, México.
+* **Lanzamiento original:** **c. 2020** en *Blue House Cervecería, Coatepec, Veracruz, México*.
+* **Estabilización:** 🌿 Viva (artesanal sin pasteurizar).
+* **Estilo:** *Scottish Ale (Ale Escocesa Tradicional)*.
+* **Color:** Oscura / Ámbar cobrizo rojizo profundo.
+* **ABV / IBU:** **4.7% Alc. Vol.** | **25 IBU**.
+* **Temperatura de servicio:** **8–11 °C**.
+* **Perfil y Notas de Cata:** Cerveza ámbar oscura escocesa tradicional con franco predominio de malta y maltas cristalinas que le aportan ricos tonos acaramelados, nuez, tofe y corteza de pan tostado, con un amargor moderado (25 IBU) que equilibra el dulzor residual.
+* **Cereal y Levadura:** Malta Pale Ale base con generosa proporción de maltas cristalinas (*Crystal Malts*) de tueste medio y oscuro y pizca de cebada tostada para el matiz rubí; levadura *Saccharomyces cerevisiae* (cepa escocesa fermentada a temperatura fresca para exaltar la malta).
+* **Maridaje sugerido:** Costillas glaseadas, carnes de cerdo y cordero asadas, estofados de montaña, hongos silvestres de la región y postres con nuez de macadamia de Coatepec.
+* **Dato curioso / Identidad:** Bautizada en honor al **Kelpie** (*Kelpi*), el legendario espíritu equino cambiaformas que habita en los lagos (*lochs*) y ríos de Escocia; su etiqueta color borgoña ilustra dos hipocampos/corceles de agua entrelazados en nudo celta.
+
+---
+
+### 🍺 Blue House Lago Oscuro
+* **Origen actual:** Coatepec, Veracruz, México.
+* **Lanzamiento original:** **c. 2020** en *Blue House Cervecería, Coatepec, Veracruz, México*.
+* **Estabilización:** 🌿 Viva (artesanal sin pasteurizar).
+* **Estilo:** *Irish Stout (Stout Irlandés Seca)*.
+* **Color:** Negra opaca con espuma color marfil/crema.
+* **ABV / IBU:** **4.5% Alc. Vol.** | **35 IBU**.
+* **Temperatura de servicio:** **7–10 °C**.
+* **Perfil y Notas de Cata:** Una stout seca al estilo clásico irlandés elaborada con maltas tostadas que le aportan intensos tonos de café expreso recién molido y chocolate amargo, con final seco, cuerpo ligero-medio muy fluido (4.5% ABV) y 35 IBU de amargor torrefacto limpio.
+* **Cereal y Levadura:** Malta Pale Ale, cebada en copos para aportar sedosidad y retención de espuma, malta chocolate y cebada tostada sin maltear (*roasted barley*); levadura *Saccharomyces cerevisiae* (cepa Ale irlandesa de alta atenuación).
+* **Maridaje sugerido:** Mole xiqueño o veracruzano, ostiones, cortes a la parrilla, quesos maduros y postres de café de especialidad o cacao de Coatepec.
+* **Dato curioso / Identidad:** El nombre **Lago Oscuro** es la traducción literal del gaélico *Dubh Linn* ("laguna negra"), origen etimológico de la ciudad de **Dublín** (cuna histórica de la Irish Dry Stout), además de evocar los profundos lagos de la mitología celta representados en el emblema plateado de su etiqueta negra.
+
+---
+
+## 5. Cervezas Sin Alcohol y 0.0% (Non-Alcoholic Beers)
 
 ### 🍺 Heineken 0.0
 * **Origen actual:** Ámsterdam, Países Bajos / Monterrey, México (Heineken México).
