@@ -1247,6 +1247,25 @@
         abv: "5.3%"
       },
       {
+        id: "negra-modelo-chocolate",
+        name: "Negra Modelo Chocolate Turín",
+        origin: "Ciudad de México / Zacatecas, México",
+        launch_year: "2025",
+        launch_place: "Grupo Modelo (AB InBev) & Chocolates Turín (Mars), Ciudad de México",
+        stabilization: "Pasteurizada",
+        family: "Lager",
+        style: "Munich Dunkel con Cacao / Edición Especial (20 IBU)",
+        label_img: "img/labels/negra-modelo-chocolate.jpg",
+        label_vintage: "2025 / Edición Especial Turín",
+        label_source: "Grupo Modelo & Chocolates Turín (2025) • Edición Especial 'Une más que dos sabores' • Archivo Oficial",
+        cereal: "Malta caramelo tostada, malta chocolate, malta base de dos carreras, maíz cervecero y toque de cacao semiamargo de Chocolates Turín.",
+        yeast: "Saccharomyces pastorianus (baja fermentación, cepa lager limpia de Grupo Modelo).",
+        process: "Elaborada sobre la base Munich Dunkel de Negra Modelo con integración aromática de cacao semiamargo Turín y maduración en frío (lagering); ~20 IBU.",
+        distinctive: "Equilibrio sedoso entre malta tostada, notas de caramelo, cacao semiamargo Turín y un ligero aroma a café recién tostado con cuerpo fluido.",
+        history: "Edición especial y limitada de temporada lanzada en noviembre de 2025 que celebra la unión de dos íconos nacidos exactamente en el mismo año (1928) en la Ciudad de México: Negra Modelo y Chocolates Turín.",
+        abv: "4.7%"
+      },
+      {
         id: "bohemia-obscura",
         name: "Bohemia Obscura",
         origin: "Monterrey / Orizaba, México",
@@ -1800,7 +1819,7 @@
     ];
 
     // ESTADO LOCAL DE LA APLICACIÓN
-    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v13";
+    const STORAGE_KEY = "antigravity_cervezas_fichas_db_v14";
     let beersData = [];
     let currentView = "cards"; // "cards" | "table"
     let currentSort = { col: "name", asc: true };
@@ -1834,8 +1853,9 @@
           beersData = [...INITIAL_BEERS];
         }
       } else {
-        // Migrar de v12, v11, v10, v9, v8, v7, v6, v5 o v4 si existían
-        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v12") ||
+        // Migrar de v13, v12, v11, v10, v9, v8, v7, v6, v5 o v4 si existían
+        const oldStored = localStorage.getItem("antigravity_cervezas_fichas_db_v13") ||
+                          localStorage.getItem("antigravity_cervezas_fichas_db_v12") ||
                           localStorage.getItem("antigravity_cervezas_fichas_db_v11") ||
                           localStorage.getItem("antigravity_cervezas_fichas_db_v10") ||
                           localStorage.getItem("antigravity_cervezas_fichas_db_v9") ||

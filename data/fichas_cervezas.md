@@ -99,6 +99,20 @@ Documento de referencia técnica, sensorial e histórica para el catálogo de ce
 
 ---
 
+### 🍺 Negra Modelo Chocolate Turín (Edición Especial)
+* **Origen actual:** Ciudad de México / Zacatecas, México.
+* **Lanzamiento original:** **Noviembre de 2025** en *Ciudad de México (Colaboración Grupo Modelo & Chocolates Turín / Mars)*.
+* **Estabilización:** 🔥 Pasteurizada.
+* **Estilo:** *Munich Dunkel con Cacao / Specialty Dark Lager*.
+* **ABV / IBU:** **4.7% Alc. Vol.** | **~20 IBU**.
+* **Cereal / Granos y Adjuntos:** Malta caramelo tostada, malta chocolate, malta base de dos carreras, maíz cervecero y un toque selecto de **cacao semiamargo de Chocolates Turín**.
+* **Levadura:** *Saccharomyces pastorianus* (fermentación baja, cepa limpia de Grupo Modelo).
+* **Proceso:** Elaborada sobre la base clásica de *Munich Dunkel* de Negra Modelo mediante maceración de maltas oscuras y adición aromática de cacao semiamargo Turín, seguida de fermentación baja controlada y maduración en frío (*lagering*).
+* **Distintivo de la receta:** Equilibrio sedoso y envolvente donde las notas clásicas de malta tostada, caramelo y café ligero de Negra Modelo se funden con el perfil aromático y aterciopelado del chocolate semiamargo Turín, manteniendo una tomabilidad fluida (4.7% ABV) sin resultar empalagosa.
+* **Dato histórico / curioso:** Lanzada como edición especial de temporada invernal a finales de 2025 bajo el lema *"Une más que dos sabores"*, esta alianza histórica celebró la unión de dos marcas icónicas nacidas exactamente en el mismo año (**1928**) en la Ciudad de México: **Negra Modelo** y **Chocolates Turín**.
+
+---
+
 ### 🍺 Bohemia Obscura
 * **Origen actual:** Monterrey / Orizaba, México.
 * **Lanzamiento original:** **1905** en *Cervecería Cuauhtémoc, Monterrey, Nuevo León, México*.

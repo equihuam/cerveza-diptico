@@ -26,3 +26,4 @@
 - blue house tara gold (english ipa), https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas / Blue House Cervecería (Coatepec, Veracruz)
 - blue house kelpi rojo (scottish ale), https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas / Blue House Cervecería (Coatepec, Veracruz)
 - blue house lago oscuro (irish stout), https://pixcando.agrojusto.com/store/pixcando?category=05-bebidas / Blue House Cervecería (Coatepec, Veracruz)
+- negra modelo chocolate turín (edición especial), https://www.themarkethink.com/wp-content/uploads/2025/11/negra-modelo-chocolate-turin.jpg / Grupo Modelo & Chocolates Turín
