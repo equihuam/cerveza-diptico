@@ -1238,10 +1238,16 @@ a:hover {
 .card-lager::before { background: var(--lager-primary); }
 .card-ale::before { background: var(--ale-primary); }
 .card-wild::before { background: var(--wild-primary); }
+.card-origin-wild::before { background: #2f855a; }
+.card-origin-neolithic::before { background: var(--grain-barley); }
+.card-origin-history::before { background: #9c4221; }
 
 .card-lager { border-top: 1px solid var(--lager-border); }
 .card-ale { border-top: 1px solid var(--ale-border); }
 .card-wild { border-top: 1px solid var(--wild-border); }
+.card-origin-wild { border-top: 1px solid #c6f6d5; }
+.card-origin-neolithic { border-top: 1px solid #fefcbf; }
+.card-origin-history { border-top: 1px solid #feebc8; }
 
 .card-header-badge {
   display: flex;
@@ -1257,6 +1263,9 @@ a:hover {
 .card-lager .card-header-badge { color: var(--lager-dark); }
 .card-ale .card-header-badge { color: var(--ale-dark); }
 .card-wild .card-header-badge { color: var(--wild-dark); }
+.card-origin-wild .card-header-badge { color: #22543d; }
+.card-origin-neolithic .card-header-badge { color: var(--grain-raw); }
+.card-origin-history .card-header-badge { color: #7b341e; }
 
 .temp-pill {
   background: #f1f5f9;

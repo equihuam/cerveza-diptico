@@ -30,6 +30,9 @@ Guía Botánica, Microbiológica &amp; Sensorial
 
 ::: {.hero-meta-chips}
 ::: {.meta-chip}
+🏺 [**Orígenes**](#sec-origenes)
+:::
+::: {.meta-chip}
 🔬 **3 Familias** (*Lager, Ale, Espontánea*)
 :::
 ::: {.meta-chip}
@@ -55,6 +58,7 @@ Guía Botánica, Microbiológica &amp; Sensorial
 ::: {.sticky-filter-bar}
 ::: {.filter-scroll-wrapper}
 <button type="button" class="filter-pill active" data-filter="all">🌐 Ver Todo</button>
+<button type="button" class="filter-pill" data-filter="origenes">🏺 Orígenes</button>
 <button type="button" class="filter-pill" data-filter="lager">❄️ Lager</button>
 <button type="button" class="filter-pill" data-filter="ale">🌾 Ale</button>
 <button type="button" class="filter-pill" data-filter="wild">🍇 Espontánea</button>
@@ -69,6 +73,108 @@ Guía Botánica, Microbiológica &amp; Sensorial
      CONTENEDOR PRINCIPAL FLUIDO
      ======================================================================= -->
 :::: {.web-container}
+
+<!-- SECCIÓN 0: ORÍGENES EVOLUTIVOS, PREHISTÓRICOS E HISTÓRICOS -->
+::: {.web-section id="sec-origenes" data-category="origenes"}
+::: {.section-header}
+[Paleobiología &amp; Arqueología]{.section-tag}
+
+## Antes de la Cervecera: De la Selva al Neolítico
+
+Mucho antes de que la humanidad moldeara la primera vasija de barro, las levaduras del género ***Saccharomyces*** ya fabricaban etanol y aromas frutales en los bosques, forjando una alianza evolutiva con insectos, mamíferos silvestres y nuestros propios ancestros.
+:::
+
+::: {.cards-grid-3}
+
+<!-- TARJETA ORIGEN 1: ECOLOGÍA SILVESTRE Y EL MONO BORRACHO -->
+::: {.family-card-web .card-origin-wild}
+::: {.card-header-badge}
+🐒 Ecología Silvestre [~10 M de años]{.temp-pill}
+:::
+
+### Fermentos en la Naturaleza &amp; el «Mono Borracho»
+
+[*Saccharomyces paradoxus*, *S. cerevisiae* silvestre &amp; enzima `ADH4`]{.scientific-name}
+
+En frutos caídos, savia de robles y néctares florales ocurre una sucesión microbiana donde las especies silvestres de ***Saccharomyces*** se imponen gracias al **efecto Crabtree**: producen alcohol incluso en presencia de oxígeno para inhibir bacterias rivales y emiten ésteres volátiles (como el acetato de isoamilo, con aroma a plátano) para atraer insectos vectores y mamíferos frugívoros.
+
+::: {.card-profile}
+**Evidencia en fauna silvestre:** En las selvas de Malasia, la **tupaya de cola de pluma** (*Ptilocercus lowii*) y el loris lento beben cada noche el néctar fermentado de la palma *Eugeissona tristis* (hasta **3.8 % ABV**, equivalente a una cerveza *Session*), inoculado naturalmente por consorcios de levaduras con *Saccharomyces*, sin mostrar signos de embriaguez.
+:::
+
+::: {.card-styles-list}
+**Nuestra huella genética (`ADH4`):**
+
+- **La hipótesis del «Mono Borracho» (R. Dudley):** El olor del alcohol y los ésteres servía a los primates como brújula olfativa hacia frutas maduras de alto valor calórico.
+- **Mutación paleogenética `A294V` (Carrigan et al., 2015):** Hace ~10 millones de años, el ancestro común de gorilas, chimpancés y humanos adquirió una mutación en la enzima **alcohol deshidrogenasa 4 (`ADH4`)** que multiplicó por **40 veces** nuestra capacidad de metabolizar etanol al bajar de los árboles al suelo del bosque.
+:::
+
+::: {.card-glass-hint}
+🧬 **Legado biológico:** Nuestro metabolismo evolucionó para procesar fermentos de *Saccharomyces* millones de años antes de inventar la agricultura.
+:::
+:::
+
+
+<!-- TARJETA ORIGEN 2: EL NEOLÍTICO (¿EL PAN O LA CERVEZA PRIMERO?) -->
+::: {.family-card-web .card-origin-neolithic}
+::: {.card-header-badge}
+🪨 Revolución Neolítica [13,000 – 7,000 a.C.]{.temp-pill}
+:::
+
+### ¿El Pan o la Cerveza Primero?
+
+[De los cazadores natufienses a Göbekli Tepe y Jiahu]{.scientific-name}
+
+Durante décadas se asumió que la cerveza nació como un subproducto fortuito del pan. Hoy la arqueobotánica apunta a que la **búsqueda de bebidas fermentadas para banquetes rituales y cohesión comunitaria** fue un motor central para domesticar la cebada (*Hordeum vulgare*) y el trigo (*Triticum*).
+
+::: {.card-profile}
+**El hallazgo más antiguo (13,000 a.C.):** En la **Cueva de Raqefet** (Monte Carmelo, Israel), morteros tallados en la roca por cazadores-recolectores de la **cultura Natufiense** conservaron microfósiles de almidón de cebada y trigo malteados, machacados y fermentados milenios antes del sedentarismo agrícola consolidado.
+:::
+
+::: {.card-styles-list}
+**Hitos arqueológicos clave:**
+
+- **Göbekli Tepe (Turquía, ~9,600 a.C.):** En el santuario megalítico más antiguo del mundo se hallaron enormes tinas de piedra caliza de hasta 160 litros con trazas de oxalato de calcio (*piedra de cerveza*) procedentes del remojo y fermentación de gramíneas silvestres.
+- **Jiahu (Valle del Río Amarillo, China, ~7,000 a.C.):** Análisis químicos en cerámica neolítica revelaron un fermento híbrido de arroz, miel, frutos de espino y uvas silvestres inoculado por levaduras epífitas de la piel de la fruta.
+:::
+
+::: {.card-glass-hint}
+🌾 **Transición clave:** El ser humano aprendió empíricamente que **germinar el grano (malteado)** endulzaba el engrudo y desataba una fermentación vigorosa.
+:::
+:::
+
+
+<!-- TARJETA ORIGEN 3: DE NINKASI A LA DOMESTICACIÓN MICROBIANA -->
+::: {.family-card-web .card-origin-history}
+::: {.card-header-badge}
+🏺 Domesticación &amp; Linajes [3,500 a.C. – Siglo XV]{.temp-pill}
+:::
+
+### De las Vasijas de Ninkasi al Cruce de las Lager
+
+[Del *sikaru* sumerio a la hibridación de *S. pastorianus*]{.scientific-name}
+
+Al reutilizar las mismas tinas porosas de arcilla y madera, o transferir espuma de un lote a otro (*backslopping*), las antiguas civilizaciones domesticaron involuntariamente a ***Saccharomyces cerevisiae***, seleccionando cepas que toleraban más alcohol, floculaban mejor y perdían su reproducción sexual silvestre.
+
+::: {.card-profile}
+**Mesopotamia y Egipto:** El ***Himno a Ninkasi*** (~1,800 a.C.), dedicado a la diosa sumeria de la cerveza, preserva en verso la primera receta de elaboración a partir de pan de cebada dos veces horneado (*bappir*). Como no se filtraba el grano, el *sikaru* se bebía de vasijas comunales usando largos **popotes de junco o de oro y lapislázuli**.
+:::
+
+::: {.card-styles-list}
+**Del *Gruit* medieval al nacimiento de las Lager:**
+
+- **La revolución del lúpulo (s. IX – XII):** Durante siglos las cervezas europeas se aromatizaron con *gruit* (mezcla de mirto de pantano, milenrama y artemisa), hasta que la abadesa y naturalista **Hildegarda de Bingen** (1158) documentó las propiedades antisépticas y conservantes del lúpulo (*Humulus lupulus*).
+- **El accidente genético de Baviera (s. XV):** Al almacenar cervezas en cuevas heladas de los Alpes, *S. cerevisiae* se hibridó espontáneamente con ***Saccharomyces eubayanus*** (levadura silvestre criotolerante originaria de bosques patagónicos y tibetanos), dando vida a ***Saccharomyces pastorianus*** y dividiendo para siempre el mundo cervecero en sus grandes familias.
+:::
+
+::: {.card-glass-hint}
+🔬 **Puente taxonómico:** De esta historia emergen las tres ramas que hoy rigen la cerveza: **Espontánea** (ancestral), **Ale** (*S. cerevisiae*) y **Lager** (*S. pastorianus*).
+:::
+:::
+
+:::
+:::
+
 
 <!-- SECCIÓN 1: FUNDAMENTOS Y FAMILIAS DE FERMENTACIÓN -->
 ::: {.web-section id="sec-familias"}
@@ -870,6 +976,13 @@ Explora fichas detalladas de estilos internacionales con parámetros técnicos (
   
   <div class="dock-grid-container" id="dockGridContainer" hidden>
     <div class="dock-grid" role="menu">
+      <a href="#sec-origenes" class="dock-item" role="menuitem" data-dock-target="sec-origenes">
+        <span class="dock-item-icon" aria-hidden="true">🏺</span>
+        <span class="dock-item-text">
+          <strong class="dock-item-title">Orígenes</strong>
+          <span class="dock-item-desc">Evolución &amp; Historia</span>
+        </span>
+      </a>
       <a href="#sec-familias" class="dock-item" role="menuitem" data-dock-target="sec-familias">
         <span class="dock-item-icon" aria-hidden="true">🍺</span>
         <span class="dock-item-text">

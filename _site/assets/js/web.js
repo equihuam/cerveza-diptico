@@ -20,12 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 familyCards.forEach(card => card.style.display = 'flex');
                 glassCards.forEach(card => card.style.display = 'flex');
                 sections.forEach(sec => sec.style.display = 'block');
+            } else if (filterValue === 'origenes') {
+                sections.forEach(sec => sec.style.display = 'block');
+                familyCards.forEach(card => card.style.display = 'flex');
+                const origSec = document.getElementById('sec-origenes');
+                if (origSec) {
+                    origSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             } else if (filterValue === 'lager' || filterValue === 'ale' || filterValue === 'wild') {
                 sections.forEach(sec => sec.style.display = 'block');
                 familyCards.forEach(card => {
-                    if (card.getAttribute('data-category') === filterValue) {
+                    const cardCat = card.getAttribute('data-category');
+                    if (!cardCat || cardCat === filterValue) {
                         card.style.display = 'flex';
-                        card.classList.add('highlight-glow');
+                        if (cardCat === filterValue) {
+                            card.classList.add('highlight-glow');
+                        }
                     } else {
                         card.style.display = 'none';
                         card.classList.remove('highlight-glow');
