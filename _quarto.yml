@@ -41,6 +41,9 @@ website:
         href: assets/degustacion.html
       - text: "📚 Catálogo de Estilos"
         href: assets/catalogo.html
+  page-footer:
+    left: "© 2026 Miguel Equihua. Obra distribuida bajo licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es)."
+    right: "🍺 *Cultura Chelera* · Ciencia, botánica y fermentos"
 
 format:
   html:

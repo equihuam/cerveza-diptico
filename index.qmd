@@ -1005,6 +1005,14 @@ Explora fichas detalladas de estilos internacionales con parámetros técnicos (
 :::
 :::
 
+<!-- PIE DE PÁGINA EDITORIAL & LICENCIA -->
+::: {.web-footer}
+::: {.web-footer-content}
+<p>© 2026 <strong>Miguel Equihua</strong> · Obra compartida bajo licencia <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es" target="_blank" rel="noopener noreferrer">Creative Commons Atribución-CompartirIgual 4.0 Internacional (CC BY-SA 4.0)</a>.</p>
+<p class="web-footer-sub">Puedes compartir, adaptar y enriquecer este material libremente citando la autoría y distribuyendo tus obras derivadas bajo esta misma licencia.</p>
+:::
+:::
+
 ::::
 
 

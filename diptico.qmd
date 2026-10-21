@@ -1,6 +1,7 @@
 ---
 title: "Díptico Imprimible"
 subtitle: "Edición especial para impresión en 2 páginas tamaño Carta Horizontal"
+title-block-style: none
 format:
   html:
     css: assets/css/diptico.css
@@ -87,7 +88,7 @@ Aporta sedosidad, retención de espuma y turbidez natural ([Witbier, Lambic](#se
 :::
 
 ::: {.page-footer}
-Díptico divulgativo • Edición Especial Quarto &amp; RStudio • 2026
+Díptico divulgativo • © 2026 Miguel Equihua • Licencia [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es)
 :::
 
 :::
