@@ -1267,6 +1267,26 @@ a:hover {
 .card-origin-neolithic .card-header-badge { color: var(--grain-raw); }
 .card-origin-history .card-header-badge { color: #7b341e; }
 
+.origin-card-illustration {
+  margin: 0.25rem 0 0.9rem 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e9dfcf;
+  background: #fdfbf7;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.origin-card-illustration p {
+  margin: 0;
+}
+
+.origin-card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .temp-pill {
   background: #f1f5f9;
   font-size: 0.7rem;

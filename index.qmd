@@ -96,6 +96,10 @@ Mucho antes de que la humanidad moldeara la primera vasija de barro, las levadur
 
 [*Saccharomyces paradoxus*, *S. cerevisiae* silvestre &amp; enzima `ADH4`]{.scientific-name}
 
+::: {.origin-card-illustration}
+![](assets/img/origen-tupaya.jpg){.origin-card-img alt="Lámina I: Ptilocercus lowii libando néctar fermentado de la palma Eugeissona tristis"}
+:::
+
 En frutos caídos, savia de robles y néctares florales ocurre una sucesión microbiana donde las especies silvestres de ***Saccharomyces*** se imponen gracias al **efecto Crabtree**: producen alcohol incluso en presencia de oxígeno para inhibir bacterias rivales y emiten ésteres volátiles (como el acetato de isoamilo, con aroma a plátano) para atraer insectos vectores y mamíferos frugívoros.
 
 ::: {.card-profile}
@@ -115,56 +119,64 @@ En frutos caídos, savia de robles y néctares florales ocurre una sucesión mic
 :::
 
 
-<!-- TARJETA ORIGEN 2: EL NEOLÍTICO (¿EL PAN O LA CERVEZA PRIMERO?) -->
+<!-- TARJETA ORIGEN 2: EL NEOLÍTICO Y MESOPOTAMIA -->
 ::: {.family-card-web .card-origin-neolithic}
 ::: {.card-header-badge}
-🪨 Revolución Neolítica [13,000 – 7,000 a.C.]{.temp-pill}
+🪨 Del Neolítico a Mesopotamia [13,000 – 1,800 a.C.]{.temp-pill}
 :::
 
-### ¿El Pan o la Cerveza Primero?
+### ¿El Pan o la Cerveza Primero? Del Ritual al *Sikaru*
 
-[De los cazadores natufienses a Göbekli Tepe y Jiahu]{.scientific-name}
+[De Raqefet y Göbekli Tepe a los banquetes de Ninkasi]{.scientific-name}
 
-Durante décadas se asumió que la cerveza nació como un subproducto fortuito del pan. Hoy la arqueobotánica apunta a que la **búsqueda de bebidas fermentadas para banquetes rituales y cohesión comunitaria** fue un motor central para domesticar la cebada (*Hordeum vulgare*) y el trigo (*Triticum*).
+::: {.origin-card-illustration}
+![](assets/img/origen-mesopotamia.jpg){.origin-card-img alt="Lámina II: Banquete sumerio del sikaru en la Antigua Mesopotamia"}
+:::
+
+Durante décadas se asumió que la cerveza nació como un subproducto fortuito del pan. Hoy la arqueobotánica apunta a que la **búsqueda de bebidas fermentadas para banquetes rituales y cohesión comunitaria** impulsó la domesticación de la cebada (*Hordeum vulgare*) y el trigo (*Triticum*), hasta convertirse en alimento diario, salario y pilar civilizatorio en **Mesopotamia y Egipto**.
 
 ::: {.card-profile}
-**El hallazgo más antiguo (13,000 a.C.):** En la **Cueva de Raqefet** (Monte Carmelo, Israel), morteros tallados en la roca por cazadores-recolectores de la **cultura Natufiense** conservaron microfósiles de almidón de cebada y trigo malteados, machacados y fermentados milenios antes del sedentarismo agrícola consolidado.
+**De las cuevas al banquete sumerio:** En la **Cueva de Raqefet** (~13,000 a.C., cultura Natufiense) y en **Göbekli Tepe** (~9,600 a.C.) ya se malteaban gramíneas silvestres en morteros y tinas de piedra. Milenios después, en Sumeria y Babilonia, el ***Himno a Ninkasi*** (~1,800 a.C.) consagró la receta del *sikaru* (elaborado con pan de cebada *bappir*), que se bebía de grandes vasijas comunales con **largos popotes de junco** para filtrar las cascarillas.
 :::
 
 ::: {.card-styles-list}
-**Hitos arqueológicos clave:**
+**Hitos arqueológicos e históricos:**
 
-- **Göbekli Tepe (Turquía, ~9,600 a.C.):** En el santuario megalítico más antiguo del mundo se hallaron enormes tinas de piedra caliza de hasta 160 litros con trazas de oxalato de calcio (*piedra de cerveza*) procedentes del remojo y fermentación de gramíneas silvestres.
-- **Jiahu (Valle del Río Amarillo, China, ~7,000 a.C.):** Análisis químicos en cerámica neolítica revelaron un fermento híbrido de arroz, miel, frutos de espino y uvas silvestres inoculado por levaduras epífitas de la piel de la fruta.
+- **Göbekli Tepe (~9,600 a.C.) y Jiahu (~7,000 a.C.):** Tinas megalíticas con oxalato de calcio (*piedra de cerveza*) en Turquía y vasijas con fermentos mixtos de arroz, miel y frutos en China.
+- **Alimento, salario y ley en Mesopotamia:** Lejos de ser un lujo ocasional, la cerveza era ración diaria de pago para obreros y escribas, bebida segura frente al agua contaminada y producto regulado por el **Código de Hammurabi**.
 :::
 
 ::: {.card-glass-hint}
-🌾 **Transición clave:** El ser humano aprendió empíricamente que **germinar el grano (malteado)** endulzaba el engrudo y desataba una fermentación vigorosa.
+🌾 **Transición clave:** Reutilizar las mismas tinas porosas de arcilla (*backslopping*) domesticó las primeras cepas cerveceras de *Saccharomyces cerevisiae*.
 :::
 :::
 
 
-<!-- TARJETA ORIGEN 3: DE NINKASI A LA DOMESTICACIÓN MICROBIANA -->
+<!-- TARJETA ORIGEN 3: HILDEGARDA DE BINGEN Y LA DOMESTICACIÓN MICROBIANA -->
 ::: {.family-card-web .card-origin-history}
 ::: {.card-header-badge}
-🏺 Domesticación &amp; Linajes [3,500 a.C. – Siglo XV]{.temp-pill}
+🏺 Del Herbario Medieval a Baviera [Siglos XII – XV]{.temp-pill}
 :::
 
-### De las Vasijas de Ninkasi al Cruce de las Lager
+### Hildegarda de Bingen, el Lúpulo y el Cruce de las Lager
 
-[Del *sikaru* sumerio a la hibridación de *S. pastorianus*]{.scientific-name}
+[*Humulus lupulus* (1158) y la hibridación de *S. pastorianus*]{.scientific-name}
 
-Al reutilizar las mismas tinas porosas de arcilla y madera, o transferir espuma de un lote a otro (*backslopping*), las antiguas civilizaciones domesticaron involuntariamente a ***Saccharomyces cerevisiae***, seleccionando cepas que toleraban más alcohol, floculaban mejor y perdían su reproducción sexual silvestre.
+::: {.origin-card-illustration}
+![](assets/img/origen-hildegarda.jpg){.origin-card-img alt="Lámina III: Hildegarda de Bingen y el estudio botánico de Humulus lupulus"}
+:::
+
+En la Edad Media europea, la cerveza dio dos giros que definieron su fisonomía moderna: la adopción botánica del **lúpulo** (*Humulus lupulus*) en los monasterios y el encuentro genético en cuevas alpinas que dividió a las levaduras en fermentación alta (**Ale**) y baja (**Lager**).
 
 ::: {.card-profile}
-**Mesopotamia y Egipto:** El ***Himno a Ninkasi*** (~1,800 a.C.), dedicado a la diosa sumeria de la cerveza, preserva en verso la primera receta de elaboración a partir de pan de cebada dos veces horneado (*bappir*). Como no se filtraba el grano, el *sikaru* se bebía de vasijas comunales usando largos **popotes de junco o de oro y lapislázuli**.
+**Hildegarda de Bingen y el lúpulo (s. XII):** Antes del lúpulo, las cervezas se condimentaban con *gruit* (mezcla de mirto de pantano, milenrama y artemisa). En su tratado naturalista ***Physica*** (c. 1158), la abadesa, médica y polímata benedictina **Hildegarda de Bingen** describió por primera vez que el lúpulo, pese a su amargor, *«frena la putrefacción y prolonga la vida de las bebidas»*.
 :::
 
 ::: {.card-styles-list}
-**Del *Gruit* medieval al nacimiento de las Lager:**
+**Consolidación de las grandes familias:**
 
-- **La revolución del lúpulo (s. IX – XII):** Durante siglos las cervezas europeas se aromatizaron con *gruit* (mezcla de mirto de pantano, milenrama y artemisa), hasta que la abadesa y naturalista **Hildegarda de Bingen** (1158) documentó las propiedades antisépticas y conservantes del lúpulo (*Humulus lupulus*).
-- **El accidente genético de Baviera (s. XV):** Al almacenar cervezas en cuevas heladas de los Alpes, *S. cerevisiae* se hibridó espontáneamente con ***Saccharomyces eubayanus*** (levadura silvestre criotolerante originaria de bosques patagónicos y tibetanos), dando vida a ***Saccharomyces pastorianus*** y dividiendo para siempre el mundo cervecero en sus grandes familias.
+- **Propiedad bacteriostática del lúpulo:** Los alfa-ácidos isomerizados de la lupulina inhiben bacterias lácticas (*Lactobacillus*), permitiendo conservar y transportar cervezas limpias y estables.
+- **El accidente genético de Baviera (s. XV):** Al almacenar cervezas en cuevas heladas de los Alpes, *S. cerevisiae* se hibridó espontáneamente con ***Saccharomyces eubayanus*** (levadura silvestre criotolerante originaria de bosques patagónicos y tibetanos), dando vida a ***Saccharomyces pastorianus***.
 :::
 
 ::: {.card-glass-hint}
