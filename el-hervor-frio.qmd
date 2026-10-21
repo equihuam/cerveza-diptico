@@ -53,6 +53,49 @@ El vocablo náhuatl *pozonallotl* (espuma efervescente) comparte raíz con *pozo
 
 ## 2. El Espectro Biotecnológico: Dos Sendas hacia el Etanol
 
+::: {.origin-card-illustration style="max-width: 840px; margin: 2rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);"}
+![](assets/img/lamina-1-tres-llaves.jpg){alt="Lámina I: Las Tres Llaves del Grano (Centros de Origen y Sacarificación de Cereales: Cebada, Maíz, Arroz)"}
+:::
+<p style="text-align: center; font-size: 0.85rem; color: #718096; margin-top: -1rem; margin-bottom: 2.5rem;"><strong>Lámina I: Las Tres Llaves del Grano</strong> · Centros de origen agrícola (Vavílov) y las tres soluciones de domesticación para descerrajar el almidón: malteado de cebada (Creciente Fértil), malteado de maíz y saliva (Mesoamérica/Andes), y moho filamentoso <em>koji</em> sobre arroz al vapor (Asia Oriental).</p>
+
+::: {.callout-note appearance="simple" icon=false style="background: #faf8f5; border-left: 4px solid var(--grain-barley); border-radius: 8px; padding: 1.2rem 1.5rem; margin-bottom: 2.5rem;"}
+### 🏷️ El Árbol Onomástico: La Poesía y Geografía de los Nombres
+
+Los nombres que la humanidad dio a sus fermentos no son etiquetas técnicas frías: son fósiles lingüísticos cargados de memoria sensorial, mitología y territorio.
+
+::: {.cards-grid-3 style="margin-top: 1rem;"}
+
+::: {.card style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0;"}
+#### 🌾 Occidente &amp; Europa
+* **Cerevisia / Cerveza:** Del latín galo, consagrada a **Ceres**, diosa romana de la agricultura y los cereales (*crescore*, crecer).
+* **Sikaru:** En sumerio, literalmente *"el pan bebido"* o licor de cebada sorbido comunitariamente con largas cañas de junco.
+* **Ale:** De la raíz proto-indoeuropea *\*alu-* ("trance, calor, amargor"), la bebida ancestral de malta sin lúpulo de las islas británicas.
+* **Lambic:** Del valle del río Senne y el poblado flamenco de **Lembeek** (*«arroyo de arcilla»*): la joya de fermentación espontánea salvaje en barricas viejas de roble.
+* **Gruit:** Del germánico medieval, la pócima amarga y narcótica de hierbas (milenrama, mirto, romero silvestre) anterior al lúpulo.
+:::
+
+::: {.card style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0;"}
+#### 🌽 Mesoamérica &amp; Andes
+* **Tesgüino / Batári:** Del náhuatl *tecuin* ("latir el corazón") y voz rarámuri: la cerveza de maíz germinado, pilar sagrado de la convivencia comunal (*korima*).
+* **Sendecho / Zendecho:** En mazahua y otomí, cerveza ceremonial de maíz pigmentado malteado y tostado, de color cobre profundo.
+* **Chicha (de Jora):** Del taíno o cuna (*chichab*, "maíz"): en los Andes, maíz malteado al sol (*jora*) o predigerido por amilasa salival (*mukh'u*).
+* **Octli / Pulque:** Del náhuatl *octli* (bebida de savia de maguey) y de la voz antillana o náhuatl deformada *poliuhqui* ("lo descompuesto o fermentado").
+* **Balché:** En lengua maya, la infusión sagrada de miel silvestre de abeja *Melipona* y corteza del árbol *Lonchocarpus*.
+* **Colonche / Nochocle:** Del náhuatl y lenguas norteñas: la efervescencia carmesí del jugo de tuna cardona (*Opuntia*).
+* **Tepache:** Del náhuatl *tepitl* ("maíz tierno cocido y fermentado"), hoy hermanado con frutas tropicales.
+:::
+
+::: {.card style="background: #fff; padding: 1rem; border-radius: 8px; border: 1px solid #e2e8f0;"}
+#### 🍚 Asia Oriental
+* **Sake / Nihonshu:** En japonés, *sake* (término general para licor) y *nihonshu* ("vino de arroz de Japón"): néctar pulido nacido del moho *koji*.
+* **Huangjiu:** En chino mandarín (黄酒), literalmente *"vino amarillo"*: el fermento de arroz y mijo más antiguo de China, con más de 4,000 años de historia.
+* **Makgeolli:** En coreano (막걸리), compuesto de *mak* ("toscamente, al momento") y *geoleu* ("filtrar"): cerveza de arroz y trigo opalescente, lechosa y viva.
+* **Kuchikamizake:** Arcaico japonés (口噛み酒, *"sake masticado en la boca"*): el gemelo asiático de la chicha andina, donde doncellas masticaban arroz para aportar amilasa salival.
+:::
+
+:::
+:::
+
 La humanidad resolvió la producción de bebidas fermentadas a través de dos caminos marcados por la arquitectura molecular de los vegetales:
 
 ```text
