@@ -97,13 +97,13 @@ Mucho antes de que la humanidad moldeara la primera vasija de barro, las levadur
 [*Saccharomyces paradoxus*, *S. cerevisiae* silvestre &amp; enzima `ADH4`]{.scientific-name}
 
 ::: {.origin-card-illustration}
-![](assets/img/origen-tupaya.jpg){.origin-card-img alt="Lámina I: Ptilocercus lowii libando néctar fermentado de la palma Eugeissona tristis"}
+![](assets/img/origen-tupaya.jpg){.origin-card-img alt="Lámina I: Ptilocercus lowii y Nycticebus coucang libando néctar fermentado de la palma Eugeissona tristis"}
 :::
 
 En frutos caídos, savia de robles y néctares florales ocurre una sucesión microbiana donde las especies silvestres de ***Saccharomyces*** se imponen gracias al **efecto Crabtree**: producen alcohol incluso en presencia de oxígeno para inhibir bacterias rivales y emiten ésteres volátiles (como el acetato de isoamilo, con aroma a plátano) para atraer insectos vectores y mamíferos frugívoros.
 
 ::: {.card-profile}
-**Evidencia en fauna silvestre:** En las selvas de Malasia, la **tupaya de cola de pluma** (*Ptilocercus lowii*) y el loris lento beben cada noche el néctar fermentado de la palma *Eugeissona tristis* (hasta **3.8 % ABV**, equivalente a una cerveza *Session*), inoculado naturalmente por consorcios de levaduras con *Saccharomyces*, sin mostrar signos de embriaguez.
+**Evidencia en fauna silvestre:** En las selvas de Malasia, la **tupaya de cola de pluma** (*Ptilocercus lowii*) y el **loris perezoso** (*Nycticebus coucang*) acuden cada noche a libar el néctar fermentado de la palma *Eugeissona tristis* (hasta **3.8 % ABV**, equivalente a una cerveza *Session*), inoculado naturalmente por consorcios de levaduras con *Saccharomyces*, sin mostrar signos de embriaguez.
 :::
 
 ::: {.card-styles-list}
