@@ -24,30 +24,18 @@ El vocablo náhuatl *pozonallotl* (espuma efervescente) comparte raíz con *pozo
 
 ## 2. El Espectro Biotecnológico: Dos Sendas hacia el Etanol
 
+![Figura: El Gradiente Biotecnológico de la Fermentación](../assets/img/figura-gradiente-fermentacion.jpg)
+*Figura: El Gradiente Biotecnológico de la Fermentación · Del acceso inmediato a mono y disacáridos en savias y frutas a la arquitectura del almidón desdoblada por amilasas o mohos.*
+
 La humanidad resolvió la producción de bebidas fermentadas a través de dos caminos dictated por la arquitectura química de las plantas:
 
-```
-                  ┌──────────────────────────────────────────────┐
-                  │       EL GRADIENTE DE LA FERMENTACIÓN        │
-                  └──────────────────────┬───────────────────────┘
-                                         │
-                 ┌───────────────────────┴───────────────────────┐
-                 ▼                                               ▼
-   [ POLO ECOLÓGICO / ESPONTÁNEO ]               [ POLO ARQUITECTÓNICO / GRANO ]
-   Sustrato: Azúcares simples libres             Sustrato: Polisacáridos complejos
-   (Sacarosa, Glucosa, Fructosa)                 (Almidón: amilosa y amilopectina)
-   
-   • Dinámica: Captura inmediata                 • Dinámica: Despolimerización enzimática
-   • Agente microbiano: Bacterias + Levaduras    • Agente microbiano: Levaduras (Saccharomyces)
-   • Ejemplos Mesoamericanos:                    • Ejemplos Mesoamericanos:
-     - Pulque (Agave salmiana, A. atrovirens)      - Tesgüino (Zea mays germinado)
-     - Taberna (Acrocomia aculeata, coyol)         - Sendecho (Maíz malteado y tostado)
-     - Balché (Miel Melipona + Lonchocarpus)       - Tepache arcaico (maíz tierno)
-     - Colonche (Opuntia streptacantha, tuna)    • Paralelos del Viejo Mundo:
-   • Paralelos del Viejo Mundo:                    - Sikaru sumerio (Cebada / Trigo)
-     - Vinos de uva silvestre                      - Cervezas Ale y Lager (Malteado)
-     - Hidromiel salvaje                           - Sake japonés (sacarificación por moho)
-```
+| Dimensión | Polo Ecológico / Silvestre (Azúcares Libres) | Polo Arquitectónico / Cereal (Almidón Complejo) |
+|---|---|---|
+| **Sustrato Químico** | Mono y disacáridos solubles (sacarosa, glucosa, fructosa). | Polisacáridos colosales (almidón: amilosa y amilopectina). |
+| **Dinámica Biológica** | Captura inmediata y fermentación abierta. | Despolimerización previa (malteado, saliva o moho *koji*). |
+| **Microorganismos** | Consorcio: *Zymomonas mobilis*, *Lactobacillus*, *Leuconostoc*, levaduras. | Levaduras (*Saccharomyces*), con sacarificación por amilasas o mohos. |
+| **Ejemplos Mesoamericanos** | Pulque (*Agave*), Taberna (*Palma*), Balché (*Melipona*), Colonche (*Tuna*). | Tesgüino (*Maíz malteado*), Sendecho (*Maíz tostado*), Chicha, Tepache arcaico. |
+| **Paralelos Globales** | Vinos silvestres, hidromiel primordial, vino de palma africano. | *Sikaru* sumerio, cerveza europea (Ale/Lager), *Sake* y *Huangjiu* (*Arroz*). |
 
 ### 2.1 La senda silvestre: El monopolio bacteriano de *Zymomonas mobilis*
 El caso del pulque es microbiológicamente excepcional a nivel planetario. Mientras que la inmensa mayoría de las bebidas alcohólicas de la historia están gobernadas por hongos eucariotas (*Saccharomyces*), el aguamiel es colonizado por una bacteria procarionte: ***Zymomonas mobilis*** (antiguamente descrita como *Termobacterium mobile*).
