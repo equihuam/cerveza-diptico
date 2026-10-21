@@ -140,18 +140,26 @@ En las regiones áridas y serranas donde el maguey pulquero no prosperaba o dond
 
 ---
 
-## 3. Botánica Reguladora: Del Lúpulo al *Ocpatli* y el *Balché*
+## 3. Botánica Reguladora y el Biorreactor de Barro
+
+::: {.origin-card-illustration style="max-width: 840px; margin: 2rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);"}
+![](assets/img/lamina-2-vasija-viva.jpg){alt="Lámina II: El Biorreactor de Barro (Anatomía y Microbiología de la Vasija Viva)"}
+:::
+<p style="text-align: center; font-size: 0.85rem; color: #718096; margin-top: -1rem; margin-bottom: 2.5rem;"><strong>Lámina II: El Biorreactor de Barro</strong> · Corte transversal de una vasija tradicional de arcilla porosa, inoculada mediante <em>back-slopping</em> (jícara con semilla/madre) y detalle microscópico de los biofilms simbióticos (<em>Saccharomyces</em>, <em>Zymomonas</em> y bacterias lácticas) refugiados en los microporos minerales de la terracota.</p>
 
 Uno de los grandes desafíos técnicos de la cerveza histórica fue evitar que se agriara o se pudriera antes de consumirse. En Europa, la respuesta tardó milenios en consolidarse hasta la adopción del **lúpulo** (*Humulus lupulus*), difundido en el siglo XII por Hildegarda de Bingen gracias a las propiedades bacteriostáticas de sus resinas y alfa-ácidos.
 
-En Mesoamérica se descubrió el mismo principio protector utilizando la farmacopea nativa:
+En Mesoamérica se descubrió el mismo principio protector utilizando la farmacopea nativa y la ecología de la arcilla:
 
 | Función Técnica | En la Cerveza Tradicional Europea | En el Sistema Fermentativo Mesoamericano |
 |-----------------|-----------------------------------|------------------------------------------|
 | **Agente bacteriostático / Conservador** | Lúpulo (*Humulus lupulus*): inhibe bacterias que avinagran el mosto. | **Raíz de Ocpatli** (*Acacia angustissima* o *Calliandra grandiflora*): rica en taninos y compuestos fenólicos que seleccionan la microbiota y evitan putrefacciones. |
 | **Clarificación y selectividad** | Flor de lúpulo e iris moss (*Chondrus crispus*). | **Corteza de Balché** (*Lonchocarpus violaceus*): sus flavonoides clarifican la miel fermentada y actúan como antiséptico selectivo. |
 | **Aporte de amargor / Balance sensorial** | Alfa y beta ácidos isomerizados (isohumulona). | Alcaloides y resinas de raíces y cortezas medicinales que balanceaban el dulzor del aguamiel o del mosto de maíz. |
-| **Inóculo y persistencia microbiana** | Varillas de levadura (*Kveikstokk* en Noruega), sedimentos y barricas de roble. | Ollas porosas de barro curado, zurrones de cuero de venado (*tinacales*) y *back-slopping* con "semilla" (*madre*). |
+| **Inóculo y persistencia microbiana** | Varillas de levadura (*Kveikstokk* en Noruega), sedimentos y barricas de roble. | Ollas porosas de barro curado, zurrones de cuero de venado (*tinacales*) y *back-slopping* con "semilla" (*madre* o *tlapehualli*). |
+
+### 3.1 El tabú de «No Lavar la Vasija»
+En los tinacales de pulque, en las ollas de barro del *tesgüino* rarámuri y en las chicherías andinas se compartía una ley inviolable: **la olla de fermentar nunca se lava con agua hirviendo ni jabón**. Lavarla a fondo significaba «matarle el alma», pues destruía el *biofilm* de levaduras y bacterias lácticas resguardado en los poros de 5 a 50 micrómetros de la terracota, dejándola expuesta a patógenos. La vasija no era un recipiente inerte: era un organismo simbiótico heredado por generaciones.
 
 ---
 
@@ -182,7 +190,23 @@ Esta mutación multiplicó por 40 la capacidad de nuestros ancestros primates pa
 
 ---
 
-## 6. Conclusión: Hacia una Cultura de la Fermentación sin Fronteras
+## 6. El Bosque y el Sembradío: El Río de los Fermentos
+
+::: {.origin-card-illustration style="max-width: 840px; margin: 2rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08);"}
+![](assets/img/lamina-3-rio-fermentos.jpg){alt="Lámina III: El Bosque y el Sembradío (El Río de los Fermentos)"}
+:::
+<p style="text-align: center; font-size: 0.85rem; color: #718096; margin-top: -1rem; margin-bottom: 2.5rem;"><strong>Lámina III: El Bosque y el Sembradío</strong> · Paisaje biocultural integrado donde confluyen el caudal silvestre (recolección de aguamiel en maguey con acocote, savia de palma coyol, miel melipona con flor de balché y frutos de cactáceas) y el caudal agrícola (la milpa comunal, mazorcas criollas, malteado de maíz y metates) en la vasija viva y la espuma compartida.</p>
+
+En Mesoamérica nunca existió una frontera rígida entre la naturaleza del monte y el surco agrícola. Por el contrario, el banquete y el rito celebraban la reconciliación entre la generosidad espontánea del bosque y la labor paciente del campesino:
+
+* **El caudal silvestre:** La savia de maguey que fluye generosa sin necesidad de siembra anual; la miel de abejas nativas sin aguijón (*Melipona beecheii*) enriquecida con cortezas de *balché*; la *taberna* que gotea en el corazón de la palma de coyol; y la sangre carmesí de las tunas en el *colonche*.
+* **El caudal domesticado:** Las variedades criollas de maíz cuidadas con esmero en la milpa, desgranadas, germinadas entre hojas de pino para hacer *tesgüino*, o tostadas en comal para teñir de cobre el *sendecho*.
+
+Ambos caudales confluían en las mismas ollas de barro, bendecidas por el copal y compartidas en el *tequio* y la reciprocidad (*korima*).
+
+---
+
+## 7. Conclusión: Hacia una Cultura de la Fermentación sin Fronteras
 
 La cerveza artesanal contemporánea y las bebidas tradicionales de los pueblos originarios no son artefactos de mundos opuestos. Son capítulos complementarios de una **misma historia evolutiva y cultural**.
 
