@@ -3,6 +3,7 @@ title: "El «Hervor Frío» y los 400 Conejos"
 subtitle: "La matriz biocultural de las fermentaciones en Mesoamérica y el mundo cervecero"
 author: "Cultura Chelera"
 date: "2026-10-21"
+title-block-style: none
 format:
   html:
     theme: cosmo
@@ -11,6 +12,8 @@ format:
     css: assets/css/diptico.css
 draft: false
 ---
+
+:::: {.essay-container}
 
 ::: {.web-hero style="padding: 2.5rem 1rem; margin-bottom: 2rem;"}
 ::: {.hero-badge}
@@ -298,3 +301,6 @@ Apreciar la turbidez viva de una *Hazy IPA* o la fermentación mixta de una *Gue
 4. **McGovern, P. E. (2009).** *Uncorking the Past: The Quest for Wine, Beer, and Other Alcoholic Beverages*. University of California Press.
 5. **Sahagún, Fray Bernardino de (1577 [1985]).** *Historia general de las cosas de la Nueva España*. Editorial Porrúa, México.
 6. **Lappe-Oliveras, P., Moreno-Terrazas, R., Arrizón-Gaviño, J., et al. (2008).** *Yeasts associated with the production of Mexican alcoholic beverages: pulque, mezcal, and tequila*. FEMS Yeast Research, 8(7), 1037-1052.
+
+::::
+
