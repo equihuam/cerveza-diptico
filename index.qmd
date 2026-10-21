@@ -184,6 +184,42 @@ En la Edad Media europea, la cerveza dio dos giros que definieron su fisonomía 
 :::
 :::
 
+
+<!-- TARJETA ORIGEN 4: MESOAMÉRICA, EL HERVOR FRÍO Y LOS 400 CONEJOS -->
+::: {.family-card-web .card-origin-mesoamerica}
+::: {.card-header-badge}
+🐇 Mesoamérica &amp; Las Dos Alquimias [Milenios a.C. – Presente]{.temp-pill}
+:::
+
+### El «Hervor Frío»: De los 400 Conejos a la Hermandad de la Espuma
+
+[*Zymomonas*, *Saccharomyces*, savias vivas y el misterio del grano]{.scientific-name}
+
+::: {.origin-card-illustration}
+![](assets/img/origen-mesoamerica.jpg){.origin-card-img alt="Lámina IV: Mayahuel, vasijas de barro con espuma viva de pulque y tesgüino en Mesoamérica"}
+:::
+
+Mucho antes del encuentro de dos mundos, Mesoamérica ya era un **hervidero de biotecnología invisible**. Frente al fuego del fogón, la fermentación se entendió como un *hervor frío* (*pozonallotl*): un misterio donde el líquido respira, genera espuma viviente y alberga una energía divina que transforma el cuerpo y la comunidad.
+
+::: {.card-profile}
+**Las dos sendas del fermento indígena:**
+
+1. **La senda silvestre (azúcares libres):** Las savias de agave (*pulque* o *neutle*, orquestado por la bacteria *Zymomonas mobilis*, bacterias lácticas y levaduras), la palma de coyol (*taberna*) y la miel de abeja *Melipona* infusionada con cortezas sagradas (*balché* maya).
+2. **La senda del grano (los almidones domados):** El maíz transformado en cerveza ancestral (*tesgüino* rarámuri y *sendecho* mazahua), donde el grano se germina pacientemente al abrigo de hojas para activar sus amilasas, exactamente igual que el malteado de cebada.
+:::
+
+::: {.card-styles-list}
+**Guiños de complicidad chelera:**
+
+- **El pariente botánico del lúpulo:** Si en Europa se adoptó el lúpulo para proteger la cerveza de bacterias rivales, los pueblos mesoamericanos añadieron cortezas y raíces (*ocpatli* o corteza de *balché*) como antibacterianos selectivos y estabilizadores de la espuma.
+- **¿Por qué 400 conejos?** Los mexicas atribuían los múltiples estados del ánimo ebrio a los *Centzon Totochtin* (400 dioses conejo). Cada bebedor despertaba a un conejo distinto: el que canta, el que llora, el que baila, el que filosofa o el que duerme plácidamente.
+:::
+
+::: {.card-glass-hint}
+🫧 **El lazo cómplice:** La cerveza artesanal y las bebidas prehispánicas comparten la misma devoción: el asombro ante el milagro invisible de la espuma. [Leer ensayo sobre el «Hervor Frío» &rarr;](el-hervor-frio.html){style="font-weight: 700; color: #b7791f; text-decoration: underline;"}
+:::
+:::
+
 :::
 :::
 

@@ -1241,6 +1241,7 @@ a:hover {
 .card-origin-wild::before { background: #2f855a; }
 .card-origin-neolithic::before { background: var(--grain-barley); }
 .card-origin-history::before { background: #9c4221; }
+.card-origin-mesoamerica::before { background: #c05621; }
 
 .card-lager { border-top: 1px solid var(--lager-border); }
 .card-ale { border-top: 1px solid var(--ale-border); }
@@ -1248,6 +1249,7 @@ a:hover {
 .card-origin-wild { border-top: 1px solid #c6f6d5; }
 .card-origin-neolithic { border-top: 1px solid #fefcbf; }
 .card-origin-history { border-top: 1px solid #feebc8; }
+.card-origin-mesoamerica { border-top: 1px solid #fbd38d; }
 
 .card-header-badge {
   display: flex;
@@ -1266,6 +1268,7 @@ a:hover {
 .card-origin-wild .card-header-badge { color: #22543d; }
 .card-origin-neolithic .card-header-badge { color: var(--grain-raw); }
 .card-origin-history .card-header-badge { color: #7b341e; }
+.card-origin-mesoamerica .card-header-badge { color: #9c4221; }
 
 .origin-card-illustration {
   margin: 0.25rem 0 0.9rem 0;

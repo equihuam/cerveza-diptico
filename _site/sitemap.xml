@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cerveza-mia.netlify.app/diptico.html</loc>
-    <lastmod>2026-09-28T02:55:59.992Z</lastmod>
+    <loc>https://cerveza-mia.netlify.app/el-hervor-frio.html</loc>
+    <lastmod>2026-10-21T18:23:45.917Z</lastmod>
   </url>
   <url>
     <loc>https://cerveza-mia.netlify.app/index.html</loc>
-    <lastmod>2026-09-29T03:13:56.916Z</lastmod>
+    <lastmod>2026-10-21T18:23:56.950Z</lastmod>
+  </url>
+  <url>
+    <loc>https://cerveza-mia.netlify.app/diptico.html</loc>
+    <lastmod>2026-09-28T02:55:59.992Z</lastmod>
   </url>
 </urlset>
