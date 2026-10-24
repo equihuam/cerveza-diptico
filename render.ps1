@@ -32,6 +32,9 @@ if (Test-Path "assets") {
     }
 }
 
+# Asegurar archivos raíz de PWA en _site
+Copy-Item -Path "manifest.webmanifest", "sw.js", "offline.html" -Destination "_site\" -Force -ErrorAction SilentlyContinue
+
 
 Write-Host "📄 [2/3] Generando PDF de impresión de 2 páginas (Letter Landscape)..." -ForegroundColor Cyan
 

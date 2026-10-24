@@ -1081,6 +1081,13 @@ Explora fichas detalladas de estilos internacionales con parámetros técnicos (
           <span class="dock-item-desc">Estilos y Fichas</span>
         </span>
       </a>
+      <button type="button" class="dock-item pwa-install-btn" id="pwaInstallBtn" role="menuitem" style="display: none; background: rgba(194, 105, 16, 0.15); border: 1px solid #c26910; border-radius: 8px; text-align: left; width: 100%; cursor: pointer;">
+        <span class="dock-item-icon" aria-hidden="true">📲</span>
+        <span class="dock-item-text">
+          <strong class="dock-item-title" style="color: #f7d59b;">Instalar App</strong>
+          <span class="dock-item-desc">Uso offline &amp; pantalla completa</span>
+        </span>
+      </button>
     </div>
   </div>
 </nav>

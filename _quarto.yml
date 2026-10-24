@@ -4,6 +4,9 @@ project:
   resources:
     - assets/
     - data/
+    - manifest.webmanifest
+    - sw.js
+    - offline.html
   render:
     - index.qmd
     - diptico.qmd
@@ -52,3 +55,14 @@ format:
     favicon: assets/img/favicon.svg
     toc: false
     page-layout: custom
+    include-in-header:
+      - text: |
+          <link rel="manifest" href="/manifest.webmanifest">
+          <meta name="theme-color" content="#2D3748">
+          <meta name="apple-mobile-web-app-capable" content="yes">
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+          <meta name="apple-mobile-web-app-title" content="Cultura Chelera">
+          <link rel="apple-touch-icon" href="/assets/img/icon-192.png">
+    include-after-body:
+      - text: |
+          <script src="/assets/js/pwa.js"></script>
